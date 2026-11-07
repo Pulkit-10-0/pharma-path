@@ -1,0 +1,4305 @@
+{
+  "protocol": "forecast-inventory-v1",
+  "evidence_type": "conditional_observed_sales_synthetic_supply_replay",
+  "measured_grd_impact": false,
+  "configuration": {
+    "seeds": 200,
+    "seed": 20261108,
+    "independent_test_seed_offset": 1000000,
+    "buffer_weeks": [
+      0,
+      0.25,
+      0.5,
+      1,
+      1.5,
+      2,
+      3
+    ],
+    "calibration_targets_pct": [
+      95,
+      98
+    ],
+    "warmup_weeks": 4,
+    "arrival_shelf_life_weeks": [
+      13,
+      52
+    ],
+    "lead_weeks": [
+      1,
+      2
+    ],
+    "supplier_capacity": "1.8 x past 52-week 95th percentile; 10% weeks reduced to 60%"
+  },
+  "source_sha256": "49e4f1c5c3daf5220fdda10785256dba5ff89c1ec18703e5ad676b7449d55b2e",
+  "frontiers": {
+    "naive": [
+      {
+        "buffer_weeks": 0,
+        "fill_rate_pct": 91.7514210950642,
+        "average_stock_weeks": 1.666142004188228,
+        "logistics_seed_range_95_fill_pct": [
+          89.33008152795959,
+          94.09893516490577
+        ]
+      },
+      {
+        "buffer_weeks": 0.25,
+        "fill_rate_pct": 94.07258417087803,
+        "average_stock_weeks": 1.8964383253936439,
+        "logistics_seed_range_95_fill_pct": [
+          92.08894584991722,
+          96.10140160929014
+        ]
+      },
+      {
+        "buffer_weeks": 0.5,
+        "fill_rate_pct": 95.76987955401204,
+        "average_stock_weeks": 2.1427496052851307,
+        "logistics_seed_range_95_fill_pct": [
+          94.0495689215532,
+          97.5566303665085
+        ]
+      },
+      {
+        "buffer_weeks": 1,
+        "fill_rate_pct": 98.02372445767311,
+        "average_stock_weeks": 2.6667832644807015,
+        "logistics_seed_range_95_fill_pct": [
+          96.85119199005604,
+          99.22138912227736
+        ]
+      },
+      {
+        "buffer_weeks": 1.5,
+        "fill_rate_pct": 99.02869182678627,
+        "average_stock_weeks": 3.231561985776488,
+        "logistics_seed_range_95_fill_pct": [
+          98.093933233352,
+          99.769705314134
+        ]
+      },
+      {
+        "buffer_weeks": 2,
+        "fill_rate_pct": 99.53655891054579,
+        "average_stock_weeks": 3.8092007725529786,
+        "logistics_seed_range_95_fill_pct": [
+          98.87243234107476,
+          100.0
+        ]
+      },
+      {
+        "buffer_weeks": 3,
+        "fill_rate_pct": 99.90310148218524,
+        "average_stock_weeks": 4.979737192613116,
+        "logistics_seed_range_95_fill_pct": [
+          99.67343569569897,
+          100.0
+        ]
+      }
+    ],
+    "recent4": [
+      {
+        "buffer_weeks": 0,
+        "fill_rate_pct": 91.66860960076491,
+        "average_stock_weeks": 1.536143701731269,
+        "logistics_seed_range_95_fill_pct": [
+          89.69514636921443,
+          94.07985633074773
+        ]
+      },
+      {
+        "buffer_weeks": 0.25,
+        "fill_rate_pct": 93.84693346285466,
+        "average_stock_weeks": 1.7684550302219264,
+        "logistics_seed_range_95_fill_pct": [
+          92.18893613853687,
+          95.85282244329338
+        ]
+      },
+      {
+        "buffer_weeks": 0.5,
+        "fill_rate_pct": 95.47396800361832,
+        "average_stock_weeks": 2.014365663095973,
+        "logistics_seed_range_95_fill_pct": [
+          94.022978910891,
+          97.19896367776211
+        ]
+      },
+      {
+        "buffer_weeks": 1,
+        "fill_rate_pct": 97.5698753618538,
+        "average_stock_weeks": 2.531072904090413,
+        "logistics_seed_range_95_fill_pct": [
+          96.5480371900426,
+          98.53185953211778
+        ]
+      },
+      {
+        "buffer_weeks": 1.5,
+        "fill_rate_pct": 98.78916726137129,
+        "average_stock_weeks": 3.064772156099675,
+        "logistics_seed_range_95_fill_pct": [
+          97.90935814798279,
+          99.46139821595395
+        ]
+      },
+      {
+        "buffer_weeks": 2,
+        "fill_rate_pct": 99.42380681025992,
+        "average_stock_weeks": 3.6100854220635004,
+        "logistics_seed_range_95_fill_pct": [
+          98.8157152921711,
+          99.91342051944014
+        ]
+      },
+      {
+        "buffer_weeks": 3,
+        "fill_rate_pct": 99.87881189359578,
+        "average_stock_weeks": 4.735315950308443,
+        "logistics_seed_range_95_fill_pct": [
+          99.61659428558049,
+          100.0
+        ]
+      }
+    ],
+    "selected": [
+      {
+        "buffer_weeks": 0,
+        "fill_rate_pct": 91.25773491414463,
+        "average_stock_weeks": 1.3839217947633324,
+        "logistics_seed_range_95_fill_pct": [
+          88.93544282670291,
+          93.90060731562129
+        ]
+      },
+      {
+        "buffer_weeks": 0.25,
+        "fill_rate_pct": 93.85192716398545,
+        "average_stock_weeks": 1.597101410949586,
+        "logistics_seed_range_95_fill_pct": [
+          92.08837719373074,
+          95.89611329742466
+        ]
+      },
+      {
+        "buffer_weeks": 0.5,
+        "fill_rate_pct": 95.73444268281314,
+        "average_stock_weeks": 1.825603783532684,
+        "logistics_seed_range_95_fill_pct": [
+          94.31041555438998,
+          97.25274388801786
+        ]
+      },
+      {
+        "buffer_weeks": 1,
+        "fill_rate_pct": 97.88383351067205,
+        "average_stock_weeks": 2.3165829587250943,
+        "logistics_seed_range_95_fill_pct": [
+          96.92737974185322,
+          98.83070123461587
+        ]
+      },
+      {
+        "buffer_weeks": 1.5,
+        "fill_rate_pct": 98.9474706706644,
+        "average_stock_weeks": 2.8305892370281396,
+        "logistics_seed_range_95_fill_pct": [
+          98.21108662221015,
+          99.63388159609664
+        ]
+      },
+      {
+        "buffer_weeks": 2,
+        "fill_rate_pct": 99.54499476490926,
+        "average_stock_weeks": 3.3526440104470794,
+        "logistics_seed_range_95_fill_pct": [
+          99.0601493351085,
+          99.94138855913454
+        ]
+      },
+      {
+        "buffer_weeks": 3,
+        "fill_rate_pct": 99.94126220684274,
+        "average_stock_weeks": 4.420603754831526,
+        "logistics_seed_range_95_fill_pct": [
+          99.82819378665718,
+          100.0
+        ]
+      }
+    ],
+    "ml": [
+      {
+        "buffer_weeks": 0,
+        "fill_rate_pct": 90.37339972304912,
+        "average_stock_weeks": 1.3133503008925222,
+        "logistics_seed_range_95_fill_pct": [
+          88.03930813236708,
+          93.07501994617066
+        ]
+      },
+      {
+        "buffer_weeks": 0.25,
+        "fill_rate_pct": 92.87473154286417,
+        "average_stock_weeks": 1.5201339760364874,
+        "logistics_seed_range_95_fill_pct": [
+          91.07788837956886,
+          94.96173637123039
+        ]
+      },
+      {
+        "buffer_weeks": 0.5,
+        "fill_rate_pct": 94.73188158622115,
+        "average_stock_weeks": 1.740259696946762,
+        "logistics_seed_range_95_fill_pct": [
+          93.40935749894886,
+          96.29875937842425
+        ]
+      },
+      {
+        "buffer_weeks": 1,
+        "fill_rate_pct": 97.0673671974178,
+        "average_stock_weeks": 2.207561172525351,
+        "logistics_seed_range_95_fill_pct": [
+          96.18419555242212,
+          98.08554043153087
+        ]
+      },
+      {
+        "buffer_weeks": 1.5,
+        "fill_rate_pct": 98.23640381332407,
+        "average_stock_weeks": 2.699909181079604,
+        "logistics_seed_range_95_fill_pct": [
+          97.5155789435825,
+          98.87638157427273
+        ]
+      },
+      {
+        "buffer_weeks": 2,
+        "fill_rate_pct": 98.96443926560077,
+        "average_stock_weeks": 3.205986242188233,
+        "logistics_seed_range_95_fill_pct": [
+          98.44208287233329,
+          99.53714754629937
+        ]
+      },
+      {
+        "buffer_weeks": 3,
+        "fill_rate_pct": 99.66854151848503,
+        "average_stock_weeks": 4.234615686565177,
+        "logistics_seed_range_95_fill_pct": [
+          99.36460534161097,
+          99.96581778214353
+        ]
+      }
+    ]
+  },
+  "calibration_selected_summary": {
+    "95": {
+      "naive": {
+        "categories_qualified_on_calibration": 8,
+        "categories_total": 8,
+        "test_fill_pct": 93.92484530932623,
+        "test_average_stock_weeks": 1.9296146820251656,
+        "categories_meeting_target_on_test": 3
+      },
+      "recent4": {
+        "categories_qualified_on_calibration": 8,
+        "categories_total": 8,
+        "test_fill_pct": 95.01734186948352,
+        "test_average_stock_weeks": 2.047558672114979,
+        "categories_meeting_target_on_test": 4
+      },
+      "selected": {
+        "categories_qualified_on_calibration": 8,
+        "categories_total": 8,
+        "test_fill_pct": 95.62145646338605,
+        "test_average_stock_weeks": 1.8879892625621788,
+        "categories_meeting_target_on_test": 5
+      },
+      "ml": {
+        "categories_qualified_on_calibration": 8,
+        "categories_total": 8,
+        "test_fill_pct": 96.1390554618082,
+        "test_average_stock_weeks": 1.9449330307681771,
+        "categories_meeting_target_on_test": 6
+      }
+    },
+    "98": {
+      "naive": {
+        "categories_qualified_on_calibration": 8,
+        "categories_total": 8,
+        "test_fill_pct": 97.1603396173868,
+        "test_average_stock_weeks": 2.5851828100771,
+        "categories_meeting_target_on_test": 4
+      },
+      "recent4": {
+        "categories_qualified_on_calibration": 8,
+        "categories_total": 8,
+        "test_fill_pct": 97.04298464969361,
+        "test_average_stock_weeks": 2.544154041593438,
+        "categories_meeting_target_on_test": 3
+      },
+      "selected": {
+        "categories_qualified_on_calibration": 8,
+        "categories_total": 8,
+        "test_fill_pct": 97.5604550552611,
+        "test_average_stock_weeks": 2.229134616349139,
+        "categories_meeting_target_on_test": 4
+      },
+      "ml": {
+        "categories_qualified_on_calibration": 7,
+        "categories_total": 8,
+        "test_fill_pct": 97.45104933223213,
+        "test_average_stock_weeks": 2.018687069720786,
+        "categories_meeting_target_on_test": 4
+      }
+    }
+  },
+  "categories": {
+    "M01AB": {
+      "naive": {
+        "forecast_method": "naive",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 93.35718951986514,
+            "average_stock_weeks": 1.4242211667485787,
+            "unmet_quantity": 119.01126400000001,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 7.12,
+            "logistics_seed_range_95_fill_pct": [
+              90.05182018106923,
+              97.60952622824547
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 95.62940393395773,
+            "average_stock_weeks": 1.6441998840049183,
+            "unmet_quantity": 78.30272500000002,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.455,
+            "logistics_seed_range_95_fill_pct": [
+              92.71342544011432,
+              98.9747876176336
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 97.43620675604774,
+            "average_stock_weeks": 1.875711967288822,
+            "unmet_quantity": 45.93240700000001,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 4.495,
+            "logistics_seed_range_95_fill_pct": [
+              94.8869503455051,
+              99.72652630638878
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 99.27412351109076,
+            "average_stock_weeks": 2.3690062547428994,
+            "unmet_quantity": 13.004658000000004,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.995,
+            "logistics_seed_range_95_fill_pct": [
+              97.85719867379633,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 99.83257097087488,
+            "average_stock_weeks": 2.905027824767398,
+            "unmet_quantity": 2.9996249999999973,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.345,
+            "logistics_seed_range_95_fill_pct": [
+              98.95734491342837,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.98792038312551,
+            "average_stock_weeks": 3.448050783531711,
+            "unmet_quantity": 0.21641599999999925,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.04,
+            "logistics_seed_range_95_fill_pct": [
+              99.69800957813773,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 4.540883457990385,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 95.96484221693379,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 95.62940393395773,
+              "average_stock_weeks": 1.6441998840049183,
+              "unmet_quantity": 78.30272500000002,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.455,
+              "logistics_seed_range_95_fill_pct": [
+                92.71342544011432,
+                98.9747876176336
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 1,
+            "calibration_fill_pct": 99.31133698425896,
+            "test": {
+              "buffer_weeks": 1,
+              "fill_rate_pct": 99.27412351109076,
+              "average_stock_weeks": 2.3690062547428994,
+              "unmet_quantity": 13.004658000000004,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 0.995,
+              "logistics_seed_range_95_fill_pct": [
+                97.85719867379633,
+                100.0
+              ]
+            }
+          }
+        }
+      },
+      "recent4": {
+        "forecast_method": "recent4",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 94.89722277263647,
+            "average_stock_weeks": 1.3961206487854056,
+            "unmet_quantity": 91.42033625,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 6.05,
+            "logistics_seed_range_95_fill_pct": [
+              92.12264301098752,
+              98.19547288566518
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 96.8625950226197,
+            "average_stock_weeks": 1.628668062047865,
+            "unmet_quantity": 56.209120093749995,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 4.13,
+            "logistics_seed_range_95_fill_pct": [
+              94.64833371591,
+              99.23473798267452
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 98.29071771843849,
+            "average_stock_weeks": 1.8715487885554773,
+            "unmet_quantity": 30.62315950000001,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.245,
+            "logistics_seed_range_95_fill_pct": [
+              96.8827180564781,
+              99.87201655626599
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 99.76739660139374,
+            "average_stock_weeks": 2.385337998645125,
+            "unmet_quantity": 4.167275968749998,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.53,
+            "logistics_seed_range_95_fill_pct": [
+              99.48250113028723,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 2.9233494515110308,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 3.4681232117459264,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 4.564790400359566,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 95.83660123702583,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 94.89722277263647,
+              "average_stock_weeks": 1.3961206487854056,
+              "unmet_quantity": 91.42033625,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 6.05,
+              "logistics_seed_range_95_fill_pct": [
+                92.12264301098752,
+                98.19547288566518
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 98.0585826162299,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 96.8625950226197,
+              "average_stock_weeks": 1.628668062047865,
+              "unmet_quantity": 56.209120093749995,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 4.13,
+              "logistics_seed_range_95_fill_pct": [
+                94.64833371591,
+                99.23473798267452
+              ]
+            }
+          }
+        }
+      },
+      "selected": {
+        "forecast_method": "croston",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 93.1678299053409,
+            "average_stock_weeks": 1.1839856452969348,
+            "unmet_quantity": 122.40379298189373,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 8.645,
+            "logistics_seed_range_95_fill_pct": [
+              90.32223628383846,
+              96.43742121932685
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 96.1689501811962,
+            "average_stock_weeks": 1.3764195736379807,
+            "unmet_quantity": 68.63632234372548,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 6.085,
+            "logistics_seed_range_95_fill_pct": [
+              93.90782985808681,
+              98.28014150590863
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 98.274310106733,
+            "average_stock_weeks": 1.587411875690857,
+            "unmet_quantity": 30.917114989792925,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.92,
+            "logistics_seed_range_95_fill_pct": [
+              96.72834460390325,
+              99.59818933982615
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 99.88996017606873,
+            "average_stock_weeks": 2.0603325653549858,
+            "unmet_quantity": 1.9714514775880747,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.29,
+            "logistics_seed_range_95_fill_pct": [
+              99.62055233127144,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 2.562956612316393,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 3.067891813799696,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 4.077735266809107,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 96.89117199233286,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 96.1689501811962,
+              "average_stock_weeks": 1.3764195736379807,
+              "unmet_quantity": 68.63632234372548,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 6.085,
+              "logistics_seed_range_95_fill_pct": [
+                93.90782985808681,
+                98.28014150590863
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.5,
+            "calibration_fill_pct": 98.33240465032134,
+            "test": {
+              "buffer_weeks": 0.5,
+              "fill_rate_pct": 98.274310106733,
+              "average_stock_weeks": 1.587411875690857,
+              "unmet_quantity": 30.917114989792925,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 3.92,
+              "logistics_seed_range_95_fill_pct": [
+                96.72834460390325,
+                99.59818933982615
+              ]
+            }
+          }
+        }
+      },
+      "ml": {
+        "forecast_method": "ml",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 94.69198445957895,
+            "average_stock_weeks": 1.3319273038273076,
+            "unmet_quantity": 95.09734481907577,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 6.945,
+            "logistics_seed_range_95_fill_pct": [
+              91.82599723914764,
+              97.59277107550184
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 97.18574398016634,
+            "average_stock_weeks": 1.5496861725957631,
+            "unmet_quantity": 50.41964800013585,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 4.735,
+            "logistics_seed_range_95_fill_pct": [
+              95.13208681429771,
+              99.09214325588128
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 98.66360015175215,
+            "average_stock_weeks": 1.7883237293908099,
+            "unmet_quantity": 23.94267240123908,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.945,
+            "logistics_seed_range_95_fill_pct": [
+              97.18048768263651,
+              99.92864526154769
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 99.904268750398,
+            "average_stock_weeks": 2.300736614332625,
+            "unmet_quantity": 1.715101921619235,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.29,
+            "logistics_seed_range_95_fill_pct": [
+              99.66989224275177,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 2.835412249181953,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 3.376775212007788,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 4.450212008703519,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 96.65985883709898,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 97.18574398016634,
+              "average_stock_weeks": 1.5496861725957631,
+              "unmet_quantity": 50.41964800013585,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 4.735,
+              "logistics_seed_range_95_fill_pct": [
+                95.13208681429771,
+                99.09214325588128
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.5,
+            "calibration_fill_pct": 98.1886425327139,
+            "test": {
+              "buffer_weeks": 0.5,
+              "fill_rate_pct": 98.66360015175215,
+              "average_stock_weeks": 1.7883237293908099,
+              "unmet_quantity": 23.94267240123908,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 2.945,
+              "logistics_seed_range_95_fill_pct": [
+                97.18048768263651,
+                99.92864526154769
+              ]
+            }
+          }
+        }
+      }
+    },
+    "M01AE": {
+      "naive": {
+        "forecast_method": "naive",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 89.9898598536853,
+            "average_stock_weeks": 1.3941234303293688,
+            "unmet_quantity": 128.6888602,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 7.855,
+            "logistics_seed_range_95_fill_pct": [
+              86.09445233103996,
+              94.17254341408778
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 92.39410843157007,
+            "average_stock_weeks": 1.5853101058357106,
+            "unmet_quantity": 97.78020111999999,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 6.785,
+            "logistics_seed_range_95_fill_pct": [
+              88.50638962028961,
+              96.29555046924168
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 94.21142732063616,
+            "average_stock_weeks": 1.7958526611042749,
+            "unmet_quantity": 74.41702207999998,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 4.69,
+            "logistics_seed_range_95_fill_pct": [
+              90.64239354068384,
+              97.86800775522428
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 96.92238699658135,
+            "average_stock_weeks": 2.2442341341351506,
+            "unmet_quantity": 39.56533113,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.38,
+            "logistics_seed_range_95_fill_pct": [
+              94.12947218581425,
+              100.00000000000003
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 98.67548726844201,
+            "average_stock_weeks": 2.7241089311100484,
+            "unmet_quantity": 17.02773699999999,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.1,
+            "logistics_seed_range_95_fill_pct": [
+              96.7431802642377,
+              100.00000000000003
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.46724330090973,
+            "average_stock_weeks": 3.2312787591965706,
+            "unmet_quantity": 6.849040209999994,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.595,
+            "logistics_seed_range_95_fill_pct": [
+              97.84789134907457,
+              100.00000000000003
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.99725861844999,
+            "average_stock_weeks": 4.2572542968754234,
+            "unmet_quantity": 0.03524278999999996,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.005,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000003,
+              100.00000000000003
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 95.11418879011828,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 92.39410843157007,
+              "average_stock_weeks": 1.5853101058357106,
+              "unmet_quantity": 97.78020111999999,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 6.785,
+              "logistics_seed_range_95_fill_pct": [
+                88.50638962028961,
+                96.29555046924168
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 1,
+            "calibration_fill_pct": 99.19383909967172,
+            "test": {
+              "buffer_weeks": 1,
+              "fill_rate_pct": 96.92238699658135,
+              "average_stock_weeks": 2.2442341341351506,
+              "unmet_quantity": 39.56533113,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 2.38,
+              "logistics_seed_range_95_fill_pct": [
+                94.12947218581425,
+                100.00000000000003
+              ]
+            }
+          }
+        }
+      },
+      "recent4": {
+        "forecast_method": "recent4",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 91.28581463973602,
+            "average_stock_weeks": 1.4300682152958841,
+            "unmet_quantity": 112.02825986375,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 7.385,
+            "logistics_seed_range_95_fill_pct": [
+              87.13654043562852,
+              95.45340402545342
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 93.32431879397318,
+            "average_stock_weeks": 1.642839396164145,
+            "unmet_quantity": 85.8215562325,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.43,
+            "logistics_seed_range_95_fill_pct": [
+              89.79196281629571,
+              97.27534002637908
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 95.10227837604089,
+            "average_stock_weeks": 1.8658045517076374,
+            "unmet_quantity": 62.96437453937502,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 4.165,
+            "logistics_seed_range_95_fill_pct": [
+              91.74165299746812,
+              98.86483807055738
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 97.33337729472383,
+            "average_stock_weeks": 2.3221900830934943,
+            "unmet_quantity": 34.28170150562501,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.085,
+            "logistics_seed_range_95_fill_pct": [
+              95.16798894083243,
+              100.00000000000003
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 98.66835576318371,
+            "average_stock_weeks": 2.78644807455007,
+            "unmet_quantity": 17.119418561875005,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.27,
+            "logistics_seed_range_95_fill_pct": [
+              96.77120617267627,
+              100.00000000000003
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.46384327995624,
+            "average_stock_weeks": 3.250554865177763,
+            "unmet_quantity": 6.892750369375005,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.59,
+            "logistics_seed_range_95_fill_pct": [
+              97.84125404971279,
+              100.00000000000003
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.99857328366078,
+            "average_stock_weeks": 4.254914690413796,
+            "unmet_quantity": 0.018341651250000802,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.035,
+            "logistics_seed_range_95_fill_pct": [
+              99.98134980378586,
+              100.00000000000003
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 97.41927020260104,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 93.32431879397318,
+              "average_stock_weeks": 1.642839396164145,
+              "unmet_quantity": 85.8215562325,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.43,
+              "logistics_seed_range_95_fill_pct": [
+                89.79196281629571,
+                97.27534002637908
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.5,
+            "calibration_fill_pct": 99.03678152041422,
+            "test": {
+              "buffer_weeks": 0.5,
+              "fill_rate_pct": 95.10227837604089,
+              "average_stock_weeks": 1.8658045517076374,
+              "unmet_quantity": 62.96437453937502,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 4.165,
+              "logistics_seed_range_95_fill_pct": [
+                91.74165299746812,
+                98.86483807055738
+              ]
+            }
+          }
+        }
+      },
+      "selected": {
+        "forecast_method": "croston",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 91.5144164806298,
+            "average_stock_weeks": 1.3209944086079934,
+            "unmet_quantity": 109.08938888749566,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 7.1,
+            "logistics_seed_range_95_fill_pct": [
+              88.29212968843377,
+              95.30286297880096
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 93.85785736780959,
+            "average_stock_weeks": 1.528535855815477,
+            "unmet_quantity": 78.96246435804544,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.53,
+            "logistics_seed_range_95_fill_pct": [
+              91.10182772853317,
+              97.33005983898504
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 95.51628800675145,
+            "average_stock_weeks": 1.7468509524256672,
+            "unmet_quantity": 57.641928828404346,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.505,
+            "logistics_seed_range_95_fill_pct": [
+              93.57290916718607,
+              98.72058036732987
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 97.02191847155744,
+            "average_stock_weeks": 2.2140368970966744,
+            "unmet_quantity": 38.28576941742867,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.86,
+            "logistics_seed_range_95_fill_pct": [
+              94.73570186191614,
+              99.74316430119474
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 98.03496574258648,
+            "average_stock_weeks": 2.6889122038780435,
+            "unmet_quantity": 25.262185658169784,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.035,
+            "logistics_seed_range_95_fill_pct": [
+              95.73129428118706,
+              100.00000000000003
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 98.79020965321412,
+            "average_stock_weeks": 3.169552361729852,
+            "unmet_quantity": 15.552883229727549,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.86,
+            "logistics_seed_range_95_fill_pct": [
+              96.726886700458,
+              100.00000000000003
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.82696570108251,
+            "average_stock_weeks": 4.12887217135951,
+            "unmet_quantity": 2.224502991738596,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.325,
+            "logistics_seed_range_95_fill_pct": [
+              98.71807153899981,
+              100.00000000000003
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 97.04245506396423,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 93.85785736780959,
+              "average_stock_weeks": 1.528535855815477,
+              "unmet_quantity": 78.96246435804544,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.53,
+              "logistics_seed_range_95_fill_pct": [
+                91.10182772853317,
+                97.33005983898504
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.5,
+            "calibration_fill_pct": 98.75548914318551,
+            "test": {
+              "buffer_weeks": 0.5,
+              "fill_rate_pct": 95.51628800675145,
+              "average_stock_weeks": 1.7468509524256672,
+              "unmet_quantity": 57.641928828404346,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 3.505,
+              "logistics_seed_range_95_fill_pct": [
+                93.57290916718607,
+                98.72058036732987
+              ]
+            }
+          }
+        }
+      },
+      "ml": {
+        "forecast_method": "ml",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 93.56879831171875,
+            "average_stock_weeks": 1.4500787011681735,
+            "unmet_quantity": 82.67856422429078,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.525,
+            "logistics_seed_range_95_fill_pct": [
+              90.7172915578097,
+              97.79408578367973
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 95.22253432338184,
+            "average_stock_weeks": 1.679863436032553,
+            "unmet_quantity": 61.41838211875191,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.25,
+            "logistics_seed_range_95_fill_pct": [
+              92.81118595609216,
+              99.13272437962186
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 96.46307402464099,
+            "average_stock_weeks": 1.9184801019093476,
+            "unmet_quantity": 45.47018980031955,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.805,
+            "logistics_seed_range_95_fill_pct": [
+              94.38480413301993,
+              99.6976309800525
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 97.9050426842402,
+            "average_stock_weeks": 2.41579698609564,
+            "unmet_quantity": 26.932457007810832,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.3,
+            "logistics_seed_range_95_fill_pct": [
+              95.81998174163508,
+              100.00000000000003
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 98.82570101761452,
+            "average_stock_weeks": 2.9254425070589565,
+            "unmet_quantity": 15.096611572700622,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.86,
+            "logistics_seed_range_95_fill_pct": [
+              96.94979494249627,
+              100.00000000000003
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.58386370545337,
+            "average_stock_weeks": 3.4367366770056007,
+            "unmet_quantity": 5.34978578224759,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.565,
+            "logistics_seed_range_95_fill_pct": [
+              98.07960814335746,
+              100.00000000000003
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 100.00000000000001,
+            "average_stock_weeks": 4.473426216767361,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000003,
+              100.00000000000003
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 97.34959062578206,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 93.56879831171875,
+              "average_stock_weeks": 1.4500787011681735,
+              "unmet_quantity": 82.67856422429078,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.525,
+              "logistics_seed_range_95_fill_pct": [
+                90.7172915578097,
+                97.79408578367973
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 98.93554198970574,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 95.22253432338184,
+              "average_stock_weeks": 1.679863436032553,
+              "unmet_quantity": 61.41838211875191,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 3.25,
+              "logistics_seed_range_95_fill_pct": [
+                92.81118595609216,
+                99.13272437962186
+              ]
+            }
+          }
+        }
+      }
+    },
+    "N02BA": {
+      "naive": {
+        "forecast_method": "naive",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 93.24646748341482,
+            "average_stock_weeks": 1.3608809804090305,
+            "unmet_quantity": 69.73359999999998,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 6.475,
+            "logistics_seed_range_95_fill_pct": [
+              89.34083095249623,
+              97.01394605588105
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 95.51739736574498,
+            "average_stock_weeks": 1.5646951343652302,
+            "unmet_quantity": 46.285113499999994,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.375,
+            "logistics_seed_range_95_fill_pct": [
+              92.12610769454263,
+              98.29566364824946
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 97.16531867706162,
+            "average_stock_weeks": 1.7792120674497318,
+            "unmet_quantity": 29.269502000000017,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.445,
+            "logistics_seed_range_95_fill_pct": [
+              94.63942424095683,
+              99.1979201975691
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 99.2657845140671,
+            "average_stock_weeks": 2.2339271883515477,
+            "unmet_quantity": 7.581142,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.25,
+            "logistics_seed_range_95_fill_pct": [
+              97.86451019321095,
+              99.99999999999997
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 99.66909902668151,
+            "average_stock_weeks": 2.7137566169004397,
+            "unmet_quantity": 3.4167179999999995,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.335,
+            "logistics_seed_range_95_fill_pct": [
+              98.9516246186625,
+              99.99999999999997
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.9782092876858,
+            "average_stock_weeks": 3.192945987579957,
+            "unmet_quantity": 0.22499999999999773,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.3,
+            "logistics_seed_range_95_fill_pct": [
+              99.92736429228606,
+              99.99999999999997
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.99999999999999,
+            "average_stock_weeks": 4.172017536643434,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              99.99999999999997,
+              99.99999999999997
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 95.72651898258363,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 93.24646748341482,
+              "average_stock_weeks": 1.3608809804090305,
+              "unmet_quantity": 69.73359999999998,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 6.475,
+              "logistics_seed_range_95_fill_pct": [
+                89.34083095249623,
+                97.01394605588105
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 98.01120836987845,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 95.51739736574498,
+              "average_stock_weeks": 1.5646951343652302,
+              "unmet_quantity": 46.285113499999994,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.375,
+              "logistics_seed_range_95_fill_pct": [
+                92.12610769454263,
+                98.29566364824946
+              ]
+            }
+          }
+        }
+      },
+      "recent4": {
+        "forecast_method": "recent4",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 93.7456644563217,
+            "average_stock_weeks": 1.2734469937314905,
+            "unmet_quantity": 64.57914165624999,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 6.315,
+            "logistics_seed_range_95_fill_pct": [
+              90.334411771827,
+              97.26525236368697
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 95.89084597295529,
+            "average_stock_weeks": 1.4768018456944418,
+            "unmet_quantity": 42.42906990625,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 4.455,
+            "logistics_seed_range_95_fill_pct": [
+              93.18606884957144,
+              98.46906248486755
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 97.30471742591155,
+            "average_stock_weeks": 1.6923692790182738,
+            "unmet_quantity": 27.830140218749992,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.53,
+            "logistics_seed_range_95_fill_pct": [
+              95.17077524998786,
+              99.36958258679965
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 99.16326268401045,
+            "average_stock_weeks": 2.1436036386635284,
+            "unmet_quantity": 8.639731156249995,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.08,
+            "logistics_seed_range_95_fill_pct": [
+              97.91497687763302,
+              99.99999999999997
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 99.75006506948813,
+            "average_stock_weeks": 2.6169885684836913,
+            "unmet_quantity": 2.580703124999999,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.3,
+            "logistics_seed_range_95_fill_pct": [
+              99.16688356496051,
+              99.99999999999997
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.99999999999999,
+            "average_stock_weeks": 3.095489435925982,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              99.99999999999997,
+              99.99999999999997
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.99999999999999,
+            "average_stock_weeks": 4.0642140132693525,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              99.99999999999997,
+              99.99999999999997
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 96.52280415987971,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 93.7456644563217,
+              "average_stock_weeks": 1.2734469937314905,
+              "unmet_quantity": 64.57914165624999,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 6.315,
+              "logistics_seed_range_95_fill_pct": [
+                90.334411771827,
+                97.26525236368697
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 98.84501080691642,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 95.89084597295529,
+              "average_stock_weeks": 1.4768018456944418,
+              "unmet_quantity": 42.42906990625,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 4.455,
+              "logistics_seed_range_95_fill_pct": [
+                93.18606884957144,
+                98.46906248486755
+              ]
+            }
+          }
+        }
+      },
+      "selected": {
+        "forecast_method": "recent4",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 93.7456644563217,
+            "average_stock_weeks": 1.2734469937314905,
+            "unmet_quantity": 64.57914165624999,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 6.315,
+            "logistics_seed_range_95_fill_pct": [
+              90.334411771827,
+              97.26525236368697
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 95.89084597295529,
+            "average_stock_weeks": 1.4768018456944418,
+            "unmet_quantity": 42.42906990625,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 4.455,
+            "logistics_seed_range_95_fill_pct": [
+              93.18606884957144,
+              98.46906248486755
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 97.30471742591155,
+            "average_stock_weeks": 1.6923692790182738,
+            "unmet_quantity": 27.830140218749992,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.53,
+            "logistics_seed_range_95_fill_pct": [
+              95.17077524998786,
+              99.36958258679965
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 99.16326268401045,
+            "average_stock_weeks": 2.1436036386635284,
+            "unmet_quantity": 8.639731156249995,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.08,
+            "logistics_seed_range_95_fill_pct": [
+              97.91497687763302,
+              99.99999999999997
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 99.75006506948813,
+            "average_stock_weeks": 2.6169885684836913,
+            "unmet_quantity": 2.580703124999999,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.3,
+            "logistics_seed_range_95_fill_pct": [
+              99.16688356496051,
+              99.99999999999997
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.99999999999999,
+            "average_stock_weeks": 3.095489435925982,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              99.99999999999997,
+              99.99999999999997
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.99999999999999,
+            "average_stock_weeks": 4.0642140132693525,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              99.99999999999997,
+              99.99999999999997
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 96.52280415987971,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 93.7456644563217,
+              "average_stock_weeks": 1.2734469937314905,
+              "unmet_quantity": 64.57914165624999,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 6.315,
+              "logistics_seed_range_95_fill_pct": [
+                90.334411771827,
+                97.26525236368697
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 98.84501080691642,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 95.89084597295529,
+              "average_stock_weeks": 1.4768018456944418,
+              "unmet_quantity": 42.42906990625,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 4.455,
+              "logistics_seed_range_95_fill_pct": [
+                93.18606884957144,
+                98.46906248486755
+              ]
+            }
+          }
+        }
+      },
+      "ml": {
+        "forecast_method": "ml",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 94.91523377843602,
+            "average_stock_weeks": 1.2418145832822043,
+            "unmet_quantity": 52.50275362075864,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.62,
+            "logistics_seed_range_95_fill_pct": [
+              91.41169772020994,
+              98.20297425129232
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 96.874674380491,
+            "average_stock_weeks": 1.448382168565998,
+            "unmet_quantity": 32.270549684239974,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.805,
+            "logistics_seed_range_95_fill_pct": [
+              94.18065221812164,
+              99.19053720993432
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 98.27412117724823,
+            "average_stock_weeks": 1.6650507561634986,
+            "unmet_quantity": 17.820561784323132,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.95,
+            "logistics_seed_range_95_fill_pct": [
+              96.28666592639584,
+              99.9288183600661
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 99.84109397023148,
+            "average_stock_weeks": 2.1198725079150784,
+            "unmet_quantity": 1.6407842103746597,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.655,
+            "logistics_seed_range_95_fill_pct": [
+              99.51558536081224,
+              99.99999999999997
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 99.99999999999999,
+            "average_stock_weeks": 2.6002450979436786,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              99.99999999999997,
+              99.99999999999997
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.99999999999999,
+            "average_stock_weeks": 3.085160621499094,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              99.99999999999997,
+              99.99999999999997
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.99999999999999,
+            "average_stock_weeks": 4.062507930650836,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              99.99999999999997,
+              99.99999999999997
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 99.29008318799497,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 94.91523377843602,
+              "average_stock_weeks": 1.2418145832822043,
+              "unmet_quantity": 52.50275362075864,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.62,
+              "logistics_seed_range_95_fill_pct": [
+                91.41169772020994,
+                98.20297425129232
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 99.29008318799497,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 94.91523377843602,
+              "average_stock_weeks": 1.2418145832822043,
+              "unmet_quantity": 52.50275362075864,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.62,
+              "logistics_seed_range_95_fill_pct": [
+                91.41169772020994,
+                98.20297425129232
+              ]
+            }
+          }
+        }
+      }
+    },
+    "N02BE": {
+      "naive": {
+        "forecast_method": "naive",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 94.82608031052143,
+            "average_stock_weeks": 1.3228718124416965,
+            "unmet_quantity": 511.644572,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.685,
+            "logistics_seed_range_95_fill_pct": [
+              90.69692522416005,
+              98.27774507842925
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 97.0376668332505,
+            "average_stock_weeks": 1.5299860842400976,
+            "unmet_quantity": 292.9426385,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 4.63,
+            "logistics_seed_range_95_fill_pct": [
+              94.44641177051157,
+              99.67244261150566
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 98.38159598079307,
+            "average_stock_weeks": 1.7500531257700356,
+            "unmet_quantity": 160.04261400000004,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.385,
+            "logistics_seed_range_95_fill_pct": [
+              96.53631684706394,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 99.68117101004802,
+            "average_stock_weeks": 2.2180717056472266,
+            "unmet_quantity": 31.528731000000036,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.915,
+            "logistics_seed_range_95_fill_pct": [
+              99.21570473447242,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 99.99170358004864,
+            "average_stock_weeks": 2.71071580211422,
+            "unmet_quantity": 0.8204260000000011,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.01,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000001,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 100.00000000000001,
+            "average_stock_weeks": 3.20739550621481,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000001,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 100.00000000000001,
+            "average_stock_weeks": 4.216282146220733,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000001,
+              100.00000000000001
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 95.25381144029255,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 94.82608031052143,
+              "average_stock_weeks": 1.3228718124416965,
+              "unmet_quantity": 511.644572,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.685,
+              "logistics_seed_range_95_fill_pct": [
+                90.69692522416005,
+                98.27774507842925
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 1,
+            "calibration_fill_pct": 98.91398871597976,
+            "test": {
+              "buffer_weeks": 1,
+              "fill_rate_pct": 99.68117101004802,
+              "average_stock_weeks": 2.2180717056472266,
+              "unmet_quantity": 31.528731000000036,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 0.915,
+              "logistics_seed_range_95_fill_pct": [
+                99.21570473447242,
+                100.00000000000001
+              ]
+            }
+          }
+        }
+      },
+      "recent4": {
+        "forecast_method": "recent4",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 95.66725938177275,
+            "average_stock_weeks": 1.3637306669937521,
+            "unmet_quantity": 428.46108023437506,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.505,
+            "logistics_seed_range_95_fill_pct": [
+              92.67014868117246,
+              99.27135093330124
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 97.4410121863332,
+            "average_stock_weeks": 1.586925115577294,
+            "unmet_quantity": 253.05615534375008,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.51,
+            "logistics_seed_range_95_fill_pct": [
+              95.27806692551036,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 98.46102841239123,
+            "average_stock_weeks": 1.823768975976588,
+            "unmet_quantity": 152.1876075625001,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.985,
+            "logistics_seed_range_95_fill_pct": [
+              97.00786055569692,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 99.73612423400351,
+            "average_stock_weeks": 2.3140221831047363,
+            "unmet_quantity": 26.094452843750023,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.605,
+            "logistics_seed_range_95_fill_pct": [
+              99.31500810952133,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 99.99199304554718,
+            "average_stock_weeks": 2.827538761554625,
+            "unmet_quantity": 0.7918009999999992,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.01,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000001,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 100.00000000000001,
+            "average_stock_weeks": 3.348612841955009,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000001,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 100.00000000000001,
+            "average_stock_weeks": 4.402299953917872,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000001,
+              100.00000000000001
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 97.01081500189888,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 95.66725938177275,
+              "average_stock_weeks": 1.3637306669937521,
+              "unmet_quantity": 428.46108023437506,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.505,
+              "logistics_seed_range_95_fill_pct": [
+                92.67014868117246,
+                99.27135093330124
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 98.11617602000887,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 97.4410121863332,
+              "average_stock_weeks": 1.586925115577294,
+              "unmet_quantity": 253.05615534375008,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 2.51,
+              "logistics_seed_range_95_fill_pct": [
+                95.27806692551036,
+                100.00000000000001
+              ]
+            }
+          }
+        }
+      },
+      "selected": {
+        "forecast_method": "recent4",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 95.66725938177275,
+            "average_stock_weeks": 1.3637306669937521,
+            "unmet_quantity": 428.46108023437506,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.505,
+            "logistics_seed_range_95_fill_pct": [
+              92.67014868117246,
+              99.27135093330124
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 97.4410121863332,
+            "average_stock_weeks": 1.586925115577294,
+            "unmet_quantity": 253.05615534375008,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.51,
+            "logistics_seed_range_95_fill_pct": [
+              95.27806692551036,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 98.46102841239123,
+            "average_stock_weeks": 1.823768975976588,
+            "unmet_quantity": 152.1876075625001,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.985,
+            "logistics_seed_range_95_fill_pct": [
+              97.00786055569692,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 99.73612423400351,
+            "average_stock_weeks": 2.3140221831047363,
+            "unmet_quantity": 26.094452843750023,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.605,
+            "logistics_seed_range_95_fill_pct": [
+              99.31500810952133,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 99.99199304554718,
+            "average_stock_weeks": 2.827538761554625,
+            "unmet_quantity": 0.7918009999999992,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.01,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000001,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 100.00000000000001,
+            "average_stock_weeks": 3.348612841955009,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000001,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 100.00000000000001,
+            "average_stock_weeks": 4.402299953917872,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000001,
+              100.00000000000001
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 97.01081500189888,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 95.66725938177275,
+              "average_stock_weeks": 1.3637306669937521,
+              "unmet_quantity": 428.46108023437506,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.505,
+              "logistics_seed_range_95_fill_pct": [
+                92.67014868117246,
+                99.27135093330124
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 98.11617602000887,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 97.4410121863332,
+              "average_stock_weeks": 1.586925115577294,
+              "unmet_quantity": 253.05615534375008,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 2.51,
+              "logistics_seed_range_95_fill_pct": [
+                95.27806692551036,
+                100.00000000000001
+              ]
+            }
+          }
+        }
+      },
+      "ml": {
+        "forecast_method": "ml",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 95.87636368126135,
+            "average_stock_weeks": 1.3122669186598566,
+            "unmet_quantity": 407.78293170555924,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 4.435,
+            "logistics_seed_range_95_fill_pct": [
+              92.99610701564191,
+              99.19254141833555
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 97.56536658435095,
+            "average_stock_weeks": 1.5331342260172796,
+            "unmet_quantity": 240.75885338146733,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.695,
+            "logistics_seed_range_95_fill_pct": [
+              95.2616104953079,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 98.69196686294683,
+            "average_stock_weeks": 1.7634863338096252,
+            "unmet_quantity": 129.35029817535565,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.72,
+            "logistics_seed_range_95_fill_pct": [
+              96.85432021084048,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 99.61638319711199,
+            "average_stock_weeks": 2.2474810727518686,
+            "unmet_quantity": 37.935543399483606,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.31,
+            "logistics_seed_range_95_fill_pct": [
+              98.72303572338018,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 100.00000000000001,
+            "average_stock_weeks": 2.7437166258053884,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000001,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 100.00000000000001,
+            "average_stock_weeks": 3.2475582665390674,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000001,
+              100.00000000000001
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 100.00000000000001,
+            "average_stock_weeks": 4.250961499585108,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.00000000000001,
+              100.00000000000001
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 95.45706647546136,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 95.87636368126135,
+              "average_stock_weeks": 1.3122669186598566,
+              "unmet_quantity": 407.78293170555924,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 4.435,
+              "logistics_seed_range_95_fill_pct": [
+                92.99610701564191,
+                99.19254141833555
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.5,
+            "calibration_fill_pct": 98.08125376099761,
+            "test": {
+              "buffer_weeks": 0.5,
+              "fill_rate_pct": 98.69196686294683,
+              "average_stock_weeks": 1.7634863338096252,
+              "unmet_quantity": 129.35029817535565,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 1.72,
+              "logistics_seed_range_95_fill_pct": [
+                96.85432021084048,
+                100.00000000000001
+              ]
+            }
+          }
+        }
+      }
+    },
+    "N05B": {
+      "naive": {
+        "forecast_method": "naive",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 95.42389470744307,
+            "average_stock_weeks": 1.357898303590742,
+            "unmet_quantity": 131.07796000000002,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.35,
+            "logistics_seed_range_95_fill_pct": [
+              92.06971791649208,
+              98.62484289903642
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 97.349140832286,
+            "average_stock_weeks": 1.5676815767629244,
+            "unmet_quantity": 75.93121000000001,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.69,
+            "logistics_seed_range_95_fill_pct": [
+              95.39257785225527,
+              99.54872748219522
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 98.80607945817621,
+            "average_stock_weeks": 1.7927993453926019,
+            "unmet_quantity": 34.19866000000001,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.575,
+            "logistics_seed_range_95_fill_pct": [
+              97.4231950844854,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 99.97346739282222,
+            "average_stock_weeks": 2.2903168288989826,
+            "unmet_quantity": 0.7600000000000031,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.295,
+            "logistics_seed_range_95_fill_pct": [
+              99.53917050691244,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 2.8156723269521957,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 3.3417805764654984,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 4.403606502271254,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 96.08607245155854,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 97.349140832286,
+              "average_stock_weeks": 1.5676815767629244,
+              "unmet_quantity": 75.93121000000001,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 3.69,
+              "logistics_seed_range_95_fill_pct": [
+                95.39257785225527,
+                99.54872748219522
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 1,
+            "calibration_fill_pct": 99.0705754001685,
+            "test": {
+              "buffer_weeks": 1,
+              "fill_rate_pct": 99.97346739282222,
+              "average_stock_weeks": 2.2903168288989826,
+              "unmet_quantity": 0.7600000000000031,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 0.295,
+              "logistics_seed_range_95_fill_pct": [
+                99.53917050691244,
+                100.0
+              ]
+            }
+          }
+        }
+      },
+      "recent4": {
+        "forecast_method": "recent4",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 97.0032968946376,
+            "average_stock_weeks": 1.300880949566028,
+            "unmet_quantity": 85.83756375000002,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 4.82,
+            "logistics_seed_range_95_fill_pct": [
+              95.03280300848344,
+              99.38991640919562
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 98.69705038577013,
+            "average_stock_weeks": 1.5249792273178944,
+            "unmet_quantity": 37.32168875,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.605,
+            "logistics_seed_range_95_fill_pct": [
+              97.29504051895684,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 99.45371194665549,
+            "average_stock_weeks": 1.766696448497999,
+            "unmet_quantity": 15.647875000000006,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.18,
+            "logistics_seed_range_95_fill_pct": [
+              98.63071236559139,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 2.2673592026788603,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 2.778192830058268,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 3.289026457437675,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 4.310532675768576,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 96.76399557708508,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 97.0032968946376,
+              "average_stock_weeks": 1.300880949566028,
+              "unmet_quantity": 85.83756375000002,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 4.82,
+              "logistics_seed_range_95_fill_pct": [
+                95.03280300848344,
+                99.38991640919562
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 98.45286831297389,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 98.69705038577013,
+              "average_stock_weeks": 1.5249792273178944,
+              "unmet_quantity": 37.32168875,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 2.605,
+              "logistics_seed_range_95_fill_pct": [
+                97.29504051895684,
+                100.0
+              ]
+            }
+          }
+        }
+      },
+      "selected": {
+        "forecast_method": "croston",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 95.51354736026263,
+            "average_stock_weeks": 1.1945281152213816,
+            "unmet_quantity": 128.50994941263647,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 7.7,
+            "logistics_seed_range_95_fill_pct": [
+              92.98918326923928,
+              98.22354254558633
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 98.0943540757256,
+            "average_stock_weeks": 1.3915684804188304,
+            "unmet_quantity": 54.58532185491555,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 4.99,
+            "logistics_seed_range_95_fill_pct": [
+              96.55667608047938,
+              99.46951084004208
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 99.56994505299463,
+            "average_stock_weeks": 1.608597271393462,
+            "unmet_quantity": 12.318493902021546,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.145,
+            "logistics_seed_range_95_fill_pct": [
+              98.70529708580094,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 2.091353512431509,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 2.5818643982506164,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 3.0723752840697234,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 4.053397055707937,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 97.18252057248169,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 95.51354736026263,
+              "average_stock_weeks": 1.1945281152213816,
+              "unmet_quantity": 128.50994941263647,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 7.7,
+              "logistics_seed_range_95_fill_pct": [
+                92.98918326923928,
+                98.22354254558633
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 98.13524649591014,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 98.0943540757256,
+              "average_stock_weeks": 1.3915684804188304,
+              "unmet_quantity": 54.58532185491555,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 4.99,
+              "logistics_seed_range_95_fill_pct": [
+                96.55667608047938,
+                99.46951084004208
+              ]
+            }
+          }
+        }
+      },
+      "ml": {
+        "forecast_method": "ml",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 95.30687970330146,
+            "average_stock_weeks": 1.2145312863136875,
+            "unmet_quantity": 134.42973777863284,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 6.845,
+            "logistics_seed_range_95_fill_pct": [
+              92.73980288560311,
+              98.05806690836796
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 97.64790902469231,
+            "average_stock_weeks": 1.4162581036574806,
+            "unmet_quantity": 67.37329389671305,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.075,
+            "logistics_seed_range_95_fill_pct": [
+              95.93180613460827,
+              99.33167414710226
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 99.19351988495397,
+            "average_stock_weeks": 1.6344848652739181,
+            "unmet_quantity": 23.100816415378386,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.47,
+            "logistics_seed_range_95_fill_pct": [
+              98.34089922256287,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 2.1143469667429233,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 2.612421648983737,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 3.1185780900893723,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 100.0,
+            "average_stock_weeks": 4.088968041501339,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              100.0,
+              100.0
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 96.99682834994462,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 95.30687970330146,
+              "average_stock_weeks": 1.2145312863136875,
+              "unmet_quantity": 134.42973777863284,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 6.845,
+              "logistics_seed_range_95_fill_pct": [
+                92.73980288560311,
+                98.05806690836796
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 98.13998612729796,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 97.64790902469231,
+              "average_stock_weeks": 1.4162581036574806,
+              "unmet_quantity": 67.37329389671305,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.075,
+              "logistics_seed_range_95_fill_pct": [
+                95.93180613460827,
+                99.33167414710226
+              ]
+            }
+          }
+        }
+      }
+    },
+    "N05C": {
+      "naive": {
+        "forecast_method": "naive",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 90.23893975903614,
+            "average_stock_weeks": 2.8260264612954185,
+            "unmet_quantity": 24.305039999999998,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 6.935,
+            "logistics_seed_range_95_fill_pct": [
+              85.93373493975903,
+              93.97590361445783
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 92.93773895582329,
+            "average_stock_weeks": 3.197154050157977,
+            "unmet_quantity": 17.58503,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.775,
+            "logistics_seed_range_95_fill_pct": [
+              89.03614457831326,
+              96.285140562249
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 94.90461847389557,
+            "average_stock_weeks": 3.597872760663506,
+            "unmet_quantity": 12.6875,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 4.215,
+            "logistics_seed_range_95_fill_pct": [
+              90.96385542168674,
+              97.79116465863454
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 98.06224899598394,
+            "average_stock_weeks": 4.422718961295418,
+            "unmet_quantity": 4.825,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.235,
+            "logistics_seed_range_95_fill_pct": [
+              95.17068273092369,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 98.97688755020081,
+            "average_stock_weeks": 5.285420602290678,
+            "unmet_quantity": 2.54755,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.89,
+            "logistics_seed_range_95_fill_pct": [
+              97.18875502008032,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.7479718875502,
+            "average_stock_weeks": 6.1421056615323835,
+            "unmet_quantity": 0.6275500000000004,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.27,
+            "logistics_seed_range_95_fill_pct": [
+              99.1616265060241,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.95983935742974,
+            "average_stock_weeks": 7.909295446287517,
+            "unmet_quantity": 0.09999999999999996,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.025,
+            "logistics_seed_range_95_fill_pct": [
+              99.95983935742971,
+              100.0
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0,
+            "calibration_fill_pct": 97.95146575342466,
+            "test": {
+              "buffer_weeks": 0,
+              "fill_rate_pct": 90.23893975903614,
+              "average_stock_weeks": 2.8260264612954185,
+              "unmet_quantity": 24.305039999999998,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 6.935,
+              "logistics_seed_range_95_fill_pct": [
+                85.93373493975903,
+                93.97590361445783
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 0.25,
+            "calibration_fill_pct": 98.97715068493149,
+            "test": {
+              "buffer_weeks": 0.25,
+              "fill_rate_pct": 92.93773895582329,
+              "average_stock_weeks": 3.197154050157977,
+              "unmet_quantity": 17.58503,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.775,
+              "logistics_seed_range_95_fill_pct": [
+                89.03614457831326,
+                96.285140562249
+              ]
+            }
+          }
+        }
+      },
+      "recent4": {
+        "forecast_method": "recent4",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 84.74394452811244,
+            "average_stock_weeks": 1.9903410373469592,
+            "unmet_quantity": 37.987578125,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 10.08,
+            "logistics_seed_range_95_fill_pct": [
+              81.30647590361446,
+              87.61373619477911
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 87.42645582329317,
+            "average_stock_weeks": 2.250053236818721,
+            "unmet_quantity": 31.308125,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 8.27,
+            "logistics_seed_range_95_fill_pct": [
+              83.88852284136546,
+              90.05631902610442
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 89.70660768072288,
+            "average_stock_weeks": 2.5254983981289496,
+            "unmet_quantity": 25.630546875,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 7.035,
+            "logistics_seed_range_95_fill_pct": [
+              86.26976656626506,
+              92.38830321285141
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 93.02233935742971,
+            "average_stock_weeks": 3.114305610436414,
+            "unmet_quantity": 17.374375,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.23,
+            "logistics_seed_range_95_fill_pct": [
+              89.52685742971887,
+              95.55095381526104
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 96.1085592369478,
+            "average_stock_weeks": 3.707707239089652,
+            "unmet_quantity": 9.6896875,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.23,
+            "logistics_seed_range_95_fill_pct": [
+              92.3820281124498,
+              98.37474899598394
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 97.82768574297188,
+            "average_stock_weeks": 4.343605614879542,
+            "unmet_quantity": 5.4090625,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.89,
+            "logistics_seed_range_95_fill_pct": [
+              94.54066265060241,
+              99.67369477911646
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.2246485943775,
+            "average_stock_weeks": 5.676809666024881,
+            "unmet_quantity": 1.930625,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.89,
+            "logistics_seed_range_95_fill_pct": [
+              97.55271084337349,
+              100.0
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0.5,
+            "calibration_fill_pct": 95.86868578767124,
+            "test": {
+              "buffer_weeks": 0.5,
+              "fill_rate_pct": 89.70660768072288,
+              "average_stock_weeks": 2.5254983981289496,
+              "unmet_quantity": 25.630546875,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 7.035,
+              "logistics_seed_range_95_fill_pct": [
+                86.26976656626506,
+                92.38830321285141
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 1,
+            "calibration_fill_pct": 98.61633133561644,
+            "test": {
+              "buffer_weeks": 1,
+              "fill_rate_pct": 93.02233935742971,
+              "average_stock_weeks": 3.114305610436414,
+              "unmet_quantity": 17.374375,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.23,
+              "logistics_seed_range_95_fill_pct": [
+                89.52685742971887,
+                95.55095381526104
+              ]
+            }
+          }
+        }
+      },
+      "selected": {
+        "forecast_method": "croston",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 82.9404957329384,
+            "average_stock_weeks": 1.4660525306828516,
+            "unmet_quantity": 42.47816562498334,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 13.965,
+            "logistics_seed_range_95_fill_pct": [
+              79.16402424180984,
+              86.2319696282631
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 86.29733198734012,
+            "average_stock_weeks": 1.67062045854639,
+            "unmet_quantity": 34.11964335152311,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 11.705,
+            "logistics_seed_range_95_fill_pct": [
+              82.57776576138735,
+              89.75922060141076
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 89.35657681724427,
+            "average_stock_weeks": 1.8840524828896787,
+            "unmet_quantity": 26.502123725061775,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 8.365,
+            "logistics_seed_range_95_fill_pct": [
+              85.81044781042927,
+              92.41037405008612
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 94.04848567331508,
+            "average_stock_weeks": 2.3448210572457184,
+            "unmet_quantity": 14.819270673445454,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.21,
+            "logistics_seed_range_95_fill_pct": [
+              90.7245163756169,
+              96.92744325332765
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 96.90885482505823,
+            "average_stock_weeks": 2.8473130536382105,
+            "unmet_quantity": 7.696951485605066,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.97,
+            "logistics_seed_range_95_fill_pct": [
+              94.07677729204293,
+              99.17742522191125
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 98.70825300434764,
+            "average_stock_weeks": 3.3739563836023376,
+            "unmet_quantity": 3.2164500191743985,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.735,
+            "logistics_seed_range_95_fill_pct": [
+              96.46035278987416,
+              100.0
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.8340477720134,
+            "average_stock_weeks": 4.489367435904679,
+            "unmet_quantity": 0.4132210476866103,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.325,
+            "logistics_seed_range_95_fill_pct": [
+              99.48937776004126,
+              100.0
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 1,
+            "calibration_fill_pct": 97.08178396292074,
+            "test": {
+              "buffer_weeks": 1,
+              "fill_rate_pct": 94.04848567331508,
+              "average_stock_weeks": 2.3448210572457184,
+              "unmet_quantity": 14.819270673445454,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.21,
+              "logistics_seed_range_95_fill_pct": [
+                90.7245163756169,
+                96.92744325332765
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 1.5,
+            "calibration_fill_pct": 98.74097128311827,
+            "test": {
+              "buffer_weeks": 1.5,
+              "fill_rate_pct": 96.90885482505823,
+              "average_stock_weeks": 2.8473130536382105,
+              "unmet_quantity": 7.696951485605066,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 3.97,
+              "logistics_seed_range_95_fill_pct": [
+                94.07677729204293,
+                99.17742522191125
+              ]
+            }
+          }
+        }
+      },
+      "ml": {
+        "forecast_method": "ml",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 74.54090708025801,
+            "average_stock_weeks": 1.1385443548897443,
+            "unmet_quantity": 63.39314137015759,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 18.98,
+            "logistics_seed_range_95_fill_pct": [
+              70.29061684479889,
+              78.63812552787063
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 78.53066577541213,
+            "average_stock_weeks": 1.2910400033450578,
+            "unmet_quantity": 53.45864221922379,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 17.94,
+            "logistics_seed_range_95_fill_pct": [
+              74.61609825073684,
+              82.07112069896468
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 81.93141091450707,
+            "average_stock_weeks": 1.4555084486778662,
+            "unmet_quantity": 44.99078682287741,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 15.12,
+            "logistics_seed_range_95_fill_pct": [
+              78.34398465922209,
+              85.47094994957722
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 87.83048793306345,
+            "average_stock_weeks": 1.8094508990416238,
+            "unmet_quantity": 30.302085046671994,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 10.755,
+            "logistics_seed_range_95_fill_pct": [
+              84.42560073430307,
+              91.30519435946046
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 91.63768064750606,
+            "average_stock_weeks": 2.210473077177766,
+            "unmet_quantity": 20.822175187709956,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 7.035,
+            "logistics_seed_range_95_fill_pct": [
+              88.55856284102673,
+              94.44953688592217
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 94.6120290417569,
+            "average_stock_weeks": 2.6449494133458895,
+            "unmet_quantity": 13.416047686025323,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 6.215,
+            "logistics_seed_range_95_fill_pct": [
+              91.58772585879669,
+              97.37763769140682
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 97.75557479433456,
+            "average_stock_weeks": 3.616232801892287,
+            "unmet_quantity": 5.588618762106909,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.935,
+            "logistics_seed_range_95_fill_pct": [
+              95.59818332993406,
+              99.72654225714822
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 3,
+            "calibration_fill_pct": 97.55364059008981,
+            "test": {
+              "buffer_weeks": 3,
+              "fill_rate_pct": 97.75557479433456,
+              "average_stock_weeks": 3.616232801892287,
+              "unmet_quantity": 5.588618762106909,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 1.935,
+              "logistics_seed_range_95_fill_pct": [
+                95.59818332993406,
+                99.72654225714822
+              ]
+            }
+          },
+          "98": null
+        }
+      }
+    },
+    "R03": {
+      "naive": {
+        "forecast_method": "naive",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 85.96491045163104,
+            "average_stock_weeks": 1.986350223905049,
+            "unmet_quantity": 380.53221333459993,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 9.93,
+            "logistics_seed_range_95_fill_pct": [
+              80.33925281617881,
+              91.4002474219374
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 88.27116644892467,
+            "average_stock_weeks": 2.1764895543828247,
+            "unmet_quantity": 318.00288666790004,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 8.96,
+            "logistics_seed_range_95_fill_pct": [
+              82.46484117350897,
+              93.7356472160056
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 90.17961734102481,
+            "average_stock_weeks": 2.3724827778374284,
+            "unmet_quantity": 266.2592166679,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 6.205,
+            "logistics_seed_range_95_fill_pct": [
+              84.17277251004695,
+              95.61258932551137
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 93.47560885799267,
+            "average_stock_weeks": 2.79852718516019,
+            "unmet_quantity": 176.89527333420003,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.195,
+            "logistics_seed_range_95_fill_pct": [
+              87.85357532542872,
+              98.07904104747357
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 96.11087578182494,
+            "average_stock_weeks": 3.328109640905536,
+            "unmet_quantity": 105.44550083382502,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.125,
+            "logistics_seed_range_95_fill_pct": [
+              90.39203331746506,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 97.61030357610409,
+            "average_stock_weeks": 3.910591718393759,
+            "unmet_quantity": 64.79163999980001,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.26,
+            "logistics_seed_range_95_fill_pct": [
+              93.21504203102062,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.32348714481064,
+            "average_stock_weeks": 5.115783736581475,
+            "unmet_quantity": 18.342236666700014,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.64,
+            "logistics_seed_range_95_fill_pct": [
+              97.565735888494,
+              99.99999999999999
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 0.5,
+            "calibration_fill_pct": 96.10205165615142,
+            "test": {
+              "buffer_weeks": 0.5,
+              "fill_rate_pct": 90.17961734102481,
+              "average_stock_weeks": 2.3724827778374284,
+              "unmet_quantity": 266.2592166679,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 6.205,
+              "logistics_seed_range_95_fill_pct": [
+                84.17277251004695,
+                95.61258932551137
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 1,
+            "calibration_fill_pct": 99.31609660883281,
+            "test": {
+              "buffer_weeks": 1,
+              "fill_rate_pct": 93.47560885799267,
+              "average_stock_weeks": 2.79852718516019,
+              "unmet_quantity": 176.89527333420003,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 5.195,
+              "logistics_seed_range_95_fill_pct": [
+                87.85357532542872,
+                98.07904104747357
+              ]
+            }
+          }
+        }
+      },
+      "recent4": {
+        "forecast_method": "recent4",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 87.10179653759788,
+            "average_stock_weeks": 2.0589393596822823,
+            "unmet_quantity": 349.70791562625004,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 9.44,
+            "logistics_seed_range_95_fill_pct": [
+              82.18173706415186,
+              92.53101900220985
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 89.83020988609078,
+            "average_stock_weeks": 2.3363314454402455,
+            "unmet_quantity": 275.73267187625004,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 7.67,
+            "logistics_seed_range_95_fill_pct": [
+              85.24874271938927,
+              94.62372831215794
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 92.14240984366148,
+            "average_stock_weeks": 2.6353784006987144,
+            "unmet_quantity": 213.0421871098883,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 6.59,
+            "logistics_seed_range_95_fill_pct": [
+              87.85838917780097,
+              96.3284065434373
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 95.29742359978594,
+            "average_stock_weeks": 3.2725877305975133,
+            "unmet_quantity": 127.50056205779299,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.225,
+            "logistics_seed_range_95_fill_pct": [
+              91.38844492939542,
+              98.67988247947609
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 98.05639403977526,
+            "average_stock_weeks": 3.930525752545543,
+            "unmet_quantity": 52.69682643247424,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.42,
+            "logistics_seed_range_95_fill_pct": [
+              95.14633534924947,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.52048262567183,
+            "average_stock_weeks": 4.607591061789816,
+            "unmet_quantity": 13.001114610394536,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.09,
+            "logistics_seed_range_95_fill_pct": [
+              98.50270934812927,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.99999999999999,
+            "average_stock_weeks": 6.060809344537367,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              99.99999999999999,
+              99.99999999999999
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 1.5,
+            "calibration_fill_pct": 97.06969637223975,
+            "test": {
+              "buffer_weeks": 1.5,
+              "fill_rate_pct": 98.05639403977526,
+              "average_stock_weeks": 3.930525752545543,
+              "unmet_quantity": 52.69682643247424,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 1.42,
+              "logistics_seed_range_95_fill_pct": [
+                95.14633534924947,
+                99.99999999999999
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 2,
+            "calibration_fill_pct": 99.17931782334382,
+            "test": {
+              "buffer_weeks": 2,
+              "fill_rate_pct": 99.52048262567183,
+              "average_stock_weeks": 4.607591061789816,
+              "unmet_quantity": 13.001114610394536,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 1.09,
+              "logistics_seed_range_95_fill_pct": [
+                98.50270934812927,
+                99.99999999999999
+              ]
+            }
+          }
+        }
+      },
+      "selected": {
+        "forecast_method": "recent4",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 87.10179653759788,
+            "average_stock_weeks": 2.0589393596822823,
+            "unmet_quantity": 349.70791562625004,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 9.44,
+            "logistics_seed_range_95_fill_pct": [
+              82.18173706415186,
+              92.53101900220985
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 89.83020988609078,
+            "average_stock_weeks": 2.3363314454402455,
+            "unmet_quantity": 275.73267187625004,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 7.67,
+            "logistics_seed_range_95_fill_pct": [
+              85.24874271938927,
+              94.62372831215794
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 92.14240984366148,
+            "average_stock_weeks": 2.6353784006987144,
+            "unmet_quantity": 213.0421871098883,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 6.59,
+            "logistics_seed_range_95_fill_pct": [
+              87.85838917780097,
+              96.3284065434373
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 95.29742359978594,
+            "average_stock_weeks": 3.2725877305975133,
+            "unmet_quantity": 127.50056205779299,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.225,
+            "logistics_seed_range_95_fill_pct": [
+              91.38844492939542,
+              98.67988247947609
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 98.05639403977526,
+            "average_stock_weeks": 3.930525752545543,
+            "unmet_quantity": 52.69682643247424,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.42,
+            "logistics_seed_range_95_fill_pct": [
+              95.14633534924947,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.52048262567183,
+            "average_stock_weeks": 4.607591061789816,
+            "unmet_quantity": 13.001114610394536,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.09,
+            "logistics_seed_range_95_fill_pct": [
+              98.50270934812927,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.99999999999999,
+            "average_stock_weeks": 6.060809344537367,
+            "unmet_quantity": 0.0,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.0,
+            "logistics_seed_range_95_fill_pct": [
+              99.99999999999999,
+              99.99999999999999
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 1.5,
+            "calibration_fill_pct": 97.06969637223975,
+            "test": {
+              "buffer_weeks": 1.5,
+              "fill_rate_pct": 98.05639403977526,
+              "average_stock_weeks": 3.930525752545543,
+              "unmet_quantity": 52.69682643247424,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 1.42,
+              "logistics_seed_range_95_fill_pct": [
+                95.14633534924947,
+                99.99999999999999
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 2,
+            "calibration_fill_pct": 99.17931782334382,
+            "test": {
+              "buffer_weeks": 2,
+              "fill_rate_pct": 99.52048262567183,
+              "average_stock_weeks": 4.607591061789816,
+              "unmet_quantity": 13.001114610394536,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 1.09,
+              "logistics_seed_range_95_fill_pct": [
+                98.50270934812927,
+                99.99999999999999
+              ]
+            }
+          }
+        }
+      },
+      "ml": {
+        "forecast_method": "ml",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 83.67616131154534,
+            "average_stock_weeks": 1.607942621109233,
+            "unmet_quantity": 442.5868780407239,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 12.16,
+            "logistics_seed_range_95_fill_pct": [
+              78.06850841707674,
+              89.05425486726826
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 86.73610261998581,
+            "average_stock_weeks": 1.8330991856117371,
+            "unmet_quantity": 359.6229443399851,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 9.83,
+            "logistics_seed_range_95_fill_pct": [
+              81.36368680742008,
+              91.89555645710165
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 89.3870938769027,
+            "average_stock_weeks": 2.0703423101808,
+            "unmet_quantity": 287.746839307047,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 7.635,
+            "logistics_seed_range_95_fill_pct": [
+              83.86855754835453,
+              94.09960851988275
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 93.52816779766202,
+            "average_stock_weeks": 2.5608982480169633,
+            "unmet_quantity": 175.47024718285473,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.595,
+            "logistics_seed_range_95_fill_pct": [
+              89.08531967032627,
+              97.15419324279803
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 96.59035619861189,
+            "average_stock_weeks": 3.082947696927359,
+            "unmet_quantity": 92.44538825016585,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.26,
+            "logistics_seed_range_95_fill_pct": [
+              93.9905541740873,
+              99.390152590073
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 98.17860854155555,
+            "average_stock_weeks": 3.6524487563148376,
+            "unmet_quantity": 49.3832348302427,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.3,
+            "logistics_seed_range_95_fill_pct": [
+              96.49024890043053,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.72367317189965,
+            "average_stock_weeks": 4.846482196274579,
+            "unmet_quantity": 7.492026263058437,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.81,
+            "logistics_seed_range_95_fill_pct": [
+              99.40649792470475,
+              99.99999999999999
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 1.5,
+            "calibration_fill_pct": 96.73619906930765,
+            "test": {
+              "buffer_weeks": 1.5,
+              "fill_rate_pct": 96.59035619861189,
+              "average_stock_weeks": 3.082947696927359,
+              "unmet_quantity": 92.44538825016585,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 3.26,
+              "logistics_seed_range_95_fill_pct": [
+                93.9905541740873,
+                99.390152590073
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 2,
+            "calibration_fill_pct": 98.85937766445275,
+            "test": {
+              "buffer_weeks": 2,
+              "fill_rate_pct": 98.17860854155555,
+              "average_stock_weeks": 3.6524487563148376,
+              "unmet_quantity": 49.3832348302427,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 1.3,
+              "logistics_seed_range_95_fill_pct": [
+                96.49024890043053,
+                99.99999999999999
+              ]
+            }
+          }
+        }
+      }
+    },
+    "R06": {
+      "naive": {
+        "forecast_method": "naive",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 90.96402667491662,
+            "average_stock_weeks": 1.6567636547859421,
+            "unmet_quantity": 105.1462,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 9.195,
+            "logistics_seed_range_95_fill_pct": [
+              85.14962746210166,
+              95.37472929772092
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 93.44405056546697,
+            "average_stock_weeks": 1.9059902133994675,
+            "unmet_quantity": 76.28764999999997,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.9,
+            "logistics_seed_range_95_fill_pct": [
+              88.15812880272247,
+              97.65036867072288
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 95.07417242446115,
+            "average_stock_weeks": 2.178012136774646,
+            "unmet_quantity": 57.31889999999999,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 4.29,
+            "logistics_seed_range_95_fill_pct": [
+              90.19821422433053,
+              98.58880323811486
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 97.53500438279877,
+            "average_stock_weeks": 2.757463857614198,
+            "unmet_quantity": 28.683674999999997,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.925,
+            "logistics_seed_range_95_fill_pct": [
+              93.93798769378846,
+              99.7164071362277
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 98.97291043621739,
+            "average_stock_weeks": 3.3696841411713923,
+            "unmet_quantity": 11.951625000000003,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.76,
+            "logistics_seed_range_95_fill_pct": [
+              96.717197758757,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.50082284899108,
+            "average_stock_weeks": 3.9994571875091447,
+            "unmet_quantity": 5.808625000000002,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.32,
+            "logistics_seed_range_95_fill_pct": [
+              98.38438004881232,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.94422673679142,
+            "average_stock_weeks": 5.222774418034703,
+            "unmet_quantity": 0.6489999999999987,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.295,
+            "logistics_seed_range_95_fill_pct": [
+              99.81093809081845,
+              99.99999999999999
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 1,
+            "calibration_fill_pct": 95.47439412032945,
+            "test": {
+              "buffer_weeks": 1,
+              "fill_rate_pct": 97.53500438279877,
+              "average_stock_weeks": 2.757463857614198,
+              "unmet_quantity": 28.683674999999997,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 2.925,
+              "logistics_seed_range_95_fill_pct": [
+                93.93798769378846,
+                99.7164071362277
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 2,
+            "calibration_fill_pct": 98.53593932225608,
+            "test": {
+              "buffer_weeks": 2,
+              "fill_rate_pct": 99.50082284899108,
+              "average_stock_weeks": 3.9994571875091447,
+              "unmet_quantity": 5.808625000000002,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 0.32,
+              "logistics_seed_range_95_fill_pct": [
+                98.38438004881232,
+                99.99999999999999
+              ]
+            }
+          }
+        }
+      },
+      "recent4": {
+        "forecast_method": "recent4",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 88.90387759530437,
+            "average_stock_weeks": 1.4756217424483515,
+            "unmet_quantity": 129.11891875,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 10.76,
+            "logistics_seed_range_95_fill_pct": [
+              83.94956035049499,
+              93.55694335232546
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 91.30297963180193,
+            "average_stock_weeks": 1.701041912714807,
+            "unmet_quantity": 101.2020078125,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 8.125,
+            "logistics_seed_range_95_fill_pct": [
+              86.5120420888333,
+              96.01282801167027
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 93.33027262512459,
+            "average_stock_weeks": 1.9338604621841438,
+            "unmet_quantity": 77.611615625,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.925,
+            "logistics_seed_range_95_fill_pct": [
+              88.87022551540856,
+              97.58880471516105
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 96.2390791234832,
+            "average_stock_weeks": 2.4291767855036324,
+            "unmet_quantity": 43.763579687500005,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 3.36,
+            "logistics_seed_range_95_fill_pct": [
+              92.77510589078237,
+              99.45788176003745
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 97.7379709360283,
+            "average_stock_weeks": 2.947426571004521,
+            "unmet_quantity": 26.321875,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.7,
+            "logistics_seed_range_95_fill_pct": [
+              95.29288885523012,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 98.5784428334794,
+            "average_stock_weeks": 3.4776798875962918,
+            "unmet_quantity": 16.541807812499993,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.03,
+            "logistics_seed_range_95_fill_pct": [
+              97.02751173043205,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.80727327072806,
+            "average_stock_weeks": 4.548156858176137,
+            "unmet_quantity": 2.2426453124999965,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.325,
+            "logistics_seed_range_95_fill_pct": [
+              99.3800434412705,
+              99.99999999999999
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 1.5,
+            "calibration_fill_pct": 96.07995447209791,
+            "test": {
+              "buffer_weeks": 1.5,
+              "fill_rate_pct": 97.7379709360283,
+              "average_stock_weeks": 2.947426571004521,
+              "unmet_quantity": 26.321875,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 1.7,
+              "logistics_seed_range_95_fill_pct": [
+                95.29288885523012,
+                99.99999999999999
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 3,
+            "calibration_fill_pct": 99.53929401202723,
+            "test": {
+              "buffer_weeks": 3,
+              "fill_rate_pct": 99.80727327072806,
+              "average_stock_weeks": 4.548156858176137,
+              "unmet_quantity": 2.2426453124999965,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 0.325,
+              "logistics_seed_range_95_fill_pct": [
+                99.3800434412705,
+                99.99999999999999
+              ]
+            }
+          }
+        }
+      },
+      "selected": {
+        "forecast_method": "ml",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 90.41086945829309,
+            "average_stock_weeks": 1.2096966378899727,
+            "unmet_quantity": 111.5829586355183,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 11.055,
+            "logistics_seed_range_95_fill_pct": [
+              84.85195746959987,
+              95.14515871934097
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 93.2348556544329,
+            "average_stock_weeks": 1.4096085124660294,
+            "unmet_quantity": 78.72192566275685,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 7.92,
+            "logistics_seed_range_95_fill_pct": [
+              88.57560922337082,
+              97.40099017459107
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 95.25026579681744,
+            "average_stock_weeks": 1.62640103016823,
+            "unmet_quantity": 55.26980708191322,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.525,
+            "logistics_seed_range_95_fill_pct": [
+              91.73523012722168,
+              98.74448812510181
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 97.91349324663523,
+            "average_stock_weeks": 2.091906085306087,
+            "unmet_quantity": 24.279427184853738,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.005,
+            "logistics_seed_range_95_fill_pct": [
+              95.96565533677519,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 98.83749264286016,
+            "average_stock_weeks": 2.588614545557992,
+            "unmet_quantity": 13.527400610621887,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.075,
+            "logistics_seed_range_95_fill_pct": [
+              97.37123266849864,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.34101283604048,
+            "average_stock_weeks": 3.085682900704215,
+            "unmet_quantity": 7.668238234698439,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.62,
+            "logistics_seed_range_95_fill_pct": [
+              98.10671874851091,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.86908418164599,
+            "average_stock_weeks": 4.088134797146385,
+            "unmet_quantity": 1.5233888286946315,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.31,
+            "logistics_seed_range_95_fill_pct": [
+              99.57769090853544,
+              99.99999999999999
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 1,
+            "calibration_fill_pct": 96.1118532039802,
+            "test": {
+              "buffer_weeks": 1,
+              "fill_rate_pct": 97.91349324663523,
+              "average_stock_weeks": 2.091906085306087,
+              "unmet_quantity": 24.279427184853738,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 2.005,
+              "logistics_seed_range_95_fill_pct": [
+                95.96565533677519,
+                99.99999999999999
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 1.5,
+            "calibration_fill_pct": 98.47647795588514,
+            "test": {
+              "buffer_weeks": 1.5,
+              "fill_rate_pct": 98.83749264286016,
+              "average_stock_weeks": 2.588614545557992,
+              "unmet_quantity": 13.527400610621887,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 1.075,
+              "logistics_seed_range_95_fill_pct": [
+                97.37123266849864,
+                99.99999999999999
+              ]
+            }
+          }
+        }
+      },
+      "ml": {
+        "forecast_method": "ml",
+        "frontier": [
+          {
+            "buffer_weeks": 0,
+            "fill_rate_pct": 90.41086945829309,
+            "average_stock_weeks": 1.2096966378899727,
+            "unmet_quantity": 111.5829586355183,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 11.055,
+            "logistics_seed_range_95_fill_pct": [
+              84.85195746959987,
+              95.14515871934097
+            ]
+          },
+          {
+            "buffer_weeks": 0.25,
+            "fill_rate_pct": 93.2348556544329,
+            "average_stock_weeks": 1.4096085124660294,
+            "unmet_quantity": 78.72192566275685,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 7.92,
+            "logistics_seed_range_95_fill_pct": [
+              88.57560922337082,
+              97.40099017459107
+            ]
+          },
+          {
+            "buffer_weeks": 0.5,
+            "fill_rate_pct": 95.25026579681744,
+            "average_stock_weeks": 1.62640103016823,
+            "unmet_quantity": 55.26980708191322,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 5.525,
+            "logistics_seed_range_95_fill_pct": [
+              91.73523012722168,
+              98.74448812510181
+            ]
+          },
+          {
+            "buffer_weeks": 1,
+            "fill_rate_pct": 97.91349324663523,
+            "average_stock_weeks": 2.091906085306087,
+            "unmet_quantity": 24.279427184853738,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 2.005,
+            "logistics_seed_range_95_fill_pct": [
+              95.96565533677519,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 1.5,
+            "fill_rate_pct": 98.83749264286016,
+            "average_stock_weeks": 2.588614545557992,
+            "unmet_quantity": 13.527400610621887,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 1.075,
+            "logistics_seed_range_95_fill_pct": [
+              97.37123266849864,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 2,
+            "fill_rate_pct": 99.34101283604048,
+            "average_stock_weeks": 3.085682900704215,
+            "unmet_quantity": 7.668238234698439,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.62,
+            "logistics_seed_range_95_fill_pct": [
+              98.10671874851091,
+              99.99999999999999
+            ]
+          },
+          {
+            "buffer_weeks": 3,
+            "fill_rate_pct": 99.86908418164599,
+            "average_stock_weeks": 4.088134797146385,
+            "unmet_quantity": 1.5233888286946315,
+            "expired_quantity": 0.0,
+            "shortage_weeks": 0.31,
+            "logistics_seed_range_95_fill_pct": [
+              99.57769090853544,
+              99.99999999999999
+            ]
+          }
+        ],
+        "calibration_selected_policies": {
+          "95": {
+            "buffer_weeks": 1,
+            "calibration_fill_pct": 96.1118532039802,
+            "test": {
+              "buffer_weeks": 1,
+              "fill_rate_pct": 97.91349324663523,
+              "average_stock_weeks": 2.091906085306087,
+              "unmet_quantity": 24.279427184853738,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 2.005,
+              "logistics_seed_range_95_fill_pct": [
+                95.96565533677519,
+                99.99999999999999
+              ]
+            }
+          },
+          "98": {
+            "buffer_weeks": 1.5,
+            "calibration_fill_pct": 98.47647795588514,
+            "test": {
+              "buffer_weeks": 1.5,
+              "fill_rate_pct": 98.83749264286016,
+              "average_stock_weeks": 2.588614545557992,
+              "unmet_quantity": 13.527400610621887,
+              "expired_quantity": 0.0,
+              "shortage_weeks": 1.075,
+              "logistics_seed_range_95_fill_pct": [
+                97.37123266849864,
+                99.99999999999999
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "limitations": [
+    "One pharmacy's observed category sales are a demand proxy, not uncensored Assam SKU demand",
+    "Logistics, supplier capacity, shelf lives and opening stock are assumptions; category units are not verified packs",
+    "Forecast methods and validation selection are unchanged; the forecast test period has already been inspected",
+    "Buffers are chosen on calibration only; test targets can fail and are not guaranteed",
+    "Seed ranges reflect invented logistics on a fixed chronological demand path, not future-site uncertainty",
+    "Mean stock is normalised by preceding historical demand; no currency saving or official target is established"
+  ]
+}

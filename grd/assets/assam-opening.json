@@ -1,0 +1,645 @@
+{
+  "generator_version": "assam-dynamic-v2",
+  "scenario_on": "2026-11-01",
+  "content_sha256": "d5208723c7c440538bc0b70dbede1a34496f8ad720ed012be4812f3466b115b8",
+  "row_count": 218400,
+  "batches": [
+    {
+      "product_code": "paracetamol",
+      "location_code": "central",
+      "code": "D2-paracetamol-1786",
+      "quantity": 5920,
+      "expiry": "2027-09-29"
+    },
+    {
+      "product_code": "paracetamol",
+      "location_code": "guwahati",
+      "code": "D2-paracetamol-1786",
+      "quantity": 1886,
+      "expiry": "2027-09-29"
+    },
+    {
+      "product_code": "paracetamol",
+      "location_code": "dibrugarh",
+      "code": "D2-paracetamol-1758",
+      "quantity": 488,
+      "expiry": "2027-09-01"
+    },
+    {
+      "product_code": "paracetamol",
+      "location_code": "silchar",
+      "code": "D2-paracetamol-1758",
+      "quantity": 1091,
+      "expiry": "2027-09-01"
+    },
+    {
+      "product_code": "paracetamol",
+      "location_code": "silchar",
+      "code": "D2-paracetamol-1786",
+      "quantity": 520,
+      "expiry": "2027-09-29"
+    },
+    {
+      "product_code": "paracetamol",
+      "location_code": "jorhat",
+      "code": "D2-paracetamol-1758",
+      "quantity": 669,
+      "expiry": "2027-09-01"
+    },
+    {
+      "product_code": "cetirizine",
+      "location_code": "central",
+      "code": "D2-cetirizine-1786",
+      "quantity": 5360,
+      "expiry": "2027-09-29"
+    },
+    {
+      "product_code": "cetirizine",
+      "location_code": "guwahati",
+      "code": "D2-cetirizine-1754",
+      "quantity": 132,
+      "expiry": "2027-08-28"
+    },
+    {
+      "product_code": "cetirizine",
+      "location_code": "guwahati",
+      "code": "D2-cetirizine-1786",
+      "quantity": 540,
+      "expiry": "2027-09-29"
+    },
+    {
+      "product_code": "cetirizine",
+      "location_code": "dibrugarh",
+      "code": "D2-cetirizine-1754",
+      "quantity": 419,
+      "expiry": "2027-08-28"
+    },
+    {
+      "product_code": "cetirizine",
+      "location_code": "dibrugarh",
+      "code": "D2-cetirizine-1754",
+      "quantity": 600,
+      "expiry": "2027-08-28"
+    },
+    {
+      "product_code": "cetirizine",
+      "location_code": "silchar",
+      "code": "D2-cetirizine-1754",
+      "quantity": 199,
+      "expiry": "2027-08-28"
+    },
+    {
+      "product_code": "cetirizine",
+      "location_code": "silchar",
+      "code": "D2-cetirizine-1786",
+      "quantity": 140,
+      "expiry": "2027-09-29"
+    },
+    {
+      "product_code": "cetirizine",
+      "location_code": "jorhat",
+      "code": "D2-cetirizine-1754",
+      "quantity": 148,
+      "expiry": "2027-08-28"
+    },
+    {
+      "product_code": "ors",
+      "location_code": "central",
+      "code": "D2-ors-1761",
+      "quantity": 1400,
+      "expiry": "2027-09-04"
+    },
+    {
+      "product_code": "ors",
+      "location_code": "central",
+      "code": "D2-ors-1789",
+      "quantity": 9200,
+      "expiry": "2027-10-02"
+    },
+    {
+      "product_code": "ors",
+      "location_code": "guwahati",
+      "code": "D2-ors-1761",
+      "quantity": 1310,
+      "expiry": "2027-09-04"
+    },
+    {
+      "product_code": "ors",
+      "location_code": "dibrugarh",
+      "code": "D2-ors-1761",
+      "quantity": 567,
+      "expiry": "2027-09-04"
+    },
+    {
+      "product_code": "ors",
+      "location_code": "silchar",
+      "code": "D2-ors-1761",
+      "quantity": 403,
+      "expiry": "2027-09-04"
+    },
+    {
+      "product_code": "ors",
+      "location_code": "silchar",
+      "code": "D2-ors-1761",
+      "quantity": 1100,
+      "expiry": "2027-09-04"
+    },
+    {
+      "product_code": "ors",
+      "location_code": "jorhat",
+      "code": "D2-ors-1761",
+      "quantity": 373,
+      "expiry": "2027-09-04"
+    },
+    {
+      "product_code": "amoxicillin",
+      "location_code": "central",
+      "code": "D2-amoxicillin-1775",
+      "quantity": 3802,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "amoxicillin",
+      "location_code": "guwahati",
+      "code": "D2-amoxicillin-1775",
+      "quantity": 299,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "amoxicillin",
+      "location_code": "dibrugarh",
+      "code": "D2-amoxicillin-1775",
+      "quantity": 375,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "amoxicillin",
+      "location_code": "silchar",
+      "code": "D2-amoxicillin-1775",
+      "quantity": 219,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "amoxicillin",
+      "location_code": "silchar",
+      "code": "D2-amoxicillin-1775",
+      "quantity": 520,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "amoxicillin",
+      "location_code": "jorhat",
+      "code": "D2-amoxicillin-1775",
+      "quantity": 395,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "metformin",
+      "location_code": "central",
+      "code": "D2-metformin-1775",
+      "quantity": 3220,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "metformin",
+      "location_code": "central",
+      "code": "D2-metformin-1796",
+      "quantity": 15150,
+      "expiry": "2027-10-09"
+    },
+    {
+      "product_code": "metformin",
+      "location_code": "guwahati",
+      "code": "D2-metformin-1775",
+      "quantity": 558,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "metformin",
+      "location_code": "guwahati",
+      "code": "D2-metformin-1775",
+      "quantity": 2000,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "metformin",
+      "location_code": "dibrugarh",
+      "code": "D2-metformin-1775",
+      "quantity": 1026,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "metformin",
+      "location_code": "silchar",
+      "code": "D2-metformin-1775",
+      "quantity": 495,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "metformin",
+      "location_code": "silchar",
+      "code": "D2-metformin-1775",
+      "quantity": 2000,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "metformin",
+      "location_code": "jorhat",
+      "code": "D2-metformin-1775",
+      "quantity": 316,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "metformin",
+      "location_code": "jorhat",
+      "code": "D2-metformin-1775",
+      "quantity": 1000,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "amlodipine",
+      "location_code": "central",
+      "code": "D2-amlodipine-1793",
+      "quantity": 9738,
+      "expiry": "2027-10-06"
+    },
+    {
+      "product_code": "amlodipine",
+      "location_code": "guwahati",
+      "code": "D2-amlodipine-1744",
+      "quantity": 23,
+      "expiry": "2027-08-18"
+    },
+    {
+      "product_code": "amlodipine",
+      "location_code": "guwahati",
+      "code": "D2-amlodipine-1793",
+      "quantity": 912,
+      "expiry": "2027-10-06"
+    },
+    {
+      "product_code": "amlodipine",
+      "location_code": "dibrugarh",
+      "code": "D2-amlodipine-1744",
+      "quantity": 195,
+      "expiry": "2027-08-18"
+    },
+    {
+      "product_code": "amlodipine",
+      "location_code": "dibrugarh",
+      "code": "D2-amlodipine-1793",
+      "quantity": 1250,
+      "expiry": "2027-10-06"
+    },
+    {
+      "product_code": "amlodipine",
+      "location_code": "silchar",
+      "code": "D2-amlodipine-1744",
+      "quantity": 176,
+      "expiry": "2027-08-18"
+    },
+    {
+      "product_code": "amlodipine",
+      "location_code": "silchar",
+      "code": "D2-amlodipine-1793",
+      "quantity": 1150,
+      "expiry": "2027-10-06"
+    },
+    {
+      "product_code": "amlodipine",
+      "location_code": "jorhat",
+      "code": "D2-amlodipine-1744",
+      "quantity": 410,
+      "expiry": "2027-08-18"
+    },
+    {
+      "product_code": "pantoprazole",
+      "location_code": "central",
+      "code": "D2-pantoprazole-1800",
+      "quantity": 13686,
+      "expiry": "2027-10-13"
+    },
+    {
+      "product_code": "pantoprazole",
+      "location_code": "guwahati",
+      "code": "D2-pantoprazole-1779",
+      "quantity": 536,
+      "expiry": "2027-09-22"
+    },
+    {
+      "product_code": "pantoprazole",
+      "location_code": "guwahati",
+      "code": "D2-pantoprazole-1779",
+      "quantity": 1540,
+      "expiry": "2027-09-22"
+    },
+    {
+      "product_code": "pantoprazole",
+      "location_code": "dibrugarh",
+      "code": "D2-pantoprazole-1779",
+      "quantity": 645,
+      "expiry": "2027-09-22"
+    },
+    {
+      "product_code": "pantoprazole",
+      "location_code": "silchar",
+      "code": "D2-pantoprazole-1779",
+      "quantity": 53,
+      "expiry": "2027-09-22"
+    },
+    {
+      "product_code": "pantoprazole",
+      "location_code": "silchar",
+      "code": "D2-pantoprazole-1779",
+      "quantity": 1480,
+      "expiry": "2027-09-22"
+    },
+    {
+      "product_code": "pantoprazole",
+      "location_code": "jorhat",
+      "code": "D2-pantoprazole-1779",
+      "quantity": 349,
+      "expiry": "2027-09-22"
+    },
+    {
+      "product_code": "salbutamol",
+      "location_code": "central",
+      "code": "D2-salbutamol-1775",
+      "quantity": 864,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "salbutamol",
+      "location_code": "central",
+      "code": "D2-salbutamol-1807",
+      "quantity": 2328,
+      "expiry": "2027-10-20"
+    },
+    {
+      "product_code": "salbutamol",
+      "location_code": "guwahati",
+      "code": "D2-salbutamol-1775",
+      "quantity": 112,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "salbutamol",
+      "location_code": "guwahati",
+      "code": "D2-salbutamol-1775",
+      "quantity": 240,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "salbutamol",
+      "location_code": "dibrugarh",
+      "code": "D2-salbutamol-1775",
+      "quantity": 49,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "salbutamol",
+      "location_code": "dibrugarh",
+      "code": "D2-salbutamol-1775",
+      "quantity": 216,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "salbutamol",
+      "location_code": "silchar",
+      "code": "D2-salbutamol-1775",
+      "quantity": 207,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "salbutamol",
+      "location_code": "jorhat",
+      "code": "D2-salbutamol-1775",
+      "quantity": 180,
+      "expiry": "2027-09-18"
+    },
+    {
+      "product_code": "zinc",
+      "location_code": "central",
+      "code": "D2-zinc-1782",
+      "quantity": 4480,
+      "expiry": "2027-09-25"
+    },
+    {
+      "product_code": "zinc",
+      "location_code": "guwahati",
+      "code": "D2-zinc-1754",
+      "quantity": 332,
+      "expiry": "2027-08-28"
+    },
+    {
+      "product_code": "zinc",
+      "location_code": "guwahati",
+      "code": "D2-zinc-1782",
+      "quantity": 160,
+      "expiry": "2027-09-25"
+    },
+    {
+      "product_code": "zinc",
+      "location_code": "dibrugarh",
+      "code": "D2-zinc-1754",
+      "quantity": 48,
+      "expiry": "2027-08-28"
+    },
+    {
+      "product_code": "zinc",
+      "location_code": "dibrugarh",
+      "code": "D2-zinc-1782",
+      "quantity": 380,
+      "expiry": "2027-09-25"
+    },
+    {
+      "product_code": "zinc",
+      "location_code": "silchar",
+      "code": "D2-zinc-1754",
+      "quantity": 332,
+      "expiry": "2027-08-28"
+    },
+    {
+      "product_code": "zinc",
+      "location_code": "silchar",
+      "code": "D2-zinc-1782",
+      "quantity": 560,
+      "expiry": "2027-09-25"
+    },
+    {
+      "product_code": "zinc",
+      "location_code": "jorhat",
+      "code": "D2-zinc-1754",
+      "quantity": 134,
+      "expiry": "2027-08-28"
+    },
+    {
+      "product_code": "cough",
+      "location_code": "central",
+      "code": "D2-cough-1789",
+      "quantity": 2496,
+      "expiry": "2027-10-02"
+    },
+    {
+      "product_code": "cough",
+      "location_code": "central",
+      "code": "D2-cough-1810",
+      "quantity": 3360,
+      "expiry": "2027-10-23"
+    },
+    {
+      "product_code": "cough",
+      "location_code": "guwahati",
+      "code": "D2-cough-1758",
+      "quantity": 183,
+      "expiry": "2027-09-01"
+    },
+    {
+      "product_code": "cough",
+      "location_code": "guwahati",
+      "code": "D2-cough-1789",
+      "quantity": 312,
+      "expiry": "2027-10-02"
+    },
+    {
+      "product_code": "cough",
+      "location_code": "dibrugarh",
+      "code": "D2-cough-1758",
+      "quantity": 28,
+      "expiry": "2027-09-01"
+    },
+    {
+      "product_code": "cough",
+      "location_code": "dibrugarh",
+      "code": "D2-cough-1758",
+      "quantity": 456,
+      "expiry": "2027-09-01"
+    },
+    {
+      "product_code": "cough",
+      "location_code": "silchar",
+      "code": "D2-cough-1758",
+      "quantity": 1,
+      "expiry": "2027-09-01"
+    },
+    {
+      "product_code": "cough",
+      "location_code": "silchar",
+      "code": "D2-cough-1758",
+      "quantity": 96,
+      "expiry": "2027-09-01"
+    },
+    {
+      "product_code": "cough",
+      "location_code": "silchar",
+      "code": "D2-cough-1789",
+      "quantity": 216,
+      "expiry": "2027-10-02"
+    },
+    {
+      "product_code": "cough",
+      "location_code": "jorhat",
+      "code": "D2-cough-1758",
+      "quantity": 135,
+      "expiry": "2027-09-01"
+    },
+    {
+      "product_code": "cough",
+      "location_code": "jorhat",
+      "code": "D2-cough-1789",
+      "quantity": 360,
+      "expiry": "2027-10-02"
+    },
+    {
+      "product_code": "slow",
+      "location_code": "central",
+      "code": "D2-slow-1796",
+      "quantity": 20,
+      "expiry": "2027-01-17"
+    },
+    {
+      "product_code": "slow",
+      "location_code": "guwahati",
+      "code": "D2-slow-1754",
+      "quantity": 13,
+      "expiry": "2026-12-06"
+    },
+    {
+      "product_code": "slow",
+      "location_code": "dibrugarh",
+      "code": "D2-slow-1754",
+      "quantity": 18,
+      "expiry": "2026-12-06"
+    },
+    {
+      "product_code": "slow",
+      "location_code": "silchar",
+      "code": "D2-slow-1796",
+      "quantity": 15,
+      "expiry": "2027-01-17"
+    },
+    {
+      "product_code": "slow",
+      "location_code": "jorhat",
+      "code": "D2-slow-1754",
+      "quantity": 13,
+      "expiry": "2026-12-06"
+    },
+    {
+      "product_code": "new",
+      "location_code": "central",
+      "code": "D2-new-1793",
+      "quantity": 3220,
+      "expiry": "2027-10-06"
+    },
+    {
+      "product_code": "new",
+      "location_code": "guwahati",
+      "code": "D2-new-1793",
+      "quantity": 607,
+      "expiry": "2027-10-06"
+    },
+    {
+      "product_code": "new",
+      "location_code": "dibrugarh",
+      "code": "D2-new-1772",
+      "quantity": 20,
+      "expiry": "2027-09-15"
+    },
+    {
+      "product_code": "new",
+      "location_code": "dibrugarh",
+      "code": "D2-new-1793",
+      "quantity": 780,
+      "expiry": "2027-10-06"
+    },
+    {
+      "product_code": "new",
+      "location_code": "silchar",
+      "code": "D2-new-1772",
+      "quantity": 190,
+      "expiry": "2027-09-15"
+    },
+    {
+      "product_code": "new",
+      "location_code": "silchar",
+      "code": "D2-new-1793",
+      "quantity": 600,
+      "expiry": "2027-10-06"
+    },
+    {
+      "product_code": "new",
+      "location_code": "jorhat",
+      "code": "D2-new-1772",
+      "quantity": 308,
+      "expiry": "2027-09-15"
+    },
+    {
+      "product_code": "new",
+      "location_code": "jorhat",
+      "code": "D2-new-1793",
+      "quantity": 700,
+      "expiry": "2027-10-06"
+    }
+  ]
+}

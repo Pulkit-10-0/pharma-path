@@ -1,0 +1,399 @@
+{
+  "protocol": "forecast-inventory-v1",
+  "source_sha256": "49e4f1c5c3daf5220fdda10785256dba5ff89c1ec18703e5ad676b7449d55b2e",
+  "configuration": {
+    "replicates": 10000,
+    "block_origins": 8,
+    "seed": 20261107,
+    "test_origins": 52
+  },
+  "scope": "Paired temporal resampling in one pharmacy; categories fixed, no sites resampled; not GRD bounds",
+  "groups": {
+    "1": {
+      "mean_wape_pct": {
+        "naive": 29.943197527601498,
+        "recent4": 27.05260671784927,
+        "selected": 25.548819535413624,
+        "ml": 26.027046466396605
+      },
+      "median_wape_pct": {
+        "naive": 25.26012401621431,
+        "recent4": 24.131322120958338,
+        "selected": 22.16777821248195,
+        "ml": 22.485974799620415
+      },
+      "mean_bias_pct": {
+        "naive": 0.004111985974559515,
+        "recent4": -0.09612367774671257,
+        "selected": -3.5860190706597654,
+        "ml": -5.2147249153668565
+      },
+      "selected_relative_reduction": {
+        "naive": {
+          "relative_reduction_pct": 14.675713868357432,
+          "interval_95_pct": [
+            7.96011928775849,
+            20.71962568067341
+          ]
+        },
+        "recent4": {
+          "relative_reduction_pct": 5.558751502654447,
+          "interval_95_pct": [
+            2.0141560317096037,
+            8.92229025078814
+          ]
+        }
+      }
+    },
+    "2": {
+      "mean_wape_pct": {
+        "naive": 32.467167562445155,
+        "recent4": 29.498976820071825,
+        "selected": 27.294796933688072,
+        "ml": 26.835256336351755
+      },
+      "median_wape_pct": {
+        "naive": 28.30984349436094,
+        "recent4": 26.36905021470413,
+        "selected": 24.176985455991463,
+        "ml": 23.64921158104238
+      },
+      "mean_bias_pct": {
+        "naive": 0.1594497498297256,
+        "recent4": 0.044584533016983605,
+        "selected": -4.117293645262527,
+        "ml": -6.440599752544558
+      },
+      "selected_relative_reduction": {
+        "naive": {
+          "relative_reduction_pct": 15.93108058720828,
+          "interval_95_pct": [
+            9.703658042958352,
+            22.140352151940906
+          ]
+        },
+        "recent4": {
+          "relative_reduction_pct": 7.472055386287069,
+          "interval_95_pct": [
+            4.003844820803232,
+            10.969289706853877
+          ]
+        }
+      }
+    },
+    "4": {
+      "mean_wape_pct": {
+        "naive": 36.363697485504105,
+        "recent4": 32.222175464055546,
+        "selected": 29.098270886466437,
+        "ml": 27.61006544286694
+      },
+      "median_wape_pct": {
+        "naive": 32.78401219023965,
+        "recent4": 30.881837704252256,
+        "selected": 26.302343837139258,
+        "ml": 24.186612133884204
+      },
+      "mean_bias_pct": {
+        "naive": 0.26235989937835347,
+        "recent4": 0.18707009505331587,
+        "selected": -5.087966548032536,
+        "ml": -6.430264473497118
+      },
+      "selected_relative_reduction": {
+        "naive": {
+          "relative_reduction_pct": 19.97988956412898,
+          "interval_95_pct": [
+            15.199638970375936,
+            24.219757828833785
+          ]
+        },
+        "recent4": {
+          "relative_reduction_pct": 9.69489034368236,
+          "interval_95_pct": [
+            4.674783402869764,
+            13.705675285903979
+          ]
+        }
+      }
+    },
+    "all": {
+      "mean_wape_pct": {
+        "naive": 32.92468752518358,
+        "recent4": 29.59125300065888,
+        "selected": 27.313962451856042,
+        "ml": 26.824122748538432
+      },
+      "median_wape_pct": {
+        "naive": 25.991768400994133,
+        "recent4": 27.31202871392174,
+        "selected": 25.53411506739836,
+        "ml": 23.232753102190294
+      },
+      "mean_bias_pct": {
+        "naive": 0.14197387839421283,
+        "recent4": 0.04517698344119562,
+        "selected": -4.26375975465161,
+        "ml": -6.028529713802844
+      },
+      "selected_relative_reduction": {
+        "naive": {
+          "relative_reduction_pct": 17.04108829897316,
+          "interval_95_pct": [
+            13.4672063416974,
+            21.309059079443756
+          ]
+        },
+        "recent4": {
+          "relative_reduction_pct": 7.6958233189792,
+          "interval_95_pct": [
+            4.489606147925975,
+            10.597022709505376
+          ]
+        }
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "category": "M01AB",
+      "lead_weeks": 1,
+      "selected_method": "croston",
+      "selected_wape_pct": 15.561912342426059,
+      "naive_wape_pct": 19.521127931260196,
+      "selected_bias_pct": -7.210665856630286,
+      "selected_coverage_pct": 98.07692307692307,
+      "relative_reduction_pct": 20.28169480152855
+    },
+    {
+      "category": "M01AB",
+      "lead_weeks": 2,
+      "selected_method": "croston",
+      "selected_wape_pct": 16.284964681926127,
+      "naive_wape_pct": 20.15073977012443,
+      "selected_bias_pct": -8.317600048694597,
+      "selected_coverage_pct": 98.07692307692307,
+      "relative_reduction_pct": 19.18428371513049
+    },
+    {
+      "category": "M01AB",
+      "lead_weeks": 4,
+      "selected_method": "croston",
+      "selected_wape_pct": 16.69024721253848,
+      "naive_wape_pct": 22.965443797941138,
+      "selected_bias_pct": -9.48195737771242,
+      "selected_coverage_pct": 98.07692307692307,
+      "relative_reduction_pct": 27.324516959542635
+    },
+    {
+      "category": "M01AE",
+      "lead_weeks": 1,
+      "selected_method": "croston",
+      "selected_wape_pct": 26.751159991914175,
+      "naive_wape_pct": 25.328277131175764,
+      "selected_bias_pct": -4.103373873667767,
+      "selected_coverage_pct": 73.07692307692307,
+      "relative_reduction_pct": -5.617764103611411
+    },
+    {
+      "category": "M01AE",
+      "lead_weeks": 2,
+      "selected_method": "croston",
+      "selected_wape_pct": 27.52371640518527,
+      "naive_wape_pct": 30.92923948057928,
+      "selected_bias_pct": -4.122446097586643,
+      "selected_coverage_pct": 73.07692307692307,
+      "relative_reduction_pct": 11.010691283024808
+    },
+    {
+      "category": "M01AE",
+      "lead_weeks": 4,
+      "selected_method": "croston",
+      "selected_wape_pct": 28.31837350920144,
+      "naive_wape_pct": 39.274935086633626,
+      "selected_bias_pct": -4.2190180026923025,
+      "selected_coverage_pct": 61.53846153846154,
+      "relative_reduction_pct": 27.897083860899908
+    },
+    {
+      "category": "N02BA",
+      "lead_weeks": 1,
+      "selected_method": "recent4",
+      "selected_wape_pct": 20.383717275135837,
+      "naive_wape_pct": 25.191970901252855,
+      "selected_bias_pct": -0.12461269028695006,
+      "selected_coverage_pct": 96.15384615384616,
+      "relative_reduction_pct": 19.086452762923333
+    },
+    {
+      "category": "N02BA",
+      "lead_weeks": 2,
+      "selected_method": "recent4",
+      "selected_wape_pct": 22.153716593048674,
+      "naive_wape_pct": 25.690447508142597,
+      "selected_bias_pct": -0.7403627359122343,
+      "selected_coverage_pct": 92.3076923076923,
+      "relative_reduction_pct": 13.766715873567225
+    },
+    {
+      "category": "N02BA",
+      "lead_weeks": 4,
+      "selected_method": "recent4",
+      "selected_wape_pct": 25.208672921580845,
+      "naive_wape_pct": 25.288174818639018,
+      "selected_bias_pct": -0.9622806700342856,
+      "selected_coverage_pct": 84.61538461538461,
+      "relative_reduction_pct": 0.3143836897219421
+    },
+    {
+      "category": "N02BE",
+      "lead_weeks": 1,
+      "selected_method": "recent4",
+      "selected_wape_pct": 17.604318888504153,
+      "naive_wape_pct": 17.50410055791733,
+      "selected_bias_pct": 1.6213026155953232,
+      "selected_coverage_pct": 76.92307692307693,
+      "relative_reduction_pct": -0.5725420181129648
+    },
+    {
+      "category": "N02BE",
+      "lead_weeks": 2,
+      "selected_method": "recent4",
+      "selected_wape_pct": 20.857054323891152,
+      "naive_wape_pct": 20.63750015282894,
+      "selected_bias_pct": 1.1018151196819506,
+      "selected_coverage_pct": 76.92307692307693,
+      "relative_reduction_pct": -1.063860300115449
+    },
+    {
+      "category": "N02BE",
+      "lead_weeks": 4,
+      "selected_method": "recent4",
+      "selected_wape_pct": 26.745130461062644,
+      "naive_wape_pct": 26.293089293845668,
+      "selected_bias_pct": 0.9561161466748037,
+      "selected_coverage_pct": 75.0,
+      "relative_reduction_pct": -1.7192394631344587
+    },
+    {
+      "category": "N05B",
+      "lead_weeks": 1,
+      "selected_method": "croston",
+      "selected_wape_pct": 15.38732209991422,
+      "naive_wape_pct": 19.83127756119384,
+      "selected_bias_pct": -3.630866621587181,
+      "selected_coverage_pct": 92.3076923076923,
+      "relative_reduction_pct": 22.408820851641064
+    },
+    {
+      "category": "N05B",
+      "lead_weeks": 2,
+      "selected_method": "croston",
+      "selected_wape_pct": 16.31850067307605,
+      "naive_wape_pct": 19.460052961312407,
+      "selected_bias_pct": -3.097048968406291,
+      "selected_coverage_pct": 98.07692307692307,
+      "relative_reduction_pct": 16.14359577788368
+    },
+    {
+      "category": "N05B",
+      "lead_weeks": 4,
+      "selected_method": "croston",
+      "selected_wape_pct": 17.66114875739881,
+      "naive_wape_pct": 20.58596761757903,
+      "selected_bias_pct": -4.56293911438484,
+      "selected_coverage_pct": 88.46153846153845,
+      "relative_reduction_pct": 14.207827946268715
+    },
+    {
+      "category": "N05C",
+      "lead_weeks": 1,
+      "selected_method": "croston",
+      "selected_wape_pct": 43.47550341009369,
+      "naive_wape_pct": 62.5,
+      "selected_bias_pct": -10.225774380469062,
+      "selected_coverage_pct": 94.23076923076923,
+      "relative_reduction_pct": 30.4391945438501
+    },
+    {
+      "category": "N05C",
+      "lead_weeks": 2,
+      "selected_method": "croston",
+      "selected_wape_pct": 44.236890490398594,
+      "naive_wape_pct": 63.25757575757576,
+      "selected_bias_pct": -10.952585114452452,
+      "selected_coverage_pct": 94.23076923076923,
+      "relative_reduction_pct": 30.068628206795033
+    },
+    {
+      "category": "N05C",
+      "lead_weeks": 4,
+      "selected_method": "croston",
+      "selected_wape_pct": 44.59923840170042,
+      "naive_wape_pct": 61.132075471698116,
+      "selected_bias_pct": -12.124572765754017,
+      "selected_coverage_pct": 90.38461538461539,
+      "relative_reduction_pct": 27.044455700922153
+    },
+    {
+      "category": "R03",
+      "lead_weeks": 1,
+      "selected_method": "recent4",
+      "selected_wape_pct": 41.2747831254928,
+      "naive_wape_pct": 41.348371849209514,
+      "selected_bias_pct": 1.9444405134206648,
+      "selected_coverage_pct": 75.0,
+      "relative_reduction_pct": 0.17797248216949724
+    },
+    {
+      "category": "R03",
+      "lead_weeks": 2,
+      "selected_method": "recent4",
+      "selected_wape_pct": 44.78327798304448,
+      "naive_wape_pct": 44.50462520840433,
+      "selected_bias_pct": 2.17434684074495,
+      "selected_coverage_pct": 71.15384615384616,
+      "relative_reduction_pct": -0.6261209331283712
+    },
+    {
+      "category": "R03",
+      "lead_weeks": 4,
+      "selected_method": "recent4",
+      "selected_wape_pct": 47.70379861503299,
+      "naive_wape_pct": 55.94145120708692,
+      "selected_bias_pct": 4.121395262536014,
+      "selected_coverage_pct": 71.15384615384616,
+      "relative_reduction_pct": 14.725489622282717
+    },
+    {
+      "category": "R06",
+      "lead_weeks": 1,
+      "selected_method": "ml",
+      "selected_wape_pct": 23.95183914982806,
+      "naive_wape_pct": 28.32045428880249,
+      "selected_bias_pct": -6.9586022716528735,
+      "selected_coverage_pct": 98.07692307692307,
+      "relative_reduction_pct": 15.425653467365875
+    },
+    {
+      "category": "R06",
+      "lead_weeks": 2,
+      "selected_method": "ml",
+      "selected_wape_pct": 26.200254318934256,
+      "naive_wape_pct": 35.10715966059348,
+      "selected_bias_pct": -8.984468157474895,
+      "selected_coverage_pct": 98.07692307692307,
+      "relative_reduction_pct": 25.37062362141733
+    },
+    {
+      "category": "R06",
+      "lead_weeks": 4,
+      "selected_method": "ml",
+      "selected_wape_pct": 25.859557213215872,
+      "naive_wape_pct": 39.42844259060933,
+      "selected_bias_pct": -14.430475862893209,
+      "selected_coverage_pct": 94.23076923076923,
+      "relative_reduction_pct": 34.4139521773177
+    }
+  ]
+}

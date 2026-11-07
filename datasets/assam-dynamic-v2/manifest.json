@@ -50,6 +50,77 @@
     "disruption_days": 3600,
     "expired_quantity": 648
   },
+  "record_breakdown": {
+    "distributor_requested_series": 48,
+    "weeks_per_series": 260,
+    "requested_rows": 109200,
+    "sales_rows": 109200,
+    "warehouse_zero_demand_rows_both_measures": 43680,
+    "distributor_requested_rows": 87360,
+    "distributor_zero_requested_rows": 10308
+  },
+  "product_outcomes": {
+    "paracetamol": {
+      "requested": 1370225,
+      "sales": 1351969,
+      "expired": 0
+    },
+    "cetirizine": {
+      "requested": 594440,
+      "sales": 583484,
+      "expired": 0
+    },
+    "ors": {
+      "requested": 997361,
+      "sales": 983520,
+      "expired": 0
+    },
+    "amoxicillin": {
+      "requested": 449435,
+      "sales": 442576,
+      "expired": 0
+    },
+    "metformin": {
+      "requested": 1079362,
+      "sales": 1066556,
+      "expired": 0
+    },
+    "amlodipine": {
+      "requested": 775342,
+      "sales": 762424,
+      "expired": 0
+    },
+    "pantoprazole": {
+      "requested": 696879,
+      "sales": 687432,
+      "expired": 0
+    },
+    "salbutamol": {
+      "requested": 126957,
+      "sales": 125435,
+      "expired": 0
+    },
+    "zinc": {
+      "requested": 305883,
+      "sales": 302564,
+      "expired": 0
+    },
+    "cough": {
+      "requested": 198925,
+      "sales": 196382,
+      "expired": 0
+    },
+    "slow": {
+      "requested": 2469,
+      "sales": 2230,
+      "expired": 648
+    },
+    "new": {
+      "requested": 163449,
+      "sales": 155635,
+      "expired": 0
+    }
+  },
   "files": {
     "demand.csv.gz": "ab627b2ef098f0c7e90a7f96a89d108dd663aa58fd874cdf45bcc8bd6a60cf11",
     "daily_operations.csv.gz": "6586b20165286a9817946a042ed584088c7fe935ca7fc7b1ea2cc11107886925"

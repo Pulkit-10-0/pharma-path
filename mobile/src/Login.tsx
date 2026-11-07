@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { publicDemo } from "../../shared/publicDemo";
+import { vault } from "./storage";
+import React, { useEffect, useState } from "react";
 import {
   KeyboardAvoidingView,
   Platform,
@@ -14,8 +16,14 @@ import { Button, c, Card, Field, s, Txt } from "./ui";
 export function Login() {
   const session = useSession();
   const [origin, setOrigin] = useState(session.origin);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState<string>(publicDemo.email);
+  const [password, setPassword] = useState<string>(publicDemo.password);
+  const [isolated, setIsolated] = useState(true);
+  useEffect(() => {
+    void vault.get("grd.lastEmail").then((value) => {
+      if (value?.startsWith("review.")) setEmail(value);
+    });
+  }, []);
   const [busy, setBusy] = useState(false);
   const [showServer, setShowServer] = useState(false);
   return (
@@ -52,6 +60,24 @@ export function Login() {
           </Text>
           <Txt>Sign in to manage stock and deliveries.</Txt>
           <Card>
+            {email === publicDemo.email && (
+              <Button
+                title={
+                  isolated
+                    ? "Independent 2-hour workspace ✓"
+                    : "Use shared evaluation workspace"
+                }
+                secondary
+                onPress={() => setIsolated((v) => !v)}
+              />
+            )}
+            {email.startsWith("review.") && (
+              <Txt small>
+                Rejoin this workspace, or enter the public evaluation email to
+                start fresh. Use the website’s workspace email to share stock
+                with this phone.
+              </Txt>
+            )}
             <Field
               label="Email address"
               value={email}
@@ -75,7 +101,7 @@ export function Login() {
               onPress={() => {
                 setBusy(true);
                 void session
-                  .login(origin, email, password)
+                  .login(origin, email, password, isolated)
                   .then(() => setPassword(""))
                   .catch((e) =>
                     session.setError(

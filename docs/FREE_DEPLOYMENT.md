@@ -1,3 +1,5 @@
+> Final release: see [RELEASE_RECORD](RELEASE_RECORD.md). Both Render services must report the same frozen commit as the APK. The deployment repository mirrors that commit. Retain Free plans and Neon Free persistence. Independent rehearsals are bounded to three sessions, two hours and a database-size guard. Readiness checks are best-effort; cold starts remain possible.
+
 # Free competition demo hosting
 
 The [Pharma Path website](https://pharma-path.onrender.com/) is a free Render Static Site. It forwards `/api/*`, `/health/*`, `/docs` and `/openapi.json` to the existing API web service. The browser uses the branded origin for both the website and the API.
@@ -13,7 +15,7 @@ best-effort.
 
 Verified on the public service: HTTPS readiness, authenticated sign-in, website/map/action centre, stock reconciliation, forecast and simulation completion through the hosted worker, idempotent job submission, and unchanged inventory/completed jobs after a Render service restart. Evidence is in the ignored `outputs/deployment-setup` folder. The local `demo-login.txt` records the current shared synthetic login, which is also pre-filled on the public website.
 
-The Render **Free** API service hosts one supervised forecasting worker and uses persistent Neon **Free** PostgreSQL. Android 1.3.2 uses the branded origin. The original API address remains available for earlier packages.
+The Render **Free** API service hosts one supervised forecasting worker and uses persistent Neon **Free** PostgreSQL. The final Android build uses the branded origin. The original API address remains available for earlier packages.
 
 Set `GRD_INSTALL_PACK_SCENARIO=true` on the synthetic API service to add the on-time strip scenario at startup. It adds one product and generated history to the seeded Assam workspace associated with `GRD_DEMO_EMAIL`. Repeated starts reuse the product. Existing stock, demand and transfer records keep their original IDs and quantities.
 

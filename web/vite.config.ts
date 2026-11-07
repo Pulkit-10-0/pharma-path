@@ -1,13 +1,49 @@
+import { execFileSync } from "node:child_process";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const devApiOrigin = process.env.GRD_DEV_API_ORIGIN || "http://127.0.0.1:8011";
+const baseRelease = JSON.parse(
+  readFileSync(
+    fileURLToPath(new URL("../grd/release.json", import.meta.url)),
+    "utf8",
+  ),
+);
+let commit =
+  process.env.RENDER_GIT_COMMIT || process.env.GRD_SOURCE_COMMIT || "";
+if (!commit) {
+  try {
+    commit = execFileSync("git", ["rev-parse", "HEAD"], {
+      cwd: fileURLToPath(new URL("..", import.meta.url)),
+      encoding: "utf8",
+    }).trim();
+  } catch {
+    commit = "unreported";
+  }
+}
+const release = {
+  ...baseRelease,
+  commit,
+  source_url: `${baseRelease.repository}/tree/${commit === "unreported" ? baseRelease.tag : commit}`,
+  release_url: `${baseRelease.repository}/releases/tag/${baseRelease.tag}`,
+};
 
 export default defineConfig({
+  define: { __PHARMA_RELEASE__: JSON.stringify(release) },
   plugins: [
     react(),
+    {
+      name: "release-identity",
+      generateBundle() {
+        this.emitFile({
+          type: "asset",
+          fileName: "release.json",
+          source: JSON.stringify(release),
+        });
+      },
+    },
     {
       name: "local-synthetic-demo-login",
       configureServer(server) {

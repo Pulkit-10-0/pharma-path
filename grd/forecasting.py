@@ -82,6 +82,16 @@ def metric(actual, predicted):
     }
 
 
+def replay(values, ends, origins, horizons, method):
+    """Replay fixed-origin forecasts without ever inserting future observations."""
+    offsets = np.asarray(horizons) - 1
+    actual = values[np.asarray(list(origins))[:, None] + offsets]
+    predicted = np.asarray([
+        predict(values[:origin], ends[:origin], max(horizons), method) for origin in origins
+    ])[:, offsets]
+    return actual, predicted
+
+
 def evaluation_windows(n, max_h):
     # Keep all target dates disjoint, including the longest horizon.
     separation = 3 * (max_h - 1)
@@ -113,26 +123,16 @@ def evaluate(values, ends, horizons, windows):
         methods.append("seasonal")
     if first >= 65 and values[:first].sum() > 0:
         methods.append("ml")
-    max_h = max(horizons)
-    offsets = np.array(horizons) - 1
-
-    def replay(origins, method):
-        actual = values[np.array(origins)[:, None] + offsets]
-        predicted = np.array([
-            predict(values[:origin], ends[:origin], max_h, method) for origin in origins
-        ])[:, offsets]
-        return actual, predicted
-
     validation, validation_mae, widths, tests = {}, {}, {}, {str(h): {} for h in horizons}
     for method in methods:
-        a, p = replay(windows["validation"], method)
+        a, p = replay(values, ends, windows["validation"], horizons, method)
         validation_mae[method] = metric(a.ravel(), p.ravel())["mae"]
         validation[method] = {str(h): metric(a[:, i], p[:, i]) for i, h in enumerate(horizons)}
-        a, p = replay(windows["calibration"], method)
+        a, p = replay(values, ends, windows["calibration"], horizons, method)
         # Finite-sample order statistic from a separate calibration window.
         rank = math.ceil((len(a) + 1) * NOMINAL_COVERAGE)
         widths[method] = np.sort(np.abs(a - p), axis=0)[rank - 1]
-        a, p = replay(windows["test"], method)
+        a, p = replay(values, ends, windows["test"], horizons, method)
         for i, h in enumerate(horizons):
             width = float(widths[method][i])
             tests[str(h)][method] = {

@@ -1,3 +1,4 @@
+import { publicDemo } from "../../shared/publicDemo";
 import { initialProduct } from "../../shared/workflow";
 import React, {
   createContext,
@@ -25,7 +26,12 @@ type Session = {
   product: string;
   setProduct: (p: string) => void;
   origin: string;
-  login: (origin: string, email: string, password: string) => Promise<void>;
+  login: (
+    origin: string,
+    email: string,
+    password: string,
+    isolated?: boolean,
+  ) => Promise<void>;
   logout: () => Promise<void>;
   loading: boolean;
   refreshing: boolean;
@@ -299,14 +305,25 @@ export function SessionProvider({ children }: { children: React.ReactNode }) {
     return () => clearTimeout(timer);
   }, [data?.me.session_expires_at, expire]);
 
-  async function login(base: string, email: string, password: string) {
+  async function login(
+    base: string,
+    email: string,
+    password: string,
+    isolated = true,
+  ) {
     base = serverOrigin(base);
     const api = new Transport(base);
-    const result = await api.request<{ access_token: string }>(
-      "/auth/login",
-      "POST",
-      { email: email.trim(), password },
-    );
+    const result = await api.request<{
+      access_token: string;
+      workspace_email: string;
+    }>("/auth/login", "POST", {
+      email: email.trim(),
+      password,
+      isolated_demo:
+        isolated && email.trim().toLowerCase() === publicDemo.email,
+    });
+    if (result.workspace_email?.startsWith("review."))
+      await vault.set("grd.lastEmail", result.workspace_email);
     await open(base, result.access_token);
   }
   async function logout() {

@@ -16,6 +16,7 @@ class Input(BaseModel):
 class Login(Input):
     email: Annotated[str, Field(max_length=200)]
     password: Annotated[str, StringConstraints(strip_whitespace=False), Field(max_length=200)]
+    isolated_demo: bool = False
 
 
 class UserInput(Input):

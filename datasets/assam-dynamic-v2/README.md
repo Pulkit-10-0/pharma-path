@@ -4,8 +4,8 @@ This is **entirely generated data**, dedicated to the public domain under CC0-1.
 It contains no patient, customer or private GRD records. Packs, prices, events,
 coordinates and operating policies are illustrative assumptions.
 
-- **218,400 demand observations:** 12 medicine presentations × 5 fictional sites ×
-  1,820 days × 2 measures (requested and sales).
+- **48 distributor-product requested-demand series over 260 weeks:** 12 presentations × four distributors.
+- The export stores **109,200 requested rows and 109,200 sales rows**. Across both measures, **43,680 rows are warehouse zeros**. Of 87,360 distributor requested rows, 10,308 (11.8%) are zero. These rows are not 218,400 independent demand histories.
 - **109,200 daily stock and signal rows**, covering 260 complete weeks from
   **8 November 2021 through 1 November 2026**.
 - Four distributors (Guwahati, Dibrugarh, Silchar and Jorhat) supplied by a
@@ -86,3 +86,9 @@ the main product at four distributors and the other products at Silchar.
 This scenario exercises product behaviour and data consistency. Accuracy and
 business impact measured here **do not predict a real distributor pilot**. The
 separate observed public pharmacy benchmark is unchanged.
+
+## Outcome limits
+
+The generated demand has 98.513% pooled fulfilment and expiry for only the slow-moving presentation (648 units). It cannot establish a ten-percentage-point service gain, expiry reduction, excess reduction or company benefit. The separate forecast-driven observed-sales replay varies bounded supply across 200 seeds, selects buffers on calibration and reports held-out frontiers. Its logistics remain assumed.
+
+Independent rehearsal sessions copy this same dated demand and frozen opening batches. Their central-to-Dibrugarh two-day express lane is explicitly an illustrative workflow assumption. It is not a measured route.

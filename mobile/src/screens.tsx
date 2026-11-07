@@ -1,3 +1,5 @@
+import Constants from "expo-constants";
+import type { ReleaseInfo } from "../../shared/evidence";
 import { supplySteps } from "../../shared/workflow";
 import React, { useMemo, useState } from "react";
 import { Platform, Pressable, ScrollView, Text, View } from "react-native";
@@ -443,6 +445,11 @@ export function MoreScreen() {
   }
   return (
     <Page title="More" eyebrow="Evidence / assistant / account">
+      <Button
+        title="Public benchmark and stock replay"
+        secondary
+        onPress={() => router.push("/evidence")}
+      />
       <Disclosure title="Data sources & map attribution">
         <Card>
           <View style={s.row}>
@@ -455,8 +462,8 @@ export function MoreScreen() {
               : "Review dataset provenance and approved operating policies before acting."}
           </Txt>
           <Txt small>
-            Map outline from Survey of India, generalised at 1:16 million.
-            Site locations are approximate and lines show configured supply lanes.
+            Map outline from Survey of India, generalised at 1:16 million. Site
+            locations are approximate and lines show configured supply lanes.
           </Txt>
         </Card>
       </Disclosure>
@@ -709,14 +716,31 @@ export function MoreScreen() {
       </Disclosure>
       <Card>
         <Heading>Connected account</Heading>
+        {data.me.demo_session && (
+          <Txt small>
+            Independent synthetic workspace. Expires{" "}
+            {new Date(data.me.demo_session.expires_at).toLocaleString()}. Use
+            this email on the website to share the same stock.
+          </Txt>
+        )}
+        <Txt small>
+          Pharma Path{" "}
+          {(Constants.expoConfig?.extra?.release as ReleaseInfo | undefined)
+            ?.version || "unreported"}{" "}
+          · source{" "}
+          {(
+            Constants.expoConfig?.extra?.release as ReleaseInfo | undefined
+          )?.commit?.slice(0, 8) || "unreported"}
+        </Txt>
         <Txt>
           {data.me.email} · {title(data.me.role)}
         </Txt>
         <Txt small>Server: {session.origin}</Txt>
         <Txt small>
           Sign out before changing servers. Signing out revokes this user’s
-          existing sessions, including the website. Credentials are never
-          bundled with this app.
+          existing sessions, including the website. Only the intentionally
+          public synthetic evaluation login is pre-filled; use separate accounts
+          for company data.
         </Txt>
         <Button
           title="Sign out"

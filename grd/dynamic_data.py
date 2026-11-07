@@ -205,6 +205,22 @@ def generate(as_of=date(2026, 11, 1), weeks=WEEKS, seed=SEED):
                     "disruption_days": sum(r["supply_disruption"] for r in ledger),
                     "expired_quantity": sum(r["expired_quantity"] for r in ledger)},
     }
+    distributor_rows = [r for r in ledger if r["location_code"] != "central"]
+    manifest["record_breakdown"] = {
+        "distributor_requested_series": len(CATALOGUE) * (len(SITES) - 1),
+        "weeks_per_series": weeks,
+        "requested_rows": len(ledger),
+        "sales_rows": len(ledger),
+        "warehouse_zero_demand_rows_both_measures": sum(r["location_code"] == "central" for r in ledger) * 2,
+        "distributor_requested_rows": len(distributor_rows),
+        "distributor_zero_requested_rows": sum(r["requested_quantity"] == 0 for r in distributor_rows),
+    }
+    manifest["product_outcomes"] = {
+        sku: {"requested": sum(r["requested_quantity"] for r in ledger if r["product_code"] == sku),
+              "sales": sum(r["sales_quantity"] for r in ledger if r["product_code"] == sku),
+              "expired": sum(r["expired_quantity"] for r in ledger if r["product_code"] == sku)}
+        for sku, *_ in CATALOGUE
+    }
     return ledger, final_lots, event_log, manifest
 
 

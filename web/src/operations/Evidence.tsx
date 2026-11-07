@@ -1,3 +1,4 @@
+import { FinalEvidence } from "./FinalEvidence";
 import { Details } from "../WorkflowProgress";
 import { useEffect, useState } from "react";
 import { BookOpen, FlaskConical, RefreshCw, ShieldCheck } from "lucide-react";
@@ -447,6 +448,7 @@ export function EvidenceWorkspace({
           )}
         </section>
       )}
+      {tab === "benchmark" && <FinalEvidence />}
       {tab === "benchmark" && (
         <section className="panel ops-main-panel">
           <SectionTitle

@@ -1,3 +1,5 @@
+import { publicDemo } from "../../shared/publicDemo";
+import { ReleaseIdentity } from "./ReleaseIdentity";
 import { buildActions, type Action } from "./actions";
 import {
   initialProduct,
@@ -354,6 +356,13 @@ export default function App() {
             </span>
             <ArrowRight size={16} />
           </button>
+          {data.me.demo_session && (
+            <div className="workspace-scope-note">
+              Independent workspace · 2-hour lifetime
+              <br />
+              <span>Use this email on Android to share the same stock.</span>
+            </div>
+          )}
           <div className="sidebar-system">
             <span className={`live-dot ${error ? "offline" : ""}`} />
             <span>
@@ -637,6 +646,19 @@ export default function App() {
                           <Loading label="Loading network positions" />
                         </div>
                       )}
+                      <p className="projection-caption">
+                        Demand basis:{" "}
+                        {currentNetwork?.table.filter(
+                          (r) => r.kind !== "warehouse" && r.forecast_job_id,
+                        ).length || 0}
+                        /
+                        {currentNetwork?.table.filter(
+                          (r) => r.kind !== "warehouse",
+                        ).length || 0}{" "}
+                        distributor sites use a published forecast. Other sites
+                        use a historical mean; intervals do not drive shortage
+                        probabilities.
+                      </p>
                       <div className="horizon-control">
                         <span>
                           <Clock3 size={15} />
@@ -1065,8 +1087,12 @@ function Login({
   connectionError: string;
 }) {
   // Public access to the shared synthetic workspace, requested for examiner review.
-  const [email, setEmail] = useState("demo@pharmapath.local"),
-    [password, setPassword] = useState("VyQjzbWlCJCQrTcAxQyBGaCP-OSdlPBH"),
+  const [email, setEmail] = useState(
+      () =>
+        sessionStorage.getItem("pharma.workspace.email") || publicDemo.email,
+    ),
+    [password, setPassword] = useState<string>(publicDemo.password),
+    [isolated, setIsolated] = useState(true),
     [error, setError] = useState(""),
     [busy, setBusy] = useState(false);
   async function signIn(demo = false) {
@@ -1075,11 +1101,21 @@ function Login({
     try {
       if (demo) await localDemo();
       else {
-        const result = await api<{ access_token: string }>(
-          "/auth/login",
-          "POST",
-          { email, password },
-        );
+        const result = await api<{
+          access_token: string;
+          workspace_email: string;
+          demo_session?: unknown;
+        }>("/auth/login", "POST", {
+          email,
+          password,
+          isolated_demo:
+            isolated && email.trim().toLowerCase() === publicDemo.email,
+        });
+        if (result.demo_session)
+          sessionStorage.setItem(
+            "pharma.workspace.email",
+            result.workspace_email,
+          );
         setToken(result.access_token);
       }
       await onReady();
@@ -1130,6 +1166,32 @@ function Login({
             clearer picture.
           </h2>
           <p>Sign in to your supply intelligence workspace.</p>
+          {email === publicDemo.email ? (
+            <label className="isolated-option">
+              <input
+                type="checkbox"
+                checked={isolated}
+                onChange={(e) => setIsolated(e.target.checked)}
+              />
+              Start an isolated evaluation workspace (2 hours)
+            </label>
+          ) : (
+            email.startsWith("review.") && (
+              <p className="login-note">
+                Rejoining your independent workspace.{" "}
+                <button
+                  type="button"
+                  className="text-button"
+                  onClick={() => {
+                    sessionStorage.removeItem("pharma.workspace.email");
+                    setEmail(publicDemo.email);
+                  }}
+                >
+                  Start fresh
+                </button>
+              </p>
+            )
+          )}
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -1352,6 +1414,7 @@ function NetworkTable({
             <th>Available</th>
             <th>Reserved</th>
             <th>Nominal cover</th>
+            <th>Demand basis</th>
             <th>Supply outlook</th>
             <th />
           </tr>
@@ -1387,6 +1450,13 @@ function NetworkTable({
                 {r.days_of_cover != null && (
                   <span className="unit-muted"> days</span>
                 )}
+              </td>
+              <td title={r.projection_method}>
+                {r.kind === "warehouse"
+                  ? "Supply source"
+                  : r.forecast_job_id
+                    ? "Published forecast"
+                    : "Historical mean"}
               </td>
               <td>
                 <Badge tone={riskLevel(r, asOf)}>
@@ -1576,6 +1646,7 @@ function Help({ onClose }: { onClose: () => void }) {
       onClose={onClose}
     >
       <div className="modal-body">
+        <ReleaseIdentity />
         <div className="guide-steps">
           {[
             [

@@ -1,5 +1,5 @@
 from contextlib import asynccontextmanager
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 import logging
 import os
 import time
@@ -50,9 +50,10 @@ def create_app(database_url=None):
         yield
         engine.dispose()
 
+    from .release import release_info
     app = FastAPI(
         title="Pharma Path",
-        version="0.1.0",
+        version=release_info()["version"],
         lifespan=lifespan,
         description="Shared web/React Native API. All quantities are integer product base units. /docs is interactive.",
     )
@@ -102,6 +103,8 @@ def create_app(database_url=None):
             if not user or not user.active or user.token_version != claims["ver"]:
                 raise HTTPException(401, "Session revoked")
             org = lock_org(s, user.org_id)
+            from .demo_workspaces import session_info
+            session_info(s, user, org)
             yield s, user, org
 
     def items(s, cls, user):
@@ -130,6 +133,11 @@ def create_app(database_url=None):
     def live():
         return {"status": "alive"}
 
+    @app.get("/health/release", tags=["health"])
+    def build_identity():
+        from .release import release_info
+        return release_info()
+
     @app.get("/health/ready", tags=["health"])
     def ready():
         try:
@@ -155,11 +163,28 @@ def create_app(database_url=None):
             user = s.scalar(select(User).where(User.email == data.email.lower()))
             if not user or not user.active or not passwords.verify(data.password, user.password_hash):
                 raise HTTPException(401, "Invalid credentials")
-            return {"access_token": token(user), "token_type": "bearer", "expires_in": 28800}
+            org = lock_org(s, user.org_id)
+            from .demo_workspaces import create_workspace, session_info
+            session_info(s, user, org)
+            if data.isolated_demo:
+                user, org = create_workspace(s, user, org)
+            rehearsal = session_info(s, user, org)
+            expires_in = 28800
+            if rehearsal:
+                expires_in = min(expires_in, max(0, int((
+                    datetime.fromisoformat(rehearsal["expires_at"]) - datetime.now(timezone.utc)
+                ).total_seconds())))
+            return {"access_token": token(user), "token_type": "bearer", "expires_in": expires_in,
+                    "workspace_email": user.email, "demo_session": rehearsal}
 
     @app.get("/api/v1/me", tags=["identity"])
     def me(ctx=Depends(context), credentials: HTTPAuthorizationCredentials = Depends(bearer)):
-        _, u, o = ctx
+        s, u, o = ctx
+        from .demo_workspaces import session_info
+        rehearsal = session_info(s, u, o)
+        expires = datetime.fromtimestamp(decode(credentials.credentials)["exp"], timezone.utc)
+        if rehearsal:
+            expires = min(expires, datetime.fromisoformat(rehearsal["expires_at"]))
         return {
             "id": u.id,
             "email": u.email,
@@ -169,11 +194,8 @@ def create_app(database_url=None):
             "evidence_type": o.mode,
             "inventory_revision": o.revision,
             "scenario_on": str(o.scenario_on) if o.scenario_on else None,
-            "session_expires_at": __import__("datetime")
-            .datetime.fromtimestamp(
-                decode(credentials.credentials)["exp"], __import__("datetime").timezone.utc
-            )
-            .isoformat(),
+            "demo_session": rehearsal,
+            "session_expires_at": expires.isoformat(),
         }
 
     @app.post("/api/v1/auth/logout", tags=["identity"])

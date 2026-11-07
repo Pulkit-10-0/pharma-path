@@ -28,15 +28,14 @@ The application was developed around **NESFIC-I-09**, the medicine demand and in
 **Submission source — 7 November 2026.** Start with the [evaluator quick start](START_HERE.md)
 and [code review](docs/SUBMISSION_CODE_REVIEW_2026-11-07.md). This repository contains
 the team's complete application and analysis work. The current synthetic
-scenario includes 218,400 demand observations; [data and assumptions](datasets/assam-dynamic-v2/README.md)
+scenario contains **48 distributor-product requested-demand series over 260 weeks**, with requested and sales measures stored separately; [data and assumptions](datasets/assam-dynamic-v2/README.md)
 are included alongside the generator.
 
 **Independent benchmark.** Selected methods averaged 27.3% WAPE versus 32.9% for
 repeating last week, across eight public category series and three horizons,
 with 52 test origins per comparison. That is approximately **17% relative error
 reduction**, below the challenge's 20% target. This is a public pharmacy benchmark;
-GRD's baseline and pilot performance remain unmeasured. [Earlier reviewer package:
-Android 1.3.2 and benchmark downloads](https://github.com/Pulkit-10-0/pharma-path/releases/tag/nesfic-i09-review-2).
+GRD's baseline and pilot performance remain unmeasured. The improvement versus the four-week mean is **7.7%**. Mean signed bias is **−4.26%**. The [final release record](docs/RELEASE_RECORD.md) identifies the immutable source, builds and evidence. Earlier review packages are historical.
 
 **Interface update — 3 November 2026:** guided order progress, one receiving form, clearer next actions, expandable details and editable supplier planning assumptions. Backend, website and Android CI checks passed. See the [usability update](docs/USABILITY_UPDATE_2026-11-03.md).
 
@@ -373,7 +372,7 @@ The system assists supply operations. It does not prescribe medicine, choose the
 
 ### Synthetic operational scenario
 
-The current default uses **218,400 demand observations** plus **109,200 daily
+The current default uses **48 distributor-product requested-demand series across 260 weeks**. Its exports contain 109,200 requested rows and 109,200 sales rows (including 43,680 warehouse zero rows across both measures), plus **109,200 daily
 inventory/signal rows**, with reproducible files in
 [`datasets/assam-dynamic-v2`](datasets/assam-dynamic-v2/README.md):
 
@@ -484,7 +483,7 @@ Android is the current delivery target. Cross-platform source remains, but **the
 
 The outbox is scoped to server origin, organisation and user. Authorisation and inventory rules are checked again by the server. Native tokens use OS-protected storage; passwords are not stored.
 
-**Acceptance boundary:** automated tests cover 50 persisted commands, restart, lost-response replay, expiry/account isolation and failed storage commits. The Android package passed signature/configuration checks, emulator installation and cold launch. Physical-phone camera, denied-permission and complete offline field acceptance remain open.
+**Acceptance boundary:** automated tests cover persisted commands, restart, lost-response replay, expiry/account isolation and failed storage commits. Consult the final release verification record for the exact physical-device checks and recording. Automated tests do not establish field acceptance.
 
 ## 11. Architecture and technology
 
@@ -702,7 +701,7 @@ npx expo run:android --variant release
 
 For a local Android emulator API, use `http://10.0.2.2:8011` and explicitly set `GRD_ALLOW_LOCAL_HTTP=1` before prebuild/build. A local HTTP-enabled binary is a different configuration; use HTTPS and disable cleartext traffic for hosted distribution.
 
-Generated native folders are not committed. Configure native behaviour through `app.config.js` and Expo config plugins. Android version metadata for the branded build is **1.3.2 / version code 6**.
+Generated native folders are not committed. Configure native behaviour through `app.config.js` and Expo config plugins. Final release metadata is **1.4.0 / version code 7**. Build and physical acceptance evidence accompanies the immutable release, rather than an earlier APK.
 
 An APK can be built from source using the steps above. Locally produced demonstration APKs, signing keys and build caches are deliberately excluded from Git. The existing demonstrated build uses a debug/demo signing identity; production/store distribution needs its own signing and acceptance process.
 
@@ -733,7 +732,7 @@ The Free API can sleep. The calculation worker pauses with it, and local contain
 
 `render.yaml` and `Dockerfile` describe the deployment approach. Configure secrets in provider-private settings. Initial cloud seeding is deliberate and must be disabled afterward; never reseed or upload a local database over an existing operating environment.
 
-Both Render services build from this repository's `main` branch with manual deploys. The API service uses the existing Neon database. Android 1.3.2 uses the branded HTTPS origin. Earlier packages still use the original API address.
+Both Render services use manual deploys from the existing deployment repository, which mirrors the exact final commit from this canonical repository. The API service uses the existing Neon database. The final Android build uses the branded HTTPS origin. Earlier packages still use the original API address.
 
 The [availability workflow](.github/workflows/demo-availability.yml) checks the public readiness route every ten minutes and can be run on demand. GitHub scheduling is best-effort, so idle starts are still possible on Render Free.
 
@@ -786,28 +785,18 @@ GRD_TEST_DATABASE_URL=postgresql+psycopg://USER:PASSWORD@HOST:5432/grd_test pyte
 
 Replace placeholders locally and keep real credentials out of shell logs and commits. GitHub Actions provisions its own disposable PostgreSQL service.
 
-### Source-snapshot verification
+### Final verification record
 
-The application snapshot was checked on 2 November 2026:
+Local checks during final-release preparation passed 93 PostgreSQL backend tests,
+30 website tests and 13 Android logic tests, plus lint, type checks and website
+build. The immutable release's verification JSON supplies the final CI run,
+compiled source identities, APK checksum/signing certificate and physical-device
+acceptance boundary. Do not treat a source test count as phone or pilot evidence.
 
-| Check | Recorded result |
-|---|---|
-| Backend with PostgreSQL | **70 passed** |
-| Backend with SQLite | **69 passed**, one PostgreSQL-only case skipped |
-| Website tests | **20 passed** |
-| Android logic tests | **13 passed** |
-| Backend lint, TypeScript, Expo lint | Passed |
-| Website production build | Passed |
-| Original source CI | All backend, web and mobile job groups green |
-| Database upgrade | Pre-upgrade cloud backup restored locally; additive migration preserved existing records and stock totals |
-| Hosted operations | Readiness, authentication, saved comparisons/scenarios, supplier draft, count worklist, inbox and reconciliation verified |
-| Hosted benchmark | Original N02BE category completed through the calculation worker |
-| Android package | Signature/configuration/private-setting checks, installation and emulator cold launch passed |
-| Physical field acceptance | Still open |
+Regression cases include duplicate receipts, stale counts, competing approvals,
+atomic split rollback, tenant/site isolation, lost-response replay, failed secure
+storage, time-limited independent rehearsals and calibration/test separation.
 
-The new repository's CI badge reports its own current run. The table records the tested source snapshot; it is not a permanent guarantee for future changes.
-
-Important regression cases include duplicate receipts, stale count snapshots, competing approvals, atomic split rollback, hold/shelf-life rejection, tenant/site isolation, replay after a lost response and failed secure-storage commits.
 
 ## 16. A suggested demonstration
 
@@ -837,7 +826,7 @@ Warm the free service before presenting. Do not claim that clicking “dispatch�
 | Execution | Partial fulfilment, receiver proof, documents, supplier worklists, counts and staged returns | Supplier/courier integration, field operating acceptance and commercial activation |
 | Data/evidence | Attributed imports, separated source tracks, benchmarks and supported demand-quality calculations | Actual regional demand/availability exports and broader evaluation |
 | Collaboration | Persistent ownership, due dates, acknowledgement and in-app exceptions | Configured push provider and reliable always-on escalation |
-| Android | Native source, protected cache/outbox, worklists, scanning/manual entry and built package | Real-phone camera, denied-permission, full offline journey and pilot/store signing |
+| Android | Native source, protected cache/outbox, worklists, scanning/manual entry and built package | Physical acceptance as recorded in the final release; broader field trials and managed signing |
 | Local signals | Seasonal baselines and downloadable regional context | Matched local demand/signal evaluation; no weather benefit is claimed |
 | Business impact | Measurement framework and reproducible synthetic experiments | A real baseline, agreed KPIs and observed pilot outcomes |
 | iOS | Cross-platform source retained | Native delivery excluded from current scope |

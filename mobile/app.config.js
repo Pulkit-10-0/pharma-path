@@ -1,8 +1,22 @@
+const release = require("../grd/release.json");
+const { execFileSync } = require("node:child_process");
+let sourceCommit = process.env.GRD_SOURCE_COMMIT || "";
+if (!sourceCommit) {
+  try {
+    sourceCommit = execFileSync("git", ["rev-parse", "HEAD"], {
+      cwd: require("node:path").resolve(__dirname, ".."),
+      encoding: "utf8",
+    }).trim();
+  } catch {
+    sourceCommit = "unreported";
+  }
+}
 const expo = {
   name: "Pharma Path",
   slug: "pharma-path",
-  version: "1.3.2",
+  version: release.version,
   orientation: "default",
+  extra: { release: { ...release, commit: sourceCommit } },
   icon: "./assets/icon.png",
   userInterfaceStyle: "light",
   ios: {
@@ -15,7 +29,7 @@ const expo = {
     },
   },
   android: {
-    versionCode: 6,
+    versionCode: release.android_version_code,
     adaptiveIcon: {
       backgroundColor: "#193C32",
       foregroundImage: "./assets/android-icon-foreground.png",

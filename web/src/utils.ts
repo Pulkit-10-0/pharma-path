@@ -5,7 +5,7 @@ export function forecastMethod(name: string) {
       {
         naive: "Last week",
         recent4: "Four-week mean",
-        croston: "Croston",
+        croston: "SBA-style Croston",
         seasonal: "Same week last year",
         ml: "Gradient boosting",
       } as Record<string, string>

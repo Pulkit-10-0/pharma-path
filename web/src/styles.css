@@ -337,6 +337,11 @@ strong {
 .user-profile > svg {
   margin-left: auto;
   color: #859e8c;
+  flex-shrink: 0;
+}
+.user-profile > span:not(.avatar) {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .user-profile small {
   display: block;
@@ -5762,3 +5767,19 @@ strong {
   font-size: inherit;
   font-weight: 400;
 }
+
+/* Independent evaluation uses compact summaries with expandable technical detail. */
+.final-evidence { display: grid; gap: 20px; }
+.evidence-horizon { display: flex; align-items: center; gap: 12px; margin: 18px 0; font-size: 13px; color: var(--muted, #617067); flex-wrap: wrap; }
+.evidence-horizon select { max-width: 100%; background: white; border: 1px solid #d9e3dc; border-radius: 9px; padding: 9px 12px; font: inherit; color: #243c30; }
+.evaluation-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; font-size: 13px; line-height: 1.65; }
+.evaluation-facts strong { color: #244c39; }
+.frontier-chart { width: 100%; min-width: 0; padding: 12px 0 5px; }
+@media (max-width: 720px) { .evaluation-facts { grid-template-columns: 1fr; gap: 0; } }
+.release-identity { border-bottom: 1px solid #dce5df; padding: 0 0 18px; margin-bottom: 20px; color: #425c4c; font-size: 13px; line-height: 1.6; }
+.workspace-scope-note { font-size: 11px; line-height: 1.45; color: #d4e6d8; padding: 7px 16px; }
+.workspace-scope-note span { color: #adc2b3; }
+.isolated-option { display: flex; gap: 9px; align-items: flex-start; font-size: 12px; line-height: 1.6; color: #53665a; margin: 16px 0; }
+.isolated-option input { margin-top: 4px; accent-color: #315c43; }
+.text-button { font: inherit; color: #315c43; text-decoration: underline; background: transparent; border: 0; cursor: pointer; }
+.projection-caption { margin: 0; padding: 12px 18px; color: #65786b; font-size: 11px; line-height: 1.6; background: #f7faf6; }

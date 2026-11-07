@@ -11,6 +11,15 @@ from .scenarios import alternatives, freeze, project
 
 
 def install_operations(app, context):
+    @app.get("/api/v1/benchmarks/evaluation", tags=["evidence"])
+    def final_evidence(ctx=Depends(context)):
+        import json
+        from .benchmark import ASSETS
+        return {
+            "forecast": json.loads((ASSETS / "pharma-evaluation.json").read_text()),
+            "inventory": json.loads((ASSETS / "pharma-inventory-replay.json").read_text()),
+        }
+
     @app.get("/api/v1/team", tags=["collaboration"])
     def team(location_id: str, ctx=Depends(context)):
         s, u, _ = ctx

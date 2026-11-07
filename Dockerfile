@@ -1,13 +1,18 @@
 FROM node:24-alpine AS workspace
+ARG RENDER_GIT_COMMIT
+ENV GRD_SOURCE_COMMIT=$RENDER_GIT_COMMIT
 WORKDIR /workspace/web
 COPY web/package*.json ./
 RUN npm ci
 COPY web ./
 # Platform-neutral client types and action logic are shared with the native app.
 COPY shared /workspace/shared
+COPY grd/release.json /workspace/grd/release.json
 RUN npm run build
 
 FROM python:3.12-slim
+ARG RENDER_GIT_COMMIT
+ENV GRD_SOURCE_COMMIT=$RENDER_GIT_COMMIT
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
 WORKDIR /app
 COPY pyproject.toml requirements.lock ./

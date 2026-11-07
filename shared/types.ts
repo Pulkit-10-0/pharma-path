@@ -1,4 +1,5 @@
 export interface Me {
+  demo_session?: { isolated: boolean; expires_at: string; email: string; template: string } | null;
   session_expires_at?: string;
   id: string;
   email: string;

@@ -1,24 +1,10 @@
-# Pharma Path mobile
+# Pharma Path Android
 
-**2 November upgrade:** Android 1.2.0 / version code 3 is built for the same hosted API. It adds shipment QR/delivery proof and an Operations desk for alerts, counts, suppliers and staged returns. Authorised records persist until session expiry, and the encrypted outbox now holds 100 commands (25 KB each). See [the upgrade release checklist](UPGRADE_IMPLEMENTATION.md) for current build/device evidence. Version 1.1.0 verification below is historical. The current package is `outputs/mobile-demo/GRD-Supply-Android.apk` (also retained as `GRD-Supply-Android-1.2.0.apk`). See the upgrade checklist for native acceptance limitations.
+The final release is **1.4.0 / version code 7**, Android ARM64, React Native / Expo SDK 58. Native iOS delivery remains excluded. Download the APK, checksum, certificate and device recording from the [immutable release](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.0).
 
-The Expo / React Native client is in `mobile`, using SDK 58 / React Native 0.88. It uses native components and Expo Router and shares the website's product types, display helpers and action ranking. Android 1.3.2 connects through **https://pharma-path.onrender.com** to the shared authenticated backend. Earlier APKs use the original API origin.
+The app connects to **https://pharma-path.onrender.com**. Its More screen identifies the compiled source commit. Public synthetic credentials are intentionally pre-filled; they are not private company credentials. A default independent rehearsal lasts two hours. Use the website's generated rehearsal email and the public evaluation password to share the same inventory on both clients.
 
-## Hosted Android demo
-
-The Android review APK is version **1.3.2 / code 6**, ARM64. The build uses the branded HTTPS origin through `EXPO_PUBLIC_GRD_API_URL` and disables cleartext traffic. Sign in with the same workspace account as the website. This package uses the demonstration signing key for direct installs.
-
-A fresh install defaults to the hosted origin. Existing installations retain their saved server and scoped pending commands: change **Server connection** deliberately, resolving any pending commands first. Do not replay a local outbox into the hosted organisation. Render Free sleeps when idle and its worker sleeps too; open the website about a minute before the demo.
-
-For a reproducible hosted build, use Node 24 and Android SDK/JDK, then from `mobile`:
-
-```sh
-GRD_ALLOW_LOCAL_HTTP=0 npx expo prebuild --platform android --no-install
-cd android
-EXPO_PUBLIC_GRD_API_URL=https://pharma-path.onrender.com ./gradlew app:assembleRelease -PreactNativeArchitectures=arm64-v8a --max-workers 4
-```
-
-The EAS `preview` profile also specifies this public origin and disables cleartext traffic; no EAS cloud build or paid account was needed for the delivered local build. `mobile/.env.example` contains only public configuration.
+Existing installations retain the selected server and pending commands. Resolve those commands before changing accounts or origins. The Free API can need about a minute to wake. The final native package disables cleartext traffic and retains the existing evaluation signing certificate for upgrades. This is evaluation signing, not managed production/store signing.
 
 ## Included workflows
 
@@ -30,22 +16,18 @@ The EAS `preview` profile also specifies this public origin and disables clearte
 - Physical counts create review cases. Mobile counts retain the original batch timestamp and are rejected for recount if the backend stock changed before upload. The phone never silently adjusts or resolves a case.
 - Evaluated forecast jobs, forecast intervals, held-out baseline metrics, policy-simulation results, declared data provenance, reconciliation, scoped activity and grounded read-only assistant. The new phone Operations desk includes return transitions/disposition, supplier receipts, assigned count rounds and alerts. Demand imports remain on the website.
 
-## Local launch
+## Reproduce the hosted build
 
-Use Node 24. In `mobile`, run `npm ci`, then `npm start`. The backend and its worker must already be running. Sign in with the existing local account; the password is not bundled or saved. Open **Server connection** on the sign-in screen to change the origin.
+Use Node 24, the locked mobile dependencies and Android SDK/JDK. From `mobile`:
 
-| Client | Backend origin |
-|---|---|
-| Android emulator | `http://10.0.2.2:8011` |
-| iOS simulator | `http://127.0.0.1:8011` |
-| Android phone over USB | Run `adb reverse tcp:8011 tcp:8011`, then enter `http://127.0.0.1:8011` |
-| Physical phone over internet | The deployed backend's HTTPS origin; see `FREE_DEPLOYMENT.md` |
+```sh
+npm ci
+EXPO_PUBLIC_GRD_API_URL=https://pharma-path.onrender.com GRD_ALLOW_LOCAL_HTTP=0 npx expo prebuild --platform android --no-install
+cd android
+EXPO_PUBLIC_GRD_API_URL=https://pharma-path.onrender.com ./gradlew app:assembleRelease -PreactNativeArchitectures=arm64-v8a --max-workers 2
+```
 
-Hosted origins require HTTPS; the app only accepts HTTP for explicit local/private-network demo origins. Native platform HTTP allowances are **off by default**. For a local native demo build use `GRD_ALLOW_LOCAL_HTTP=1` during prebuild. `npm run build:android:local` and `npm run build:ios:local` include that step. They generate platform code through Expo config plugins. A local demo build should be rebuilt with HTTP disabled and proper signing before real use.
-
-`npm run build:android` and `npm run build:ios` build native release variants on a machine with the corresponding platform tools. Local Android requires JDK/Android SDK/NDK; local iOS requires full Xcode and CocoaPods. The generated platform folders are ignored; do not edit them by hand.
-
-`eas.json` provides Android APK preview, iOS simulator and production profiles. EAS account linking/signing is not performed automatically. Confirm any cloud build allowance in your Expo account; this repository does not assume paid builds, a paid store account or store publication. SDK 58 is newly released; development/native builds avoid depending on the store Expo Go rollout.
+The Expo configuration derives version/code/source from the canonical release metadata and checked-out commit. Generated native folders are ignored and must not be hand-edited. Cloud EAS builds or paid hosting are not required. For local development, use the documented private/local server override deliberately; never replay an existing hosted outbox into a local organisation.
 
 ## Outbox and offline boundary
 
@@ -57,16 +39,8 @@ Approval, proposal and dispatch also retain an unconfirmed command after a lost 
 
 Authorised network/stock/worklist snapshots are encrypted in SecureStore chunks. A native cold start can restore the most recent account-bound records while the server-issued session is still valid. Cached records are marked provisional/stale and mutations still require server acceptance; first login and expired sessions need connectivity. Browser preview storage is session memory only, explicitly labelled in More. Native persistence, camera optics, permissions and device-specific behaviour require native/device QA.
 
-## Verification and limits
+## Verification
 
-Executed: 10 mobile command/transport tests, TypeScript, Expo lint, Expo Doctor (20/20), Android/iOS/web JavaScript production exports, mobile browser preview against the real local backend. The browser checks covered login, medicine selection, map, a critical Silchar location and eligible/blocked replenishment explanations. The backend suite passes 58 tests on SQLite (one PostgreSQL-only skip) and all 59 on PostgreSQL 16; 18 website tests and its production build pass.
+The final release verification JSON records CI and physical checks against the exact packaged build. It distinguishes camera/online receipt, denied permission and offline persistence if exercised. A passed logic test or emulator screenshot alone does not prove native offline operation. Push delivery, automatic background sync, GPS vehicle tracking, supplier/courier integrations and app-store publication remain outside the demonstrated scope.
 
-The cloud launcher was exercised locally on disposable PostgreSQL, then deployed successfully on Render Free with Neon Free PostgreSQL 16. Public verification passed readiness, authenticated login, the website map/action centre, hosted forecast and simulation workers, idempotent submission, approval/dispatch/partial receipt/quarantine and ledger reconciliation. Stock, completed jobs and login continuity survived a Render service restart. These are synthetic demo checks, not measured GRD outcomes.
-
-The hosted Android release build passed. Its APK signature was verified, the compiled public URL and absence of cloud credentials were checked, and the manifest confirms cleartext traffic is disabled. Version 1.1.0/code 2 installed and completed a cold launch on the API 36 ARM64 emulator; the app process remained running without fatal startup log markers. `outputs/mobile-demo/hosted-build.json` records the size, SHA-256, configuration and verification boundary.
-
-The earlier local HTTP-enabled APK remains `outputs/mobile-demo/GRD-Supply-Android-demo.apk`; use the new hosted APK above for internet access. Interactive native login, camera permission and offline/device workflows have not been exercised; the connected UI journey was verified in the React Native browser preview and hosted website/API separately. **iOS native build is skipped at the user’s request.** No iOS installation or distribution is part of the current demo handoff. Push delivery, automatic background synchronisation, GPS vehicle tracking and app-store publication are not implemented. All existing synthetic-data limitations remain visible in the mobile app.
-
-The Expo starter licence is retained as `mobile/EXPO_TEMPLATE_LICENSE`; it does not choose a licence for the whole repository.
-
-Dependency check: mobile production dependency audit reports zero known advisories after narrowly overriding modern glob/minimatch build dependencies to patched versions. The development lint tree still reports moderate minimatch advisories in legacy consumers; do not force an incompatible major-version override into those APIs. Recheck advisories and Expo compatibility before release.
+The Expo starter licence remains in `mobile/EXPO_TEMPLATE_LICENSE`. Public benchmark data carries CC BY-NC 4.0 restrictions; it is research evidence, not licensed commercial company training data.

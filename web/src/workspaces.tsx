@@ -1,3 +1,5 @@
+import { FinalEvidence } from "./operations/FinalEvidence";
+import { Details } from "./WorkflowProgress";
 import { useEffect, useMemo, useState } from "react";
 import {
   Area,
@@ -591,6 +593,11 @@ export function ForecastWorkspace({
               <span>Held-out coverage · 90% nominal</span>
             </div>
           </div>
+          <p className="ops-note">
+            Signed test bias: {number(selected?.bias_pct, 2)}%. This operating
+            series is {data.me.evidence_type}. Intervals are displayed evidence;
+            shortage probabilities are not calculated from them.
+          </p>
           <section className="panel forecast-chart">
             <SectionTitle
               title="Demand outlook"
@@ -801,65 +808,68 @@ export function ForecastWorkspace({
         </>
       ) : (
         <>
-          <section className="panel">
-            <SectionTitle
-              title="Policy comparison"
-              action={<Badge tone="demo">Policy simulation</Badge>}
-            >
-              Compare stock buffers against the same demand, deliveries and
-              opening stock.
-            </SectionTitle>
-            <div className="simulation-controls">
-              <label>
-                Assumed lead time <strong>{lead} days</strong>
-                <input
-                  aria-label="Simulation lead time"
-                  type="range"
-                  min="1"
-                  max="14"
-                  value={lead}
-                  onChange={(e) => setLead(Number(e.target.value))}
-                />
-              </label>
-              <div className="simulation-fixed">
-                <small>STOCK BUFFERS TESTED</small>
-                <strong>0–10 days</strong>
-                <span>Seven policies · baseline is 2 days</span>
-              </div>
-              <div className="simulation-fixed">
-                <small>COMPARISON WINDOW</small>
-                <strong>90 days</strong>
-                <span>Shared scenario seed 42</span>
-              </div>
-            </div>
-          </section>
-          {simulation ? (
-            <SimulationResult
-              job={simulation}
-              unit={product?.base_unit || "unit"}
-            />
-          ) : (
+          <FinalEvidence inventoryOnly />
+          <Details title="Exploratory single-lane simulation using a historical run rate">
             <section className="panel">
-              <Empty
-                title="Policy results"
-                action={
-                  <button
-                    className="button primary"
-                    onClick={run}
-                    disabled={
-                      busy || running || !hasRole(data, "planner", "manager")
-                    }
-                  >
-                    Run policy comparison
-                    <ArrowRight size={16} />
-                  </button>
-                }
+              <SectionTitle
+                title="Exploratory buffer comparison"
+                action={<Badge tone="demo">Policy simulation</Badge>}
               >
-                Compare service and inventory together. Added stock is a cost,
-                not a hidden benefit.
-              </Empty>
+                Compare stock buffers against the same demand, deliveries and
+                opening stock.
+              </SectionTitle>
+              <div className="simulation-controls">
+                <label>
+                  Assumed lead time <strong>{lead} days</strong>
+                  <input
+                    aria-label="Simulation lead time"
+                    type="range"
+                    min="1"
+                    max="14"
+                    value={lead}
+                    onChange={(e) => setLead(Number(e.target.value))}
+                  />
+                </label>
+                <div className="simulation-fixed">
+                  <small>STOCK BUFFERS TESTED</small>
+                  <strong>0–10 days</strong>
+                  <span>Seven policies · baseline is 2 days</span>
+                </div>
+                <div className="simulation-fixed">
+                  <small>COMPARISON WINDOW</small>
+                  <strong>90 days</strong>
+                  <span>Shared scenario seed 42</span>
+                </div>
+              </div>
             </section>
-          )}
+            {simulation ? (
+              <SimulationResult
+                job={simulation}
+                unit={product?.base_unit || "unit"}
+              />
+            ) : (
+              <section className="panel">
+                <Empty
+                  title="Policy results"
+                  action={
+                    <button
+                      className="button primary"
+                      onClick={run}
+                      disabled={
+                        busy || running || !hasRole(data, "planner", "manager")
+                      }
+                    >
+                      Run policy comparison
+                      <ArrowRight size={16} />
+                    </button>
+                  }
+                >
+                  Compare service and inventory together. Added stock is a cost,
+                  not a hidden benefit.
+                </Empty>
+              </section>
+            )}
+          </Details>
         </>
       )}
     </>
