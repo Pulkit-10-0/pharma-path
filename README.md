@@ -701,7 +701,7 @@ npx expo run:android --variant release
 
 For a local Android emulator API, use `http://10.0.2.2:8011` and explicitly set `GRD_ALLOW_LOCAL_HTTP=1` before prebuild/build. A local HTTP-enabled binary is a different configuration; use HTTPS and disable cleartext traffic for hosted distribution.
 
-Generated native folders are not committed. Configure native behaviour through `app.config.js` and Expo config plugins. Final release metadata is **1.4.0 / version code 7**. Build and physical acceptance evidence accompanies the immutable release, rather than an earlier APK.
+Generated native folders are not committed. Configure native behaviour through `app.config.js` and Expo config plugins. Final release metadata is **1.4.1 / version code 8**. Build and physical acceptance evidence accompanies the immutable release, rather than an earlier APK.
 
 An APK can be built from source using the steps above. Locally produced demonstration APKs, signing keys and build caches are deliberately excluded from Git. The existing demonstrated build uses a debug/demo signing identity; production/store distribution needs its own signing and acceptance process.
 

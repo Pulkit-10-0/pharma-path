@@ -1,7 +1,7 @@
 {
-  "version": "1.4.0",
-  "tag": "nesfic-i09-final-v1.4.0",
+  "version": "1.4.1",
+  "tag": "nesfic-i09-final-v1.4.1",
   "repository": "https://github.com/Pulkit-10-0/pharma-path-nesfic",
   "evaluation_protocol": "forecast-inventory-v1",
-  "android_version_code": 7
+  "android_version_code": 8
 }

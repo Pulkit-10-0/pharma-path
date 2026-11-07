@@ -1,6 +1,6 @@
 # Pharma Path Android
 
-The final release is **1.4.0 / version code 7**, Android ARM64, React Native / Expo SDK 58. Native iOS delivery remains excluded. Download the APK, checksum, certificate and device recording from the [immutable release](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.0).
+The final release is **1.4.1 / version code 8**, Android ARM64, React Native / Expo SDK 58. Native iOS delivery remains excluded. Download the APK, checksum, certificate and device recording from the [immutable release](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.1).
 
 The app connects to **https://pharma-path.onrender.com**. Its More screen identifies the compiled source commit. Public synthetic credentials are intentionally pre-filled; they are not private company credentials. A default independent rehearsal lasts two hours. Use the website's generated rehearsal email and the public evaluation password to share the same inventory on both clients.
 

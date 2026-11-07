@@ -1,7 +1,7 @@
 # Final release of record
 
-The canonical release is **Pharma Path 1.4.0**, tag
-[`nesfic-i09-final-v1.4.0`](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.0).
+The canonical release is **Pharma Path 1.4.1**, tag
+[`nesfic-i09-final-v1.4.1`](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.1).
 The release verification JSON and asset manifest are published with that tag after
 CI, deployment and package checks. They identify the exact commit, CI run, APK
 certificate/checksum, evidence files and physical-test boundary.
@@ -52,7 +52,7 @@ invented bounded supply and shelf lives. Buffers are selected on calibration;
 test fill targets can fail. It is not actual distributor stock history or savings.
 
 Power BI remains in the MAIN submission, alongside website and Android. Its
-historical category experiment is clearly separated from current evidence.
+analytics module identifies the dataset, model and supply assumptions behind each metric.
 The final source does not claim measured GRD outcomes, weather/outbreak awareness,
 native iOS acceptance or production readiness.
 

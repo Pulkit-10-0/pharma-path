@@ -1,6 +1,6 @@
 # PRD traceability and activation gates
 
-Updated for final release 1.4.0. The [release record](RELEASE_RECORD.md) supersedes earlier build identities. The twelve research
+Updated for final release 1.4.1. The [release record](RELEASE_RECORD.md) supersedes earlier build identities. The twelve research
 recommendations now have working shared-backend implementations; see
 [the release checklist and limitations](UPGRADE_IMPLEMENTATION.md). The full original
 final-product PRD still includes company-data, provider and field/pilot acceptance

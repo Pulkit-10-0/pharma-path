@@ -1,8 +1,8 @@
 # Pharma Path: evaluator quick start
 
-[Live website](https://pharma-path.onrender.com/) · [Product review and video](https://pharma-path.onrender.com/review/index.html) · [Final release](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.0) · [Official challenge](https://startup.assam.gov.in/nesfic26/problem-statements/nesfic-i-09)
+[Live website](https://pharma-path.onrender.com/) · [Product review and video](https://pharma-path.onrender.com/review/index.html) · [Final release](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.1) · [Official challenge](https://startup.assam.gov.in/nesfic26/problem-statements/nesfic-i-09)
 
-Pharma Path connects a demand forecast to stock planning, approval, dispatch and receiver-confirmed receipt. The main submission includes the website, Android field app and Power BI analysis. Power BI retains its historical experiment scope; its metrics are not the current operating or public-benchmark results.
+Pharma Path connects a demand forecast to stock planning, approval, dispatch and receiver-confirmed receipt. The main submission includes the website, Android field app and Power BI analysis. Power BI is the analytics component of the solution. Each view identifies its source dataset and calculation method.
 
 ## Access
 
