@@ -65,6 +65,12 @@ export function riskLevel(row: NetworkRow, asOf: string) {
 }
 
 export type Observation = { date: string; quantity: number; measure: string };
+export function weeklyHistoryStart(asOf: string) {
+  const lastSunday = new Date(asOf + "T12:00:00Z");
+  lastSunday.setUTCDate(lastSunday.getUTCDate() - lastSunday.getUTCDay());
+  lastSunday.setUTCDate(lastSunday.getUTCDate() - (14 * 7 - 1));
+  return lastSunday.toISOString().slice(0, 10);
+}
 export function weeklyHistory(rows: Observation[], asOf: string) {
   const groups = new Map<string, Map<string, number>>();
   for (const row of rows) {

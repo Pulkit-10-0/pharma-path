@@ -24,3 +24,20 @@ On 7 November 2026, the existing Render service was relinked to
 `Pulkit-10-0/pharma-path` on `main`. Its tagged evaluator commit `b987037`
 passed readiness on the existing service and Neon database. The original team
 repository remains the credited source of the initial experiments.
+
+## Submission repository — 7 November 2026
+
+- Submission repository: https://github.com/Pulkit-10-0/pharma-path-nesfic
+- Source repository: https://github.com/Pulkit-10-0/pharma-path
+- Source revision before the submission review: `fa7dd06bfceca5bb8fe5a51482b17a1a2dd23d74`
+- The available Pharma Path commit history and tags are preserved. Original-team
+  attribution above remains; original-team commits predating the first public
+  snapshot are referenced through the original repository rather than fabricated.
+- The new repository translates four Hinglish comments, bounds demand import
+  processing, batches database checks/writes, adds SQL history pagination and
+  date/measure filters, and limits chart downloads to fourteen complete weeks.
+- Existing published dataset manifests continue to identify their original
+  generation source. Their hashes and provenance were not relabelled.
+- The live website retains https://pharma-path.onrender.com/. The previous
+  repository remains the configured hosting source; publishing this repository
+  does not change provider settings or reset the database.

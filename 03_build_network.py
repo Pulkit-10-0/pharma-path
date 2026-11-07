@@ -13,6 +13,8 @@ products = pd.DataFrame([
  ("R06","ATC R06 category (synthetic allocation)","category-unit",1,0,1095,1),
 ], columns=["sku_id","name","dosage_form","pack_size","unit_cost",
             "shelf_life_days","transfer_allowed"])
+products["unit_cost"] = None  # Category data has no verified unit valuation.
+products["provenance"] = "synthetic category allocation; no observed Assam SKU history"
 
 # ---------- locations ----------
 locations = pd.DataFrame([
@@ -23,7 +25,7 @@ locations = pd.DataFrame([
 ], columns=["location_id","type","district"])
 
 # ---------- supply_routes ----------
-# lead_days_normal / monsoon (Jun-Sep) / sd = variability. Sab ASSUMPTIONS hain.
+# Normal/monsoon (June–September) lead times and variability are assumptions.
 routes = pd.DataFrame([
  # origin, dest, permitted, normal, monsoon, sd, kind
  ("WH_GHY","DIST_GHY",1,1,1,0.3,"replenishment"),
@@ -41,6 +43,3 @@ routes = pd.DataFrame([
 for name, d in [("products",products),("locations",locations),("supply_routes",routes)]:
     d.to_csv(f"{name}.csv", index=False)
 print(products.shape, locations.shape, routes.shape)
-products["unit_cost"] = None  # Category data has no verified unit valuation.
-products["provenance"] = "synthetic category allocation; no observed Assam SKU history"
-products.to_csv("products.csv", index=False)

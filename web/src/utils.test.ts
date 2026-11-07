@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   weeklyHistory,
+  weeklyHistoryStart,
   riskLevel,
   remainingDispatch,
   type Observation,
@@ -15,6 +16,27 @@ it("reads naive SQLite UTC and aware PostgreSQL India timestamps as the same ins
 });
 
 describe("decision evidence", () => {
+  it("fetches only the history needed for the same fourteen complete chart weeks", () => {
+    const rows: Observation[] = Array.from({ length: 400 }, (_, i) => ({
+      date: new Date(Date.UTC(2025, 9, 1) + i * 86400000)
+        .toISOString()
+        .slice(0, 10),
+      quantity: 10 + (i % 19),
+      measure: "requested",
+    }));
+    expect(weeklyHistoryStart("2026-11-01")).toBe("2026-07-27");
+    expect(weeklyHistoryStart("2026-11-04")).toBe("2026-07-27");
+    for (const cutoff of ["2026-11-01", "2026-10-28", "2026-03-01"]) {
+      const recent = rows.filter(
+        (row) => row.date >= weeklyHistoryStart(cutoff) && row.date <= cutoff,
+      );
+      expect(recent.length).toBeLessThanOrEqual(104);
+      expect(weeklyHistory(recent, cutoff)).toEqual(
+        weeklyHistory(rows, cutoff),
+      );
+      expect(weeklyHistory(recent, cutoff)).toHaveLength(14);
+    }
+  });
   const week: Observation[] = Array.from({ length: 7 }, (_, i) => ({
     date: `2026-10-${String(26 + i).padStart(2, "0")}`,
     quantity: 10,

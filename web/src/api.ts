@@ -155,7 +155,10 @@ export async function command<T>(path: string, body: unknown): Promise<T> {
   return value;
 }
 export async function localDemo() {
-  const response = await fetch("/__local-demo", { method: "POST" });
+  const response = await fetch("/__local-demo", {
+    method: "POST",
+    signal: AbortSignal.timeout(15000),
+  });
   const value = await response.json();
   if (!response.ok)
     throw new Error(value.detail || "Local workspace is unavailable.");

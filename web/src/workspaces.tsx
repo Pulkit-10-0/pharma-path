@@ -51,6 +51,7 @@ import {
   shortProduct,
   title,
   weeklyHistory,
+  weeklyHistoryStart,
   type Observation,
 } from "./utils";
 import { Badge, Empty, Loading, Modal, SectionTitle, Stat } from "./ui";
@@ -351,7 +352,7 @@ export function ForecastWorkspace({
       return;
     }
     all<Observation>(
-      `/demand?product_id=${encodeURIComponent(productId)}&location_id=${encodeURIComponent(locId)}`,
+      `/demand?product_id=${encodeURIComponent(productId)}&location_id=${encodeURIComponent(locId)}&measure=requested&start=${weeklyHistoryStart(asOf)}&end=${asOf}`,
     )
       .then((rows) => {
         if (!cancelled) setHistory(rows);
@@ -365,7 +366,7 @@ export function ForecastWorkspace({
     return () => {
       cancelled = true;
     };
-  }, [productId, locId, datasetsVersion, recordedHistory]);
+  }, [productId, locId, asOf, datasetsVersion, recordedHistory]);
   const chart = useMemo(() => {
     const past = recordedHistory || weeklyHistory(history, asOf);
     const future =

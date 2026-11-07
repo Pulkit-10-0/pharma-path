@@ -5,13 +5,14 @@ import os
 import time
 from collections import defaultdict, deque
 from threading import Lock
+from typing import Literal
 
 from fastapi import Depends, FastAPI, File, Form, Header, HTTPException, Request, UploadFile
 from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
-from sqlalchemy import select, text
+from sqlalchemy import func, select, text
 from sqlalchemy.exc import IntegrityError
 
 from . import domain as d, schemas as v
@@ -106,9 +107,12 @@ def create_app(database_url=None):
     def items(s, cls, user):
         return list(s.scalars(select(cls).where(cls.org_id == user.org_id).order_by(cls.created_at, cls.id)))
 
-    def page(rows, offset=0, limit=100):
+    def validate_page(offset, limit):
         if offset < 0 or limit < 1 or limit > 200:
             d.fail("offset >= 0 and limit between 1 and 200 required", 422)
+
+    def page(rows, offset=0, limit=100):
+        validate_page(offset, limit)
         return {
             "items": [d.record(x) if not isinstance(x, dict) else x for x in rows[offset : offset + limit]],
             "total": len(rows),
@@ -165,7 +169,11 @@ def create_app(database_url=None):
             "evidence_type": o.mode,
             "inventory_revision": o.revision,
             "scenario_on": str(o.scenario_on) if o.scenario_on else None,
-            "session_expires_at": __import__("datetime").datetime.fromtimestamp(decode(credentials.credentials)["exp"], __import__("datetime").timezone.utc).isoformat(),
+            "session_expires_at": __import__("datetime")
+            .datetime.fromtimestamp(
+                decode(credentials.credentials)["exp"], __import__("datetime").timezone.utc
+            )
+            .isoformat(),
         }
 
     @app.post("/api/v1/auth/logout", tags=["identity"])
@@ -968,21 +976,38 @@ def create_app(database_url=None):
         return page(items(s, Dataset, u), offset, limit)
 
     @app.get("/api/v1/demand", tags=["data"])
-    def demand(location_id: str, product_id: str, offset: int = 0, limit: int = 100, ctx=Depends(context)):
+    def demand(
+        location_id: str,
+        product_id: str,
+        offset: int = 0,
+        limit: int = 100,
+        measure: Literal["requested", "sales"] | None = None,
+        start: date | None = None,
+        end: date | None = None,
+        ctx=Depends(context),
+    ):
         s, u, _ = ctx
         d.scope(u, location_id)
-        rows = list(
-            s.scalars(
-                select(Demand)
-                .where(
-                    Demand.org_id == u.org_id,
-                    Demand.location_id == location_id,
-                    Demand.product_id == product_id,
-                )
-                .order_by(Demand.date)
-            )
+        validate_page(offset, limit)
+        if start is not None and end is not None and start > end:
+            d.fail("Demand start date must be on or before end date", 422)
+        conditions = [
+            Demand.org_id == u.org_id,
+            Demand.location_id == location_id,
+            Demand.product_id == product_id,
+        ]
+        if measure is not None:
+            conditions.append(Demand.measure == measure)
+        if start is not None:
+            conditions.append(Demand.date >= start)
+        if end is not None:
+            conditions.append(Demand.date <= end)
+        total = s.scalar(select(func.count()).select_from(Demand).where(*conditions))
+        # Page in SQL rather than repeatedly loading an entire multi-year series.
+        rows = s.scalars(
+            select(Demand).where(*conditions).order_by(Demand.date, Demand.id).offset(offset).limit(limit)
         )
-        return page(rows, offset, limit)
+        return {"items": [d.record(row) for row in rows], "total": total, "offset": offset, "limit": limit}
 
     @app.get("/api/v1/network", tags=["map and planning"])
     def network(product_id: str, as_of: date, horizon: int = 21, ctx=Depends(context)):
@@ -1131,6 +1156,7 @@ def create_app(database_url=None):
         s, u, _ = ctx
         if code.startswith("GRD:SHIPMENT:"):
             from .operations import shipment_document
+
             return shipment_document(s, u, code.removeprefix("GRD:SHIPMENT:"))
         # Internal labels only. Never infer batch/expiry from an ordinary product barcode.
         identifier = code.removeprefix("GRD:BATCH:")
@@ -1204,6 +1230,7 @@ def create_app(database_url=None):
         }
 
     from .operations_api import install_operations
+
     install_operations(app, context)
 
     from .web import mount_workspace

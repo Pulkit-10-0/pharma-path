@@ -1,0 +1,42 @@
+{
+  "scope": "Disposable SQLite import dry-run, one product/site, 400 observations, three alternating runs; not hosted throughput",
+  "baseline_ref": "fa7dd06",
+  "results": {
+    "baseline": [
+      {
+        "select_queries": 802,
+        "elapsed_ms": 119.42
+      },
+      {
+        "select_queries": 802,
+        "elapsed_ms": 118.37
+      },
+      {
+        "select_queries": 802,
+        "elapsed_ms": 121.97
+      }
+    ],
+    "current": [
+      {
+        "select_queries": 5,
+        "elapsed_ms": 6.81
+      },
+      {
+        "select_queries": 5,
+        "elapsed_ms": 6.6
+      },
+      {
+        "select_queries": 5,
+        "elapsed_ms": 4.86
+      }
+    ]
+  },
+  "median_select_queries": {
+    "baseline": 802,
+    "current": 5
+  },
+  "median_elapsed_ms": {
+    "baseline": 119.42,
+    "current": 6.6
+  }
+}

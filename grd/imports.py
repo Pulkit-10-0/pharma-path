@@ -4,13 +4,32 @@ from typing import Annotated, Literal
 import hashlib
 import io
 import zipfile
+from itertools import islice
 
 from pydantic import Field, ValidationError
-from sqlalchemy import select
+from sqlalchemy import insert, select, tuple_
 
 from . import domain as d
-from .models import Dataset, Demand
+from .models import Dataset, Demand, Location, Product
 from .schemas import Identifier, Input, Nonnegative
+
+MAX_IMPORT_ROWS = 10_000
+QUERY_BATCH_SIZE = 200
+
+
+def chunks(values):
+    for offset in range(0, len(values), QUERY_BATCH_SIZE):
+        yield values[offset : offset + QUERY_BATCH_SIZE]
+
+
+def catalogue(s, cls, user, identifiers):
+    records = {}
+    for group in chunks(list(identifiers)):
+        records.update(
+            (row.id, row)
+            for row in s.scalars(select(cls).where(cls.org_id == user.org_id, cls.id.in_(group)))
+        )
+    return records
 
 
 class Row(Input):
@@ -42,14 +61,18 @@ def import_demand(s, user, org, raw, filename, metadata, dry_run):
             fields = reader.fieldnames or []
             if len(fields) != len(set(fields)):
                 raise ValueError("Duplicate CSV column headers")
-            data = list(reader)
+            data = list(islice(reader, MAX_IMPORT_ROWS + 1))
         elif filename.endswith(".xlsx"):
             with zipfile.ZipFile(io.BytesIO(raw)) as z:
                 if sum(x.file_size for x in z.infolist()) > 30_000_000 or len(z.infolist()) > 200:
                     raise ValueError("Workbook expands beyond limit")
             import pandas as pd
 
-            data = pd.read_excel(io.BytesIO(raw), dtype=str).fillna("").to_dict("records")
+            data = (
+                pd.read_excel(io.BytesIO(raw), dtype=str, nrows=MAX_IMPORT_ROWS + 1)
+                .fillna("")
+                .to_dict("records")
+            )
         else:
             raise ValueError("Use CSV or XLSX")
     except (ValueError, UnicodeError, zipfile.BadZipFile) as exc:
@@ -59,52 +82,79 @@ def import_demand(s, user, org, raw, filename, metadata, dry_run):
         d.fail("Cannot read this CSV/XLSX file; check its format and contents", 422)
     if not data:
         d.fail("The file contains no demand observations", 422)
-    if len(data) > 10000:
+    if len(data) > MAX_IMPORT_ROWS:
         d.fail("Maximum 10,000 rows per upload; split larger files", 413)
-    errors, good, seen = [], [], set()
-    from .models import Product, Location
-
+    errors, parsed, seen = [], [], set()
     for number, raw_row in enumerate(data, 2):
         try:
-            # CSV text quantities must be a canonical nonnegative integer.
+            # Reject decimal/fractional quantities before validating base units.
             raw_row["quantity"] = int(str(raw_row.get("quantity", "")))
             row = Row.model_validate(raw_row)
             d.scope(user, row.location_id)
-            product = d.get(s, Product, row.product_id, user)
-            if meta["units"] not in [product.base_unit, "product_base_units"]:
-                raise ValueError(
-                    "Quantity units must match the product base unit; convert explicitly before import"
-                )
-            d.get(s, Location, row.location_id, user)
             identity = (row.date, row.product_id, row.location_id, row.measure)
             if identity in seen:
                 raise ValueError("Duplicate observation in file")
             seen.add(identity)
-            if s.scalar(
-                select(Demand).where(
-                    Demand.org_id == user.org_id,
-                    Demand.date == row.date,
-                    Demand.product_id == row.product_id,
-                    Demand.location_id == row.location_id,
-                    Demand.measure == row.measure,
-                )
-            ):
-                raise ValueError(
-                    "Observation already exists; corrections require a versioned replacement dataset"
-                )
-            good.append(row)
+            parsed.append((number, row))
         except (ValueError, ValidationError) as exc:
             errors.append({"row": number, "error": str(exc)[:500]})
         except Exception as exc:
             if not hasattr(exc, "status_code"):
                 raise
             errors.append({"row": number, "error": "Record or location not accessible"})
+
+    # Batch catalogue reads and duplicate checks instead of repeating database
+    # lookups for every observation in a large upload.
+    products = catalogue(s, Product, user, {row.product_id for _, row in parsed})
+    locations = catalogue(s, Location, user, {row.location_id for _, row in parsed})
+    good = []
+    for number, row in parsed:
+        product = products.get(row.product_id)
+        if product is None or row.location_id not in locations:
+            errors.append({"row": number, "error": "Record or location not accessible"})
+        elif meta["units"] not in [product.base_unit, "product_base_units"]:
+            errors.append(
+                {
+                    "row": number,
+                    "error": "Quantity units must match the product base unit; convert explicitly before import",
+                }
+            )
+        else:
+            good.append((number, row))
     digest = hashlib.sha256(raw).hexdigest()
     prior = s.scalar(select(Dataset).where(Dataset.org_id == user.org_id, Dataset.digest == digest))
     if prior:
         if prior.provenance != meta:
             d.fail("Identical file cannot be relabelled with different provenance")
-        return {"dataset_id": prior.id, "duplicate": True, "row_count": prior.row_count, "digest": digest}
+        # A replay still checks the caller's current location scope and units.
+        if not errors:
+            return {"dataset_id": prior.id, "duplicate": True, "row_count": prior.row_count, "digest": digest}
+
+    existing = set()
+    identities = [(row.product_id, row.location_id, row.measure, row.date) for _, row in good]
+    for group in chunks(identities):
+        existing.update(
+            tuple(row)
+            for row in s.execute(
+                select(Demand.product_id, Demand.location_id, Demand.measure, Demand.date).where(
+                    Demand.org_id == user.org_id,
+                    tuple_(Demand.product_id, Demand.location_id, Demand.measure, Demand.date).in_(group),
+                )
+            )
+        )
+    accepted = []
+    for number, row in good:
+        if (row.product_id, row.location_id, row.measure, row.date) in existing:
+            errors.append(
+                {
+                    "row": number,
+                    "error": "Observation already exists; corrections require a versioned replacement dataset",
+                }
+            )
+        else:
+            accepted.append(row)
+    good = accepted
+    errors.sort(key=lambda error: error["row"])
     result = {
         "digest": digest,
         "valid_rows": len(good),
@@ -122,8 +172,11 @@ def import_demand(s, user, org, raw, filename, metadata, dry_run):
     )
     s.add(dataset)
     s.flush()
-    for row in good:
-        s.add(Demand(org_id=user.org_id, dataset_id=dataset.id, **row.model_dump()))
+    for group in chunks(good):
+        s.execute(
+            insert(Demand),
+            [{"org_id": user.org_id, "dataset_id": dataset.id, **row.model_dump()} for row in group],
+        )
     org.revision += 1
     d.audit(
         s,

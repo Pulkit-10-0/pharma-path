@@ -9,11 +9,12 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Pulkit-10-0/pharma-path/actions/workflows/backend.yml"><img src="https://github.com/Pulkit-10-0/pharma-path/actions/workflows/backend.yml/badge.svg?branch=main" alt="Product checks" /></a>
+  <a href="https://github.com/Pulkit-10-0/pharma-path-nesfic/actions/workflows/backend.yml"><img src="https://github.com/Pulkit-10-0/pharma-path-nesfic/actions/workflows/backend.yml/badge.svg?branch=main" alt="Product checks" /></a>
   · <a href="https://pharma-path.onrender.com/">Live demonstration</a>
   · <a href="https://startup.assam.gov.in/nesfic26/problem-statements/nesfic-i-09">Official challenge</a>
   · <a href="docs/WEBSITE_READ_ALONG.md">Website walkthrough</a>
   · <a href="docs/PRD_STATUS.md">Implementation status</a>
+  · <a href="START_HERE.md">Evaluator quick start</a>
 </p>
 
 **Pharma Path connects a forecast to a stock decision, and follows that decision through approval, dispatch and receipt.** It combines a planner website, an Android field app and a shared, authenticated backend. Staff can inspect demand and inventory, compare replenishment and redistribution options, protect donor locations, manage expiry risk, record physical handoffs and explain the resulting stock balance.
@@ -22,9 +23,20 @@ The application was developed around **NESFIC-I-09**, the medicine demand and in
 
 > **Current evidence boundary:** the operational demonstration uses generated demand, fictional sites, approximate Assam town coordinates and illustrative business rules. A separate public pharmacy benchmark uses original observed category-sales data. Neither proves real GRD forecast accuracy, commercial savings or pilot outcomes.
 
-![Planning Studio: saved supply comparisons, donor options and frozen scenarios](docs/images/planning-studio.png)
+![Current network and complete laptop navigation](docs/images/network-current.png)
 
-**NESFIC evaluator release.** Android 1.3.2 uses the branded Pharma Path address. The selected forecasting methods averaged 27.3% WAPE versus 32.9% for the last-week baseline across eight public category series and three horizons, with 52 test origins per comparison. GRD performance requires an authorised pilot. [Android and benchmark downloads](https://github.com/Pulkit-10-0/pharma-path/releases/tag/nesfic-i09-review-2)
+**Submission source — 7 November 2026.** Start with the [evaluator quick start](START_HERE.md)
+and [code review](docs/SUBMISSION_CODE_REVIEW_2026-11-07.md). This repository preserves
+the existing project history and original-team attribution. The current synthetic
+scenario includes 218,400 demand observations; [data and assumptions](datasets/assam-dynamic-v2/README.md)
+are included alongside the generator.
+
+**Independent benchmark.** Selected methods averaged 27.3% WAPE versus 32.9% for
+repeating last week, across eight public category series and three horizons,
+with 52 test origins per comparison. That is approximately **17% relative error
+reduction**, below the challenge's 20% target. This is a public pharmacy benchmark;
+GRD's baseline and pilot performance remain unmeasured. [Earlier reviewer package:
+Android 1.3.2 and benchmark downloads](https://github.com/Pulkit-10-0/pharma-path/releases/tag/nesfic-i09-review-2).
 
 **Interface update — 3 November 2026:** guided order progress, one receiving form, clearer next actions, expandable details and editable supplier planning assumptions. Backend, website and Android CI checks passed. See the [usability update](docs/USABILITY_UPDATE_2026-11-03.md).
 
@@ -569,8 +581,8 @@ The local login throttle is process-local. This correctness-oriented small-netwo
 ### A. Clone and install the backend
 
 ```sh
-git clone https://github.com/Pulkit-10-0/pharma-path.git
-cd pharma-path
+git clone https://github.com/Pulkit-10-0/pharma-path-nesfic.git
+cd pharma-path-nesfic
 
 python3.12 -m venv .venv
 source .venv/bin/activate
@@ -605,7 +617,9 @@ The command prints a newly generated local value. Put it in your private environ
 
 ```sh
 grd migrate
-grd seed-demo --email demo@grd.local --as-of 2026-11-01
+grd seed-demo --email demo@pharmapath.local --as-of 2026-11-01
+grd add-pack-scenario --email demo@pharmapath.local
+grd add-dynamic-scenario --email demo@pharmapath.local
 ```
 
 The seed refuses to overwrite an existing account. Keep its declared date when issuing demo inventory commands. It prints record IDs and provenance, not the password.

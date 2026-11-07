@@ -42,15 +42,20 @@ export default defineConfig({
             );
             const response = await fetch(`${devApiOrigin}/api/v1/auth/login`, {
               method: "POST",
+              signal: AbortSignal.timeout(15000),
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
-                email: process.env.GRD_DEV_LOGIN_EMAIL || "demo@grd.local",
+                email:
+                  process.env.GRD_DEV_LOGIN_EMAIL ||
+                  env.GRD_DEMO_EMAIL ||
+                  "demo@pharmapath.local",
                 password: env.GRD_ADMIN_PASSWORD,
               }),
             });
             const body = await response.json();
             if (!response.ok) throw new Error("Demo login unavailable");
             const me = await fetch(`${devApiOrigin}/api/v1/me`, {
+              signal: AbortSignal.timeout(10000),
               headers: { Authorization: `Bearer ${body.access_token}` },
             });
             if ((await me.json()).evidence_type !== "synthetic")
