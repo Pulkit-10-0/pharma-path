@@ -1,10 +1,22 @@
 # Final release of record
 
-The canonical release is **Pharma Path 1.4.1**, tag
-[`nesfic-i09-final-v1.4.1`](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.1).
+The canonical release is **Pharma Path 1.4.2**, tag
+[`nesfic-i09-final-v1.4.2`](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.2).
 The release verification JSON and asset manifest are published with that tag after
 CI, deployment and package checks. They identify the exact commit, CI run, APK
 certificate/checksum, evidence files and physical-test boundary.
+
+## Android connection patch
+
+Version 1.4.2 fixes Android DNS/network error handling. Public mobile requests use
+the direct API hostname first and can fall back to the branded HTTPS hostname.
+Both addresses use the same backend and stock ledger. Cache and outbox identities
+remain stable; custom organisation servers never fall back to public hosts.
+
+The 1.4.1 product evidence deck and supporting proposal remain an immutable
+evidence snapshot. No presentation, architecture, product workflow, dataset or
+forecasting method is changed by this connection patch. See
+[ANDROID_CONNECTION_FIX](ANDROID_CONNECTION_FIX.md) for scope and recovery.
 
 ## How to verify the same source
 

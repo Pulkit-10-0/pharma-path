@@ -9,7 +9,7 @@ def test_public_release_reports_only_build_identity(env, monkeypatch):
     response = env.client.get("/health/release")
     assert response.status_code == 200
     result = response.json()
-    assert result["version"] == "1.4.1"
+    assert result["version"] == "1.4.2"
     assert result["commit"] == "a" * 40
     assert result["source_url"].endswith("/tree/" + "a" * 40)
     assert set(result) == {"version", "tag", "repository", "evaluation_protocol", "android_version_code", "commit", "source_url", "release_url"}

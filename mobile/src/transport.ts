@@ -8,6 +8,38 @@ export class ApiError extends Error {
 }
 export class SessionChanged extends Error {}
 
+const publicWebsite = "https://pharma-path.onrender.com";
+const publicApi = "https://grd-supply-demo.onrender.com";
+
+function apiOrigins(origin: string) {
+  // Both HTTPS names reach the same API and SQL ledger. Keep origin stable for
+  // account-bound cache/outbox keys, but bypass the website proxy on native apps.
+  // Custom organisation servers must never send credentials to this public API.
+  return origin === publicWebsite || origin === publicApi
+    ? [publicApi, publicWebsite]
+    : [origin];
+}
+
+function dnsFailure(error: unknown) {
+  return (
+    error instanceof Error &&
+    /UnknownHostException|Unable to resolve host|No address associated with hostname|ENOTFOUND|EAI_AGAIN/i.test(
+      error.message,
+    )
+  );
+}
+
+function connectionFailure(error: unknown) {
+  return (
+    error instanceof TypeError ||
+    dnsFailure(error) ||
+    (error instanceof Error &&
+      /Network request failed|fetch failed|Failed to fetch|NetworkError|ConnectException|Failed to connect|SocketException|SocketTimeoutException/i.test(
+        error.message,
+      ))
+  );
+}
+
 export function serverOrigin(value: string) {
   const url = new URL(value.trim());
   const h = url.hostname;
@@ -38,6 +70,7 @@ export function serverOrigin(value: string) {
 export class Transport {
   private epoch = 0;
   private token: string | null = null;
+  private connectedOrigin: string | null = null;
   constructor(
     public origin: string,
     private expired: () => void = () => {},
@@ -57,7 +90,7 @@ export class Transport {
     // A free demo host can need about a minute to wake after inactivity.
     const timer = setTimeout(() => controller.abort(), 90000);
     try {
-      const response = await fetch(this.origin + "/api/v1" + path, {
+      const options: RequestInit = {
         method,
         signal: controller.signal,
         headers: {
@@ -66,7 +99,40 @@ export class Transport {
           ...(key ? { "Idempotency-Key": key } : {}),
         },
         ...(body === undefined ? {} : { body: JSON.stringify(body) }),
-      });
+      };
+      const configured = apiOrigins(this.origin);
+      const origins = this.connectedOrigin
+        ? [
+            this.connectedOrigin,
+            ...configured.filter((o) => o !== this.connectedOrigin),
+          ]
+        : configured;
+      let response: Response | undefined;
+      for (let index = 0; index < origins.length; index++) {
+        if (epoch !== this.epoch) throw new SessionChanged();
+        try {
+          response = await fetch(origins[index] + "/api/v1" + path, options);
+          if (epoch !== this.epoch) throw new SessionChanged();
+          this.connectedOrigin = origins[index];
+          break;
+        } catch (error) {
+          if (epoch !== this.epoch) throw new SessionChanged();
+          // A lost reply may already have committed a write. Only replay reads,
+          // persisted idempotent commands, or a confirmed DNS lookup failure.
+          const safeToRepeat =
+            ["GET", "HEAD"].includes(method.toUpperCase()) ||
+            Boolean(key) ||
+            dnsFailure(error);
+          if (
+            index === origins.length - 1 ||
+            controller.signal.aborted ||
+            !connectionFailure(error) ||
+            !safeToRepeat
+          )
+            throw error;
+        }
+      }
+      if (!response) throw new Error("No server response.");
       if (epoch !== this.epoch) throw new SessionChanged();
       let result: { detail?: unknown };
       try {
@@ -102,9 +168,9 @@ export class Transport {
         throw new Error(
           "The server did not respond in time. Check the connection and retry the saved action to confirm its result.",
         );
-      if (error instanceof TypeError)
+      if (connectionFailure(error))
         throw new Error(
-          "Cannot reach the server. Check its address and your connection; the server may need a moment to start.",
+          "Cannot connect to Pharma Path. Try mobile data or another Wi-Fi network, then retry. Saved actions remain on this phone.",
         );
       throw error;
     } finally {
