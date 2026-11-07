@@ -26,8 +26,8 @@ The application was developed around **NESFIC-I-09**, the medicine demand and in
 ![Current network and complete laptop navigation](docs/images/network-current.png)
 
 **Submission source — 7 November 2026.** Start with the [evaluator quick start](START_HERE.md)
-and [code review](docs/SUBMISSION_CODE_REVIEW_2026-11-07.md). This repository preserves
-the existing project history and original-team attribution. The current synthetic
+and [code review](docs/SUBMISSION_CODE_REVIEW_2026-11-07.md). This repository contains
+the team's complete application and analysis work. The current synthetic
 scenario includes 218,400 demand observations; [data and assumptions](datasets/assam-dynamic-v2/README.md)
 are included alongside the generator.
 

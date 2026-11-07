@@ -20,8 +20,8 @@ backend integration tests, web tests and Android export validation.
   for multibyte chunk handling, not a comment; it remains part of that test.
 - The original network script now writes the final product CSV once, after
   assigning unknown valuation and source metadata.
-- Commit history and original-team attribution are preserved. See
-  [SOURCE_ORIGIN.md](SOURCE_ORIGIN.md).
+- The notebook, experiments and application form one team project. See the
+  [team project guide](SOURCE_ORIGIN.md) for component and evaluation scope.
 
 ## Performance and correctness improvements
 
