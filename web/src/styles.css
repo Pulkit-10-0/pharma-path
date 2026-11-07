@@ -4600,6 +4600,11 @@ strong {
 }
 .sidebar .workspace-label {
   color: #a4b99f;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
 }
 /* Keep the complete navigation and account controls within laptop viewports.
    At unusually short heights the sidebar itself scrolls independently. */
