@@ -1,0 +1,3842 @@
+[
+  {
+    "product_code": "paracetamol",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2022-07-10",
+    "end": "2022-07-24",
+    "multiplier": 1.519
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2022-08-10",
+    "end": "2022-08-24",
+    "multiplier": 1.3456
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2021-12-19",
+    "end": "2022-01-02",
+    "multiplier": 1.2185
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2021-12-16",
+    "end": "2021-12-30",
+    "multiplier": 1.4996
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-06-26",
+    "end": "2023-07-10",
+    "multiplier": 1.2198
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2023-07-21",
+    "end": "2023-08-04",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2023-01-28",
+    "end": "2023-02-11",
+    "multiplier": 1.5574
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2023-07-07",
+    "end": "2023-07-21",
+    "multiplier": 1.4286
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2024-02-21",
+    "end": "2024-03-06",
+    "multiplier": 1.1836
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2024-06-25",
+    "end": "2024-07-09",
+    "multiplier": 1.2849
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2024-07-15",
+    "end": "2024-07-29",
+    "multiplier": 1.5131
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-02-10",
+    "end": "2024-02-24",
+    "multiplier": 1.4448
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2025-08-27",
+    "end": "2025-09-10",
+    "multiplier": 1.4187
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-08-10",
+    "end": "2025-08-24",
+    "multiplier": 1.44
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2025-04-10",
+    "end": "2025-04-24",
+    "multiplier": 1.1563
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2025-02-01",
+    "end": "2025-02-15",
+    "multiplier": 1.2678
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2026-03-02",
+    "end": "2026-03-16",
+    "multiplier": 1.523
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2026-08-31",
+    "end": "2026-09-14",
+    "multiplier": 1.3064
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2026-04-19",
+    "end": "2026-05-03",
+    "multiplier": 1.3679
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2026-05-04",
+    "end": "2026-05-18",
+    "multiplier": 1.3836
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2022-01-11",
+    "end": "2022-01-25",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2022-05-20",
+    "end": "2022-05-27",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2022-04-15",
+    "end": "2022-04-24",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2022-05-01",
+    "end": "2022-05-12",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2023-04-28",
+    "end": "2023-05-19",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-01-07",
+    "end": "2023-01-23",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2023-07-02",
+    "end": "2023-07-15",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2023-08-08",
+    "end": "2023-08-25",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2024-07-25",
+    "end": "2024-08-10",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2024-07-14",
+    "end": "2024-07-26",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2024-06-15",
+    "end": "2024-07-05",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2024-07-27",
+    "end": "2024-08-07",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2025-05-08",
+    "end": "2025-05-15",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2024-12-19",
+    "end": "2024-12-31",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-08-27",
+    "end": "2025-09-17",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2025-06-30",
+    "end": "2025-07-09",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2026-08-25",
+    "end": "2026-09-05",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2026-07-07",
+    "end": "2026-07-19",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-12-22",
+    "end": "2026-01-07",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "paracetamol",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2026-07-05",
+    "end": "2026-07-16",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2022-08-03",
+    "end": "2022-08-17",
+    "multiplier": 1.5049
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2022-01-16",
+    "end": "2022-01-30",
+    "multiplier": 1.2035
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2022-03-27",
+    "end": "2022-04-10",
+    "multiplier": 1.2961
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2022-04-28",
+    "end": "2022-05-12",
+    "multiplier": 1.3329
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-04-25",
+    "end": "2023-05-09",
+    "multiplier": 1.4104
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2023-08-14",
+    "end": "2023-08-28",
+    "multiplier": 1.2672
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2023-01-26",
+    "end": "2023-02-09",
+    "multiplier": 1.3838
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2023-06-16",
+    "end": "2023-06-30",
+    "multiplier": 1.5923
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2024-03-17",
+    "end": "2024-03-31",
+    "multiplier": 1.2194
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2024-05-03",
+    "end": "2024-05-17",
+    "multiplier": 1.2983
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2024-01-09",
+    "end": "2024-01-23",
+    "multiplier": 1.3488
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-08-28",
+    "end": "2024-09-11",
+    "multiplier": 1.2755
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2025-01-03",
+    "end": "2025-01-17",
+    "multiplier": 1.5017
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-03-02",
+    "end": "2025-03-16",
+    "multiplier": 1.2527
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2025-08-03",
+    "end": "2025-08-17",
+    "multiplier": 1.2415
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-12-11",
+    "end": "2024-12-25",
+    "multiplier": 1.2296
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2026-06-16",
+    "end": "2026-06-30",
+    "multiplier": 1.5179
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-12-27",
+    "end": "2026-01-10",
+    "multiplier": 1.4154
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2026-01-03",
+    "end": "2026-01-17",
+    "multiplier": 1.4156
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2026-08-20",
+    "end": "2026-09-03",
+    "multiplier": 1.3607
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2022-05-30",
+    "end": "2022-06-20",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2022-04-03",
+    "end": "2022-04-10",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2022-03-06",
+    "end": "2022-03-21",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2022-01-26",
+    "end": "2022-02-09",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2023-03-17",
+    "end": "2023-04-05",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-02-08",
+    "end": "2023-02-25",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2023-02-24",
+    "end": "2023-03-10",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2023-09-03",
+    "end": "2023-09-23",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2024-06-19",
+    "end": "2024-07-06",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2024-09-09",
+    "end": "2024-09-25",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2024-07-04",
+    "end": "2024-07-23",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2024-01-26",
+    "end": "2024-02-13",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2025-09-14",
+    "end": "2025-10-05",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2025-09-14",
+    "end": "2025-09-26",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-05-11",
+    "end": "2025-05-27",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2025-02-12",
+    "end": "2025-03-03",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2026-04-16",
+    "end": "2026-04-30",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2026-02-15",
+    "end": "2026-03-03",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2026-07-10",
+    "end": "2026-07-22",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "cetirizine",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2025-12-18",
+    "end": "2026-01-07",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "ors",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2022-05-13",
+    "end": "2022-05-27",
+    "multiplier": 1.2269
+  },
+  {
+    "product_code": "ors",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2022-08-13",
+    "end": "2022-08-27",
+    "multiplier": 1.4259
+  },
+  {
+    "product_code": "ors",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2022-02-01",
+    "end": "2022-02-15",
+    "multiplier": 1.4013
+  },
+  {
+    "product_code": "ors",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2022-01-19",
+    "end": "2022-02-02",
+    "multiplier": 1.3766
+  },
+  {
+    "product_code": "ors",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-08-26",
+    "end": "2023-09-09",
+    "multiplier": 1.4845
+  },
+  {
+    "product_code": "ors",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2023-05-16",
+    "end": "2023-05-30",
+    "multiplier": 1.5019
+  },
+  {
+    "product_code": "ors",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2023-08-07",
+    "end": "2023-08-21",
+    "multiplier": 1.1736
+  },
+  {
+    "product_code": "ors",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2023-05-29",
+    "end": "2023-06-12",
+    "multiplier": 1.4753
+  },
+  {
+    "product_code": "ors",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-12-27",
+    "end": "2024-01-10",
+    "multiplier": 1.3254
+  },
+  {
+    "product_code": "ors",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2024-02-28",
+    "end": "2024-03-13",
+    "multiplier": 1.4648
+  },
+  {
+    "product_code": "ors",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2024-06-17",
+    "end": "2024-07-01",
+    "multiplier": 1.5824
+  },
+  {
+    "product_code": "ors",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-01-03",
+    "end": "2024-01-17",
+    "multiplier": 1.2686
+  },
+  {
+    "product_code": "ors",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2025-07-28",
+    "end": "2025-08-11",
+    "multiplier": 1.5633
+  },
+  {
+    "product_code": "ors",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-03-05",
+    "end": "2025-03-19",
+    "multiplier": 1.3259
+  },
+  {
+    "product_code": "ors",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2025-05-29",
+    "end": "2025-06-12",
+    "multiplier": 1.1557
+  },
+  {
+    "product_code": "ors",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2025-05-15",
+    "end": "2025-05-29",
+    "multiplier": 1.355
+  },
+  {
+    "product_code": "ors",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2026-05-12",
+    "end": "2026-05-26",
+    "multiplier": 1.3895
+  },
+  {
+    "product_code": "ors",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2026-05-14",
+    "end": "2026-05-28",
+    "multiplier": 1.5938
+  },
+  {
+    "product_code": "ors",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2026-02-11",
+    "end": "2026-02-25",
+    "multiplier": 1.2975
+  },
+  {
+    "product_code": "ors",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2026-07-31",
+    "end": "2026-08-14",
+    "multiplier": 1.5332
+  },
+  {
+    "product_code": "ors",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2022-08-01",
+    "end": "2022-08-11",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "ors",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2022-08-21",
+    "end": "2022-09-07",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "ors",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2022-07-31",
+    "end": "2022-08-17",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "ors",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2022-01-29",
+    "end": "2022-02-09",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "ors",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2023-09-20",
+    "end": "2023-09-28",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "ors",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-01-27",
+    "end": "2023-02-05",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "ors",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2023-05-06",
+    "end": "2023-05-25",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "ors",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2023-06-07",
+    "end": "2023-06-26",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "ors",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2024-04-08",
+    "end": "2024-04-25",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "ors",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2024-04-25",
+    "end": "2024-05-12",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "ors",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2024-03-14",
+    "end": "2024-03-21",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "ors",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2024-02-21",
+    "end": "2024-03-08",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "ors",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2025-01-13",
+    "end": "2025-01-28",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "ors",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2025-04-07",
+    "end": "2025-04-28",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "ors",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-09-04",
+    "end": "2025-09-11",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "ors",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2025-05-02",
+    "end": "2025-05-15",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "ors",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2026-01-15",
+    "end": "2026-01-29",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "ors",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2026-08-13",
+    "end": "2026-08-24",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "ors",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-12-17",
+    "end": "2026-01-02",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "ors",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2026-04-30",
+    "end": "2026-05-16",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2022-02-06",
+    "end": "2022-02-20",
+    "multiplier": 1.2894
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2022-05-09",
+    "end": "2022-05-23",
+    "multiplier": 1.1951
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2022-08-21",
+    "end": "2022-09-04",
+    "multiplier": 1.5561
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2021-12-21",
+    "end": "2022-01-04",
+    "multiplier": 1.3226
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-03-20",
+    "end": "2023-04-03",
+    "multiplier": 1.2667
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2023-07-26",
+    "end": "2023-08-09",
+    "multiplier": 1.5752
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2023-05-30",
+    "end": "2023-06-13",
+    "multiplier": 1.4867
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2023-07-03",
+    "end": "2023-07-17",
+    "multiplier": 1.5002
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2024-02-03",
+    "end": "2024-02-17",
+    "multiplier": 1.5828
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2024-07-18",
+    "end": "2024-08-01",
+    "multiplier": 1.4734
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2024-06-14",
+    "end": "2024-06-28",
+    "multiplier": 1.3963
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-06-08",
+    "end": "2024-06-22",
+    "multiplier": 1.3459
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2025-05-16",
+    "end": "2025-05-30",
+    "multiplier": 1.3966
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-05-18",
+    "end": "2025-06-01",
+    "multiplier": 1.5133
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2025-01-25",
+    "end": "2025-02-08",
+    "multiplier": 1.5859
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2025-03-07",
+    "end": "2025-03-21",
+    "multiplier": 1.4354
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2026-04-10",
+    "end": "2026-04-24",
+    "multiplier": 1.4396
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-12-16",
+    "end": "2025-12-30",
+    "multiplier": 1.1858
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2026-08-12",
+    "end": "2026-08-26",
+    "multiplier": 1.331
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2026-04-15",
+    "end": "2026-04-29",
+    "multiplier": 1.5012
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2022-07-29",
+    "end": "2022-08-11",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2022-08-12",
+    "end": "2022-08-30",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2022-08-31",
+    "end": "2022-09-09",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2022-04-21",
+    "end": "2022-04-28",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2023-02-15",
+    "end": "2023-02-23",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-01-26",
+    "end": "2023-02-05",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2023-06-29",
+    "end": "2023-07-19",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2023-03-07",
+    "end": "2023-03-21",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2024-06-01",
+    "end": "2024-06-11",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-12-29",
+    "end": "2024-01-10",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2023-12-28",
+    "end": "2024-01-07",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2024-07-13",
+    "end": "2024-07-22",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2025-01-26",
+    "end": "2025-02-04",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2025-08-11",
+    "end": "2025-08-30",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-04-06",
+    "end": "2025-04-24",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2025-09-18",
+    "end": "2025-10-06",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2026-08-21",
+    "end": "2026-09-06",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2026-03-05",
+    "end": "2026-03-12",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2026-06-17",
+    "end": "2026-06-24",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "amoxicillin",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2026-05-18",
+    "end": "2026-05-28",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2022-04-30",
+    "end": "2022-05-14",
+    "multiplier": 1.5295
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2022-07-18",
+    "end": "2022-08-01",
+    "multiplier": 1.4844
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2022-07-24",
+    "end": "2022-08-07",
+    "multiplier": 1.4671
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2022-01-08",
+    "end": "2022-01-22",
+    "multiplier": 1.2604
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-05-19",
+    "end": "2023-06-02",
+    "multiplier": 1.2545
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2023-06-21",
+    "end": "2023-07-05",
+    "multiplier": 1.4408
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2023-05-06",
+    "end": "2023-05-20",
+    "multiplier": 1.3854
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2023-08-14",
+    "end": "2023-08-28",
+    "multiplier": 1.4872
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2024-04-16",
+    "end": "2024-04-30",
+    "multiplier": 1.4112
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2024-03-01",
+    "end": "2024-03-15",
+    "multiplier": 1.4241
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2024-08-21",
+    "end": "2024-09-04",
+    "multiplier": 1.404
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-05-27",
+    "end": "2024-06-10",
+    "multiplier": 1.4162
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2025-07-26",
+    "end": "2025-08-09",
+    "multiplier": 1.4778
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-06-15",
+    "end": "2025-06-29",
+    "multiplier": 1.2613
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2025-02-01",
+    "end": "2025-02-15",
+    "multiplier": 1.3941
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-12-20",
+    "end": "2025-01-03",
+    "multiplier": 1.5864
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2026-02-08",
+    "end": "2026-02-22",
+    "multiplier": 1.458
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2026-03-11",
+    "end": "2026-03-25",
+    "multiplier": 1.2061
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2026-03-09",
+    "end": "2026-03-23",
+    "multiplier": 1.5062
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2026-01-07",
+    "end": "2026-01-21",
+    "multiplier": 1.4742
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2022-01-07",
+    "end": "2022-01-23",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2021-12-20",
+    "end": "2021-12-28",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2022-01-26",
+    "end": "2022-02-04",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2022-02-20",
+    "end": "2022-02-28",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2023-07-06",
+    "end": "2023-07-24",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-07-10",
+    "end": "2023-07-18",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2023-05-28",
+    "end": "2023-06-13",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2023-02-22",
+    "end": "2023-03-07",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2024-05-02",
+    "end": "2024-05-17",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2024-08-07",
+    "end": "2024-08-22",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2024-01-17",
+    "end": "2024-01-31",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2024-09-05",
+    "end": "2024-09-16",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2025-03-11",
+    "end": "2025-03-30",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2025-07-20",
+    "end": "2025-07-27",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-02-20",
+    "end": "2025-03-03",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2025-04-23",
+    "end": "2025-05-07",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2025-12-18",
+    "end": "2026-01-08",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2026-02-08",
+    "end": "2026-02-24",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2026-06-01",
+    "end": "2026-06-14",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "metformin",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2026-06-09",
+    "end": "2026-06-24",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2022-07-20",
+    "end": "2022-08-03",
+    "multiplier": 1.2407
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2022-07-13",
+    "end": "2022-07-27",
+    "multiplier": 1.3957
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2022-03-18",
+    "end": "2022-04-01",
+    "multiplier": 1.4829
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2021-12-09",
+    "end": "2021-12-23",
+    "multiplier": 1.2015
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-02-09",
+    "end": "2023-02-23",
+    "multiplier": 1.5272
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2023-07-28",
+    "end": "2023-08-11",
+    "multiplier": 1.5304
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2023-06-20",
+    "end": "2023-07-04",
+    "multiplier": 1.39
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2023-05-28",
+    "end": "2023-06-11",
+    "multiplier": 1.3997
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2024-06-09",
+    "end": "2024-06-23",
+    "multiplier": 1.4082
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2024-03-25",
+    "end": "2024-04-08",
+    "multiplier": 1.4419
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2024-08-01",
+    "end": "2024-08-15",
+    "multiplier": 1.2055
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-02-09",
+    "end": "2024-02-23",
+    "multiplier": 1.188
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2025-03-05",
+    "end": "2025-03-19",
+    "multiplier": 1.58
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-03-26",
+    "end": "2025-04-09",
+    "multiplier": 1.1929
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2025-06-13",
+    "end": "2025-06-27",
+    "multiplier": 1.3641
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2025-05-19",
+    "end": "2025-06-02",
+    "multiplier": 1.1663
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2026-07-19",
+    "end": "2026-08-02",
+    "multiplier": 1.4119
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2026-01-15",
+    "end": "2026-01-29",
+    "multiplier": 1.3253
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2026-07-31",
+    "end": "2026-08-14",
+    "multiplier": 1.4136
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2026-06-14",
+    "end": "2026-06-28",
+    "multiplier": 1.2364
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2022-02-20",
+    "end": "2022-03-11",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2022-03-14",
+    "end": "2022-03-21",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2022-02-14",
+    "end": "2022-02-25",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2022-02-04",
+    "end": "2022-02-15",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2023-01-22",
+    "end": "2023-01-31",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-07-24",
+    "end": "2023-08-14",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2023-07-09",
+    "end": "2023-07-18",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2023-05-30",
+    "end": "2023-06-19",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2024-03-20",
+    "end": "2024-03-28",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2024-09-09",
+    "end": "2024-09-23",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2024-06-01",
+    "end": "2024-06-15",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2024-01-02",
+    "end": "2024-01-21",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2025-07-28",
+    "end": "2025-08-12",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2025-07-05",
+    "end": "2025-07-15",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-06-15",
+    "end": "2025-07-01",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2025-04-16",
+    "end": "2025-05-04",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2026-07-29",
+    "end": "2026-08-12",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2026-07-10",
+    "end": "2026-07-23",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2026-06-18",
+    "end": "2026-06-26",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "amlodipine",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2026-01-11",
+    "end": "2026-02-01",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2022-04-29",
+    "end": "2022-05-13",
+    "multiplier": 1.5843
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2022-04-29",
+    "end": "2022-05-13",
+    "multiplier": 1.226
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2022-09-02",
+    "end": "2022-09-16",
+    "multiplier": 1.4547
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2022-05-20",
+    "end": "2022-06-03",
+    "multiplier": 1.2864
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-02-07",
+    "end": "2023-02-21",
+    "multiplier": 1.4188
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2023-07-12",
+    "end": "2023-07-26",
+    "multiplier": 1.1635
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2023-05-04",
+    "end": "2023-05-18",
+    "multiplier": 1.4776
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2023-07-18",
+    "end": "2023-08-01",
+    "multiplier": 1.3628
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2024-03-11",
+    "end": "2024-03-25",
+    "multiplier": 1.3872
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2024-04-21",
+    "end": "2024-05-05",
+    "multiplier": 1.3588
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2024-08-01",
+    "end": "2024-08-15",
+    "multiplier": 1.5285
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-08-10",
+    "end": "2024-08-24",
+    "multiplier": 1.4911
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2025-02-24",
+    "end": "2025-03-10",
+    "multiplier": 1.502
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-08-11",
+    "end": "2025-08-25",
+    "multiplier": 1.2787
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2025-01-25",
+    "end": "2025-02-08",
+    "multiplier": 1.1819
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2025-03-27",
+    "end": "2025-04-10",
+    "multiplier": 1.4576
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2026-03-16",
+    "end": "2026-03-30",
+    "multiplier": 1.1954
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2026-07-10",
+    "end": "2026-07-24",
+    "multiplier": 1.3874
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2026-02-14",
+    "end": "2026-02-28",
+    "multiplier": 1.5983
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2026-04-29",
+    "end": "2026-05-13",
+    "multiplier": 1.5802
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2022-04-23",
+    "end": "2022-05-01",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2022-01-09",
+    "end": "2022-01-27",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2022-01-16",
+    "end": "2022-01-31",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2022-05-31",
+    "end": "2022-06-07",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2023-05-11",
+    "end": "2023-05-28",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-01-05",
+    "end": "2023-01-18",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2023-03-20",
+    "end": "2023-04-10",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2023-05-29",
+    "end": "2023-06-12",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2024-02-19",
+    "end": "2024-03-02",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-12-14",
+    "end": "2023-12-31",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2024-02-20",
+    "end": "2024-03-11",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2024-07-14",
+    "end": "2024-07-21",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2025-02-25",
+    "end": "2025-03-16",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2025-05-15",
+    "end": "2025-06-02",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-05-13",
+    "end": "2025-05-20",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2025-08-16",
+    "end": "2025-09-03",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2026-08-21",
+    "end": "2026-08-30",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2026-05-02",
+    "end": "2026-05-16",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2026-03-13",
+    "end": "2026-03-27",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "pantoprazole",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2026-06-02",
+    "end": "2026-06-13",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2022-06-21",
+    "end": "2022-07-05",
+    "multiplier": 1.2852
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2022-03-10",
+    "end": "2022-03-24",
+    "multiplier": 1.4673
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2022-08-11",
+    "end": "2022-08-25",
+    "multiplier": 1.4764
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2022-07-24",
+    "end": "2022-08-07",
+    "multiplier": 1.3388
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-02-25",
+    "end": "2023-03-11",
+    "multiplier": 1.2818
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2023-06-03",
+    "end": "2023-06-17",
+    "multiplier": 1.2958
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2023-07-03",
+    "end": "2023-07-17",
+    "multiplier": 1.4711
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2023-06-09",
+    "end": "2023-06-23",
+    "multiplier": 1.4509
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2024-04-03",
+    "end": "2024-04-17",
+    "multiplier": 1.3359
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2024-08-02",
+    "end": "2024-08-16",
+    "multiplier": 1.2225
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2024-01-18",
+    "end": "2024-02-01",
+    "multiplier": 1.3235
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-04-16",
+    "end": "2024-04-30",
+    "multiplier": 1.2429
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2024-12-27",
+    "end": "2025-01-10",
+    "multiplier": 1.3448
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-05-16",
+    "end": "2025-05-30",
+    "multiplier": 1.1635
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2025-07-24",
+    "end": "2025-08-07",
+    "multiplier": 1.4311
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2025-05-08",
+    "end": "2025-05-22",
+    "multiplier": 1.227
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2026-05-10",
+    "end": "2026-05-24",
+    "multiplier": 1.2994
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2026-06-01",
+    "end": "2026-06-15",
+    "multiplier": 1.4625
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2026-07-05",
+    "end": "2026-07-19",
+    "multiplier": 1.5355
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2026-05-08",
+    "end": "2026-05-22",
+    "multiplier": 1.3638
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2022-06-27",
+    "end": "2022-07-09",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2022-05-10",
+    "end": "2022-05-24",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2022-01-21",
+    "end": "2022-02-02",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2022-04-01",
+    "end": "2022-04-17",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2023-03-19",
+    "end": "2023-03-27",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-06-01",
+    "end": "2023-06-18",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2023-05-08",
+    "end": "2023-05-15",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2023-07-25",
+    "end": "2023-08-02",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2024-06-30",
+    "end": "2024-07-13",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2024-05-14",
+    "end": "2024-06-03",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2024-03-09",
+    "end": "2024-03-26",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2024-09-08",
+    "end": "2024-09-26",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2025-04-18",
+    "end": "2025-04-27",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2025-08-13",
+    "end": "2025-08-23",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-03-07",
+    "end": "2025-03-26",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2025-03-08",
+    "end": "2025-03-23",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2026-05-09",
+    "end": "2026-05-24",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2026-02-22",
+    "end": "2026-03-11",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2026-01-03",
+    "end": "2026-01-14",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "salbutamol",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2026-04-09",
+    "end": "2026-04-16",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2022-07-28",
+    "end": "2022-08-11",
+    "multiplier": 1.5532
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2022-07-11",
+    "end": "2022-07-25",
+    "multiplier": 1.3547
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2022-07-11",
+    "end": "2022-07-25",
+    "multiplier": 1.5173
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2022-04-30",
+    "end": "2022-05-14",
+    "multiplier": 1.2204
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-08-17",
+    "end": "2023-08-31",
+    "multiplier": 1.5228
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2023-06-19",
+    "end": "2023-07-03",
+    "multiplier": 1.5421
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2023-01-02",
+    "end": "2023-01-16",
+    "multiplier": 1.2101
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2023-06-30",
+    "end": "2023-07-14",
+    "multiplier": 1.1696
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2024-08-10",
+    "end": "2024-08-24",
+    "multiplier": 1.596
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2024-04-28",
+    "end": "2024-05-12",
+    "multiplier": 1.5718
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2024-02-13",
+    "end": "2024-02-27",
+    "multiplier": 1.4305
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-07-30",
+    "end": "2024-08-13",
+    "multiplier": 1.2744
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2025-08-12",
+    "end": "2025-08-26",
+    "multiplier": 1.4443
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-03-15",
+    "end": "2025-03-29",
+    "multiplier": 1.5383
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2025-07-21",
+    "end": "2025-08-04",
+    "multiplier": 1.4234
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-12-18",
+    "end": "2025-01-01",
+    "multiplier": 1.4826
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2026-02-16",
+    "end": "2026-03-02",
+    "multiplier": 1.4824
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2026-08-27",
+    "end": "2026-09-10",
+    "multiplier": 1.5712
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2026-08-05",
+    "end": "2026-08-19",
+    "multiplier": 1.5682
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2026-01-22",
+    "end": "2026-02-05",
+    "multiplier": 1.4581
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2022-07-23",
+    "end": "2022-08-13",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2022-04-05",
+    "end": "2022-04-19",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2022-01-14",
+    "end": "2022-01-23",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2022-04-04",
+    "end": "2022-04-19",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2023-08-24",
+    "end": "2023-09-14",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-06-05",
+    "end": "2023-06-14",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2022-12-31",
+    "end": "2023-01-13",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2023-06-29",
+    "end": "2023-07-19",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2024-03-14",
+    "end": "2024-03-29",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2024-04-07",
+    "end": "2024-04-18",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2024-07-17",
+    "end": "2024-07-24",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2024-03-11",
+    "end": "2024-03-27",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2025-05-18",
+    "end": "2025-06-08",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2025-03-07",
+    "end": "2025-03-15",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-04-24",
+    "end": "2025-05-04",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2025-05-20",
+    "end": "2025-06-10",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2026-03-05",
+    "end": "2026-03-25",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2026-07-19",
+    "end": "2026-08-02",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2026-05-15",
+    "end": "2026-05-22",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "zinc",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2026-08-06",
+    "end": "2026-08-16",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "cough",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2022-08-29",
+    "end": "2022-09-12",
+    "multiplier": 1.587
+  },
+  {
+    "product_code": "cough",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2022-05-31",
+    "end": "2022-06-14",
+    "multiplier": 1.3338
+  },
+  {
+    "product_code": "cough",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2021-12-10",
+    "end": "2021-12-24",
+    "multiplier": 1.5297
+  },
+  {
+    "product_code": "cough",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2022-08-15",
+    "end": "2022-08-29",
+    "multiplier": 1.3978
+  },
+  {
+    "product_code": "cough",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-05-20",
+    "end": "2023-06-03",
+    "multiplier": 1.4362
+  },
+  {
+    "product_code": "cough",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2023-01-14",
+    "end": "2023-01-28",
+    "multiplier": 1.3213
+  },
+  {
+    "product_code": "cough",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2022-12-26",
+    "end": "2023-01-09",
+    "multiplier": 1.5755
+  },
+  {
+    "product_code": "cough",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2023-06-19",
+    "end": "2023-07-03",
+    "multiplier": 1.5837
+  },
+  {
+    "product_code": "cough",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2024-05-02",
+    "end": "2024-05-16",
+    "multiplier": 1.3057
+  },
+  {
+    "product_code": "cough",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2024-01-01",
+    "end": "2024-01-15",
+    "multiplier": 1.5347
+  },
+  {
+    "product_code": "cough",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2024-08-17",
+    "end": "2024-08-31",
+    "multiplier": 1.3197
+  },
+  {
+    "product_code": "cough",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-06-05",
+    "end": "2024-06-19",
+    "multiplier": 1.4655
+  },
+  {
+    "product_code": "cough",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2025-08-28",
+    "end": "2025-09-11",
+    "multiplier": 1.1523
+  },
+  {
+    "product_code": "cough",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-05-08",
+    "end": "2025-05-22",
+    "multiplier": 1.5378
+  },
+  {
+    "product_code": "cough",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2025-05-19",
+    "end": "2025-06-02",
+    "multiplier": 1.2314
+  },
+  {
+    "product_code": "cough",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2025-02-14",
+    "end": "2025-02-28",
+    "multiplier": 1.3362
+  },
+  {
+    "product_code": "cough",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2026-08-26",
+    "end": "2026-09-09",
+    "multiplier": 1.4044
+  },
+  {
+    "product_code": "cough",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2026-03-03",
+    "end": "2026-03-17",
+    "multiplier": 1.2243
+  },
+  {
+    "product_code": "cough",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2026-08-23",
+    "end": "2026-09-06",
+    "multiplier": 1.2125
+  },
+  {
+    "product_code": "cough",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2026-04-20",
+    "end": "2026-05-04",
+    "multiplier": 1.3355
+  },
+  {
+    "product_code": "cough",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2022-07-19",
+    "end": "2022-08-03",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cough",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2022-08-07",
+    "end": "2022-08-27",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "cough",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2022-03-27",
+    "end": "2022-04-14",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "cough",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2022-03-25",
+    "end": "2022-04-13",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cough",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2023-05-31",
+    "end": "2023-06-10",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "cough",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-03-31",
+    "end": "2023-04-16",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "cough",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2023-07-26",
+    "end": "2023-08-11",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cough",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2023-04-23",
+    "end": "2023-05-06",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "cough",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2024-03-24",
+    "end": "2024-03-31",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "cough",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2024-05-25",
+    "end": "2024-06-10",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "cough",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2024-06-29",
+    "end": "2024-07-14",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "cough",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2024-03-05",
+    "end": "2024-03-20",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "cough",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2025-08-25",
+    "end": "2025-09-09",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "cough",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2025-06-16",
+    "end": "2025-06-24",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cough",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-04-26",
+    "end": "2025-05-13",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "cough",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2025-02-08",
+    "end": "2025-02-23",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "cough",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2026-04-13",
+    "end": "2026-04-28",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "cough",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2026-05-25",
+    "end": "2026-06-03",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "cough",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2026-05-11",
+    "end": "2026-05-27",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "cough",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2026-08-16",
+    "end": "2026-08-30",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "slow",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2022-01-13",
+    "end": "2022-01-27",
+    "multiplier": 1.2955
+  },
+  {
+    "product_code": "slow",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2022-01-24",
+    "end": "2022-02-07",
+    "multiplier": 1.3117
+  },
+  {
+    "product_code": "slow",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2022-08-21",
+    "end": "2022-09-04",
+    "multiplier": 1.3553
+  },
+  {
+    "product_code": "slow",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2022-02-04",
+    "end": "2022-02-18",
+    "multiplier": 1.58
+  },
+  {
+    "product_code": "slow",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-04-06",
+    "end": "2023-04-20",
+    "multiplier": 1.1532
+  },
+  {
+    "product_code": "slow",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2022-12-27",
+    "end": "2023-01-10",
+    "multiplier": 1.3284
+  },
+  {
+    "product_code": "slow",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2023-05-22",
+    "end": "2023-06-05",
+    "multiplier": 1.416
+  },
+  {
+    "product_code": "slow",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2023-06-21",
+    "end": "2023-07-05",
+    "multiplier": 1.3034
+  },
+  {
+    "product_code": "slow",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-12-18",
+    "end": "2024-01-01",
+    "multiplier": 1.2905
+  },
+  {
+    "product_code": "slow",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2024-06-15",
+    "end": "2024-06-29",
+    "multiplier": 1.262
+  },
+  {
+    "product_code": "slow",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2024-05-22",
+    "end": "2024-06-05",
+    "multiplier": 1.4392
+  },
+  {
+    "product_code": "slow",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-01-28",
+    "end": "2024-02-11",
+    "multiplier": 1.3772
+  },
+  {
+    "product_code": "slow",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2025-03-14",
+    "end": "2025-03-28",
+    "multiplier": 1.2689
+  },
+  {
+    "product_code": "slow",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-01-11",
+    "end": "2025-01-25",
+    "multiplier": 1.281
+  },
+  {
+    "product_code": "slow",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2025-02-05",
+    "end": "2025-02-19",
+    "multiplier": 1.3445
+  },
+  {
+    "product_code": "slow",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2025-04-20",
+    "end": "2025-05-04",
+    "multiplier": 1.2306
+  },
+  {
+    "product_code": "slow",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2026-07-12",
+    "end": "2026-07-26",
+    "multiplier": 1.4208
+  },
+  {
+    "product_code": "slow",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2026-03-26",
+    "end": "2026-04-09",
+    "multiplier": 1.1603
+  },
+  {
+    "product_code": "slow",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2026-05-29",
+    "end": "2026-06-12",
+    "multiplier": 1.4935
+  },
+  {
+    "product_code": "slow",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2026-08-12",
+    "end": "2026-08-26",
+    "multiplier": 1.2538
+  },
+  {
+    "product_code": "slow",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2021-12-27",
+    "end": "2022-01-15",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "slow",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2022-01-10",
+    "end": "2022-01-18",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "slow",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2022-05-07",
+    "end": "2022-05-24",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "slow",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2022-01-14",
+    "end": "2022-01-22",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "slow",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2023-03-24",
+    "end": "2023-04-13",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "slow",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-04-18",
+    "end": "2023-05-05",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "slow",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2023-02-26",
+    "end": "2023-03-17",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "slow",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2022-12-13",
+    "end": "2022-12-27",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "slow",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2024-05-05",
+    "end": "2024-05-24",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "slow",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2024-09-09",
+    "end": "2024-09-25",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "slow",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2024-08-20",
+    "end": "2024-09-04",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "slow",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2024-05-11",
+    "end": "2024-05-29",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "slow",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2025-06-07",
+    "end": "2025-06-18",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "slow",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2025-04-30",
+    "end": "2025-05-20",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "slow",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-08-04",
+    "end": "2025-08-11",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "slow",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2025-06-01",
+    "end": "2025-06-19",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "slow",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2026-02-08",
+    "end": "2026-02-22",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "slow",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2026-01-10",
+    "end": "2026-01-19",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "slow",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2026-05-15",
+    "end": "2026-05-22",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "slow",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2026-07-09",
+    "end": "2026-07-27",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "new",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2022-02-25",
+    "end": "2022-03-11",
+    "multiplier": 1.368
+  },
+  {
+    "product_code": "new",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2022-04-15",
+    "end": "2022-04-29",
+    "multiplier": 1.2216
+  },
+  {
+    "product_code": "new",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2022-03-02",
+    "end": "2022-03-16",
+    "multiplier": 1.1674
+  },
+  {
+    "product_code": "new",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2022-04-26",
+    "end": "2022-05-10",
+    "multiplier": 1.3041
+  },
+  {
+    "product_code": "new",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2023-03-05",
+    "end": "2023-03-19",
+    "multiplier": 1.4343
+  },
+  {
+    "product_code": "new",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2023-07-05",
+    "end": "2023-07-19",
+    "multiplier": 1.2112
+  },
+  {
+    "product_code": "new",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2023-02-10",
+    "end": "2023-02-24",
+    "multiplier": 1.1505
+  },
+  {
+    "product_code": "new",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2023-06-20",
+    "end": "2023-07-04",
+    "multiplier": 1.1598
+  },
+  {
+    "product_code": "new",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2024-06-02",
+    "end": "2024-06-16",
+    "multiplier": 1.5377
+  },
+  {
+    "product_code": "new",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2023-12-18",
+    "end": "2024-01-01",
+    "multiplier": 1.5474
+  },
+  {
+    "product_code": "new",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2024-01-04",
+    "end": "2024-01-18",
+    "multiplier": 1.5335
+  },
+  {
+    "product_code": "new",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2024-03-25",
+    "end": "2024-04-08",
+    "multiplier": 1.3908
+  },
+  {
+    "product_code": "new",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2025-03-08",
+    "end": "2025-03-22",
+    "multiplier": 1.3157
+  },
+  {
+    "product_code": "new",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2025-04-05",
+    "end": "2025-04-19",
+    "multiplier": 1.1833
+  },
+  {
+    "product_code": "new",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2025-02-14",
+    "end": "2025-02-28",
+    "multiplier": 1.3939
+  },
+  {
+    "product_code": "new",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2025-06-02",
+    "end": "2025-06-16",
+    "multiplier": 1.5715
+  },
+  {
+    "product_code": "new",
+    "location_code": "guwahati",
+    "kind": "promotion",
+    "start": "2026-06-18",
+    "end": "2026-07-02",
+    "multiplier": 1.4133
+  },
+  {
+    "product_code": "new",
+    "location_code": "dibrugarh",
+    "kind": "promotion",
+    "start": "2026-06-18",
+    "end": "2026-07-02",
+    "multiplier": 1.2467
+  },
+  {
+    "product_code": "new",
+    "location_code": "silchar",
+    "kind": "promotion",
+    "start": "2026-03-14",
+    "end": "2026-03-28",
+    "multiplier": 1.2348
+  },
+  {
+    "product_code": "new",
+    "location_code": "jorhat",
+    "kind": "promotion",
+    "start": "2026-03-18",
+    "end": "2026-04-01",
+    "multiplier": 1.4305
+  },
+  {
+    "product_code": "new",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2022-09-22",
+    "end": "2022-09-30",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "new",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2022-02-19",
+    "end": "2022-03-09",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "new",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2022-06-21",
+    "end": "2022-07-08",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "new",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2022-07-21",
+    "end": "2022-08-05",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "new",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2023-09-13",
+    "end": "2023-09-29",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "new",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2023-09-20",
+    "end": "2023-10-08",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "new",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2023-03-23",
+    "end": "2023-04-02",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "new",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2023-05-24",
+    "end": "2023-06-06",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "new",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2024-09-01",
+    "end": "2024-09-20",
+    "multiplier": 0.55
+  },
+  {
+    "product_code": "new",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2024-02-29",
+    "end": "2024-03-17",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "new",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2024-05-04",
+    "end": "2024-05-12",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "new",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2024-02-15",
+    "end": "2024-02-27",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "new",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2025-01-27",
+    "end": "2025-02-16",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "new",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2025-04-15",
+    "end": "2025-04-28",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "new",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2025-08-31",
+    "end": "2025-09-08",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "new",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2024-12-27",
+    "end": "2025-01-05",
+    "multiplier": 2.0
+  },
+  {
+    "product_code": "new",
+    "location_code": "guwahati",
+    "kind": "local_demand_shock",
+    "start": "2026-09-03",
+    "end": "2026-09-10",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "new",
+    "location_code": "dibrugarh",
+    "kind": "local_demand_shock",
+    "start": "2026-06-27",
+    "end": "2026-07-15",
+    "multiplier": 0.7
+  },
+  {
+    "product_code": "new",
+    "location_code": "silchar",
+    "kind": "local_demand_shock",
+    "start": "2026-02-09",
+    "end": "2026-02-27",
+    "multiplier": 1.6
+  },
+  {
+    "product_code": "new",
+    "location_code": "jorhat",
+    "kind": "local_demand_shock",
+    "start": "2026-03-23",
+    "end": "2026-04-08",
+    "multiplier": 2.0
+  }
+]

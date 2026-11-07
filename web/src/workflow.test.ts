@@ -145,4 +145,17 @@ describe("stock fulfilment journey", () => {
     expect(initialLocation(current, "urgent")).toBe("b");
     expect(initialLocation(data, "m")).toBe("b");
   });
+  it("starts the current scenario while preserving an explicitly selected product", () => {
+    const versioned = {
+      ...data,
+      products: [
+        { id: "earlier", provenance: { review_start_location: "a" } },
+        { id: "current", provenance: { review_start_location: "b", scenario_priority: 2 } },
+      ],
+    } as unknown as Data;
+    expect(initialProduct(versioned)).toBe("current");
+    expect(initialLocation(versioned, initialProduct(versioned))).toBe("b");
+    expect(initialProduct(versioned, "earlier")).toBe("earlier");
+    expect(versioned.products[0].id).toBe("earlier");
+  });
 });

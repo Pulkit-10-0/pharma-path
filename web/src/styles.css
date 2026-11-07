@@ -124,7 +124,18 @@ strong {
   padding: 31px 16px 16px;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #598e70 transparent;
   z-index: 50;
+}
+.sidebar > .brand,
+.sidebar > .workspace-label,
+.sidebar > .sidebar-bottom {
+  flex-shrink: 0;
 }
 .brand {
   display: flex;
@@ -176,6 +187,23 @@ strong {
   width: 16px;
   background: #598e70;
 }
+.sidebar .brand {
+  gap: 8px;
+  padding: 0 6px;
+}
+.sidebar .brand strong {
+  font-size: 22px;
+  white-space: nowrap;
+}
+.sidebar .brand small {
+  font-size: 9px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.sidebar .brand-symbol {
+  flex-shrink: 0;
+  width: 25px;
+}
 .workspace-label {
   font-size: 11px;
   letter-spacing: 1.6px;
@@ -184,10 +212,18 @@ strong {
   font-weight: 700;
 }
 .sidebar nav {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #598e70 transparent;
   gap: 6px;
 }
 .sidebar nav > button {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   gap: 11px;
@@ -226,7 +262,7 @@ strong {
 }
 .sidebar-bottom {
   margin-top: auto;
-  padding-top: 50px;
+  padding-top: 24px;
 }
 .assistant-link {
   width: 100%;
@@ -4564,6 +4600,56 @@ strong {
 }
 .sidebar .workspace-label {
   color: #a4b99f;
+}
+/* Keep the complete navigation and account controls within laptop viewports.
+   At unusually short heights the sidebar itself scrolls independently. */
+@media (max-height: 820px) {
+  .sidebar {
+    padding-top: 18px;
+    padding-bottom: 12px;
+  }
+  .sidebar .workspace-label {
+    margin-top: 23px;
+    margin-bottom: 12px;
+  }
+  .sidebar nav {
+    gap: 3px;
+  }
+  .sidebar nav > button {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  .sidebar-bottom {
+    padding-top: 14px;
+  }
+  .sidebar .assistant-link {
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+  .sidebar-system {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}
+@media (max-height: 660px) {
+  .sidebar .workspace-label {
+    margin-top: 16px;
+    margin-bottom: 9px;
+  }
+  .sidebar nav > button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .sidebar nav {
+    gap: 2px;
+  }
+  .sidebar .assistant-link small,
+  .sidebar-system small {
+    display: none;
+  }
+  .sidebar-bottom {
+    padding-top: 10px;
+  }
 }
 .modal .batch-summary,
 .modal .shipment-trail small,

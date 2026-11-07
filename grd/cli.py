@@ -29,6 +29,11 @@ def main():
     seed.add_argument("--as-of", type=date.fromisoformat, default=date(2026, 11, 1))
     pack_scenario = commands.add_parser("add-pack-scenario")
     pack_scenario.add_argument("--email", required=True)
+    dynamic_scenario = commands.add_parser("add-dynamic-scenario")
+    dynamic_scenario.add_argument("--email", required=True)
+    dynamic_export = commands.add_parser("export-dynamic-scenario")
+    dynamic_export.add_argument("--output", default="datasets/assam-dynamic-v2")
+    dynamic_export.add_argument("--as-of", type=date.fromisoformat, default=date(2026, 11, 1))
     commands.add_parser("worker")
     commands.add_parser("worker-once")
     commands.add_parser("openapi")
@@ -44,6 +49,11 @@ def main():
     legacy.add_argument("--output", default="data/legacy-run")
     legacy.add_argument("--as-of", default="2019-09-05")
     args = parser.parse_args()
+    if args.command == "export-dynamic-scenario":
+        from .dynamic_data import export
+
+        print(json.dumps(export(args.output, args.as_of), indent=2))
+        return
     if args.command == "migrate":
         from alembic.config import Config
         from alembic import command
@@ -109,6 +119,12 @@ def main():
         if product_id is None:
             parser.error("An administrator of the seeded Assam scenario is required")
         print(json.dumps({"product_id": product_id}))
+    elif args.command == "add-dynamic-scenario":
+        from .dynamic_data import install
+
+        with transaction(factory) as s:
+            result = install(s, args.email)
+        print(json.dumps(result, indent=2))
     elif args.command in ["worker", "worker-once"]:
         from .worker import run_once
 

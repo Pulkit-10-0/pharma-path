@@ -1,0 +1,110 @@
+[
+  {
+    "code": "paracetamol",
+    "name": "Paracetamol 500 mg \u00b7 10-tablet strips",
+    "base_unit": "strip",
+    "carton_size": 20,
+    "unit_cost_paise": 900,
+    "daily_rate_assumption": 190,
+    "seasonal_amplitude_assumption": 0.28
+  },
+  {
+    "code": "cetirizine",
+    "name": "Cetirizine 10 mg \u00b7 10-tablet strips",
+    "base_unit": "strip",
+    "carton_size": 20,
+    "unit_cost_paise": 1800,
+    "daily_rate_assumption": 85,
+    "seasonal_amplitude_assumption": 0.32
+  },
+  {
+    "code": "ors",
+    "name": "ORS \u00b7 21 g sachets",
+    "base_unit": "sachet",
+    "carton_size": 100,
+    "unit_cost_paise": 1400,
+    "daily_rate_assumption": 140,
+    "seasonal_amplitude_assumption": 0.45
+  },
+  {
+    "code": "amoxicillin",
+    "name": "Amoxicillin 500 mg \u00b7 10-capsule strips",
+    "base_unit": "strip",
+    "carton_size": 20,
+    "unit_cost_paise": 5500,
+    "daily_rate_assumption": 65,
+    "seasonal_amplitude_assumption": 0.22
+  },
+  {
+    "code": "metformin",
+    "name": "Metformin 500 mg \u00b7 10-tablet strips",
+    "base_unit": "strip",
+    "carton_size": 50,
+    "unit_cost_paise": 2100,
+    "daily_rate_assumption": 150,
+    "seasonal_amplitude_assumption": 0.07
+  },
+  {
+    "code": "amlodipine",
+    "name": "Amlodipine 5 mg \u00b7 10-tablet strips",
+    "base_unit": "strip",
+    "carton_size": 50,
+    "unit_cost_paise": 2200,
+    "daily_rate_assumption": 110,
+    "seasonal_amplitude_assumption": 0.05
+  },
+  {
+    "code": "pantoprazole",
+    "name": "Pantoprazole 40 mg \u00b7 10-tablet strips",
+    "base_unit": "strip",
+    "carton_size": 20,
+    "unit_cost_paise": 4500,
+    "daily_rate_assumption": 95,
+    "seasonal_amplitude_assumption": 0.12
+  },
+  {
+    "code": "salbutamol",
+    "name": "Salbutamol \u00b7 100 mcg inhalers",
+    "base_unit": "inhaler",
+    "carton_size": 12,
+    "unit_cost_paise": 12000,
+    "daily_rate_assumption": 18,
+    "seasonal_amplitude_assumption": 0.35
+  },
+  {
+    "code": "zinc",
+    "name": "Zinc 20 mg \u00b7 10-tablet strips",
+    "base_unit": "strip",
+    "carton_size": 20,
+    "unit_cost_paise": 2400,
+    "daily_rate_assumption": 42,
+    "seasonal_amplitude_assumption": 0.33
+  },
+  {
+    "code": "cough",
+    "name": "Cough preparation \u00b7 100 mL bottles",
+    "base_unit": "bottle",
+    "carton_size": 24,
+    "unit_cost_paise": 6500,
+    "daily_rate_assumption": 28,
+    "seasonal_amplitude_assumption": 0.38
+  },
+  {
+    "code": "slow",
+    "name": "Specialty supplement \u00b7 10-tablet strips",
+    "base_unit": "strip",
+    "carton_size": 20,
+    "unit_cost_paise": 8500,
+    "daily_rate_assumption": 1.2,
+    "seasonal_amplitude_assumption": 0.12
+  },
+  {
+    "code": "new",
+    "name": "Vitamin C 500 mg \u00b7 10-tablet strips",
+    "base_unit": "strip",
+    "carton_size": 20,
+    "unit_cost_paise": 3200,
+    "daily_rate_assumption": 55,
+    "seasonal_amplitude_assumption": 0.18
+  }
+]

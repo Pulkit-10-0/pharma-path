@@ -1,0 +1,57 @@
+{
+  "name": "Assam dynamic supply scenario v2",
+  "generator_version": "assam-dynamic-v2",
+  "evidence_type": "synthetic",
+  "seed": 20261107,
+  "as_of": "2026-11-01",
+  "first_date": "2021-11-08",
+  "complete_weeks": 260,
+  "products": 12,
+  "locations": 5,
+  "row_count": 218400,
+  "daily_stock_rows": 109200,
+  "content_sha256": "d5208723c7c440538bc0b70dbede1a34496f8ad720ed012be4812f3466b115b8",
+  "source_url": "https://github.com/Pulkit-10-0/pharma-path/tree/main/datasets/assam-dynamic-v2",
+  "licence": "Project-generated synthetic data, CC0-1.0",
+  "geography": "Five fictional Assam operating sites",
+  "units": "product_base_units",
+  "dynamic_factors": [
+    "weekday patterns",
+    "annual seasonality",
+    "growth and regime changes",
+    "local demand shocks",
+    "promotions",
+    "correlated overdispersed noise",
+    "new-product introduction",
+    "intermittent demand",
+    "delayed supply",
+    "FEFO expiry",
+    "stock-constrained sales"
+  ],
+  "checks": {
+    "daily_stock_conservation": true,
+    "sales_at_most_requested": true,
+    "unmet_equals_requested_less_sales": true,
+    "no_negative_stock": true,
+    "unique_series_dates": true
+  },
+  "limitations": [
+    "Invented operating data; not observed Assam or GRD demand",
+    "Events, packs, prices, supply policies and volumes are illustrative assumptions",
+    "Event flags explain generation; the current forecast uses demand history, not these flags",
+    "Warehouse dispatches are internal transfers, not additional customer demand",
+    "Remaining historical in-transit supply is excluded from actionable opening stock and live orders",
+    "Forecast accuracy and policy impact on this scenario do not predict a real pilot"
+  ],
+  "summary": {
+    "unmet_quantity": 100520,
+    "stockout_days": 1205,
+    "promotion_days": 3600,
+    "disruption_days": 3600,
+    "expired_quantity": 648
+  },
+  "files": {
+    "demand.csv.gz": "ab627b2ef098f0c7e90a7f96a89d108dd663aa58fd874cdf45bcc8bd6a60cf11",
+    "daily_operations.csv.gz": "6586b20165286a9817946a042ed584088c7fe935ca7fc7b1ea2cc11107886925"
+  }
+}

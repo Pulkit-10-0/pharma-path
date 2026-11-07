@@ -159,9 +159,13 @@ export function initialProduct(
   current = "",
 ) {
   if (data.products.some((p) => p.id === current)) return current;
-  const practice = data.products.find(
-    (p) => p.provenance?.review_start_location,
-  );
+  const practice = data.products
+    .filter((p) => p.provenance?.review_start_location)
+    .sort(
+      (a, b) =>
+        Number(b.provenance?.scenario_priority || 0) -
+        Number(a.provenance?.scenario_priority || 0),
+    )[0];
   if (practice) return practice.id;
   const open = data.requests.find(
     (r) => r.quantity > r.fulfilled + r.cancelled,

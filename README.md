@@ -361,19 +361,30 @@ The system assists supply operations. It does not prescribe medicine, choose the
 
 ### Synthetic operational scenario
 
-The seeded scenario contains **18,375 daily demand rows**:
+The current default uses **218,400 demand observations** plus **109,200 daily
+inventory/signal rows**, with reproducible files in
+[`datasets/assam-dynamic-v2`](datasets/assam-dynamic-v2/README.md):
 
 ```text
-5 illustrative products × 5 fictional locations × 735 days
+12 product presentations × 5 fictional locations × 1,820 days × 2 demand measures
 ```
 
 The locations are a Guwahati central demo warehouse and fictional distributors associated with Guwahati, Dibrugarh, Silchar and Jorhat. Coordinates approximate town centres.
 
 Illustrative products include paracetamol, cetirizine and ORS presentations, plus slow-moving and transfer-restricted examples. They exercise different operating cases; they are not an official company SKU catalogue.
 
-The generator includes a short-stock recipient, short-dated surplus and configured route constraints. The standard demonstration stock date is **1 November 2026**. Changing a projection horizon does not change that physical stock date.
+Demand includes weekday and seasonal patterns, growth and level changes,
+promotions, temporary shocks, intermittent demand and a product introduction.
+Stock-constrained sales, warehouse dispatches, delayed receipts and expiry arise
+from one conserving inventory simulation. Requested and sales quantities remain
+separate. Final physical batches become the new catalogue's opening stock.
+Event flags document generation and are not inputs to the current forecaster.
+Earlier scenarios and their existing orders remain available and labelled.
+The scenario stock date is **1 November 2026**. Changing a projection horizon
+does not change that physical stock date.
 
-See [the generator](grd/demo.py) and [data strategy](docs/DATA_STRATEGY.md).
+See [the current generator](grd/dynamic_data.py), [earlier generators](grd/demo.py)
+and [data strategy](docs/DATA_STRATEGY.md).
 
 ### Original public benchmark
 

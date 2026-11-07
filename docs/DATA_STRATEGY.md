@@ -4,6 +4,18 @@ Checked against the official I09 challenge and public sources on 1 November 2026
 
 ## Three separate evidence tracks
 
+**Current operating scenario — 7 November 2026:** the default is now
+[`assam-dynamic-v2`](../datasets/assam-dynamic-v2/README.md): **218,400 requested/sales
+observations** and **109,200 daily inventory/signal rows**, covering 12 product
+presentations, five sites and 260 complete weeks. It includes demand shocks,
+promotions, changing demand levels, a product launch, intermittent demand,
+delayed replenishment, shortages and expiry. Daily stock and cross-site transfers
+reconcile. The final physical batches initialise the new catalogue through stock
+movements. Earlier scenarios remain labelled and accessible for existing orders.
+The current forecast consumes demand history, not the generator's event flags.
+The public observed benchmark remains separate and unchanged. The original
+seed described below remains as an earlier scenario.
+
 1. **Observed public forecasting benchmark:** the original pharmacy series keeps its ATC category meaning and original geographic provenance. It cannot be relabelled as observed Assam SKU demand. The legacy experiment's distributor splits, rounding and stock simulation are derived/synthetic.
 2. **Assam operational scenario:** `grd seed-demo` creates 735 daily observations for each of 5 illustrative products at 5 fictional operating locations: 18,375 rows. Product presentations, demand, costs, stock and route rules are assumptions. Fixed seed 42, generator `assam-v1`, scenario date 1 November 2026. Approximate town coordinates are not actual GRD premises. A short-dated donor, a short-stock recipient, slow-moving stock and a transfer-restricted product exercise the backend. The scenario does not establish local forecast accuracy or business impact.
 3. **Real regional context:** NASA POWER gridded daily temperature, humidity and corrected precipitation at approximate Guwahati, Dibrugarh and Silchar town centres, 1 January 2024–31 October 2026. Downloaded JSON and SHA-256/source manifests are stored locally under ignored `data/context`. This is weather context, not medicine sales. It is not currently included as a model feature; no improvement from it is claimed. Preserve missing-value codes as missing and test timestamp availability before any future forecast integration.
