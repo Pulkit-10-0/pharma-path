@@ -2,9 +2,11 @@
 
 The canonical release is **Pharma Path 1.4.2**, tag
 [`nesfic-i09-final-v1.4.2`](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.2).
-The release verification JSON and asset manifest are published with that tag after
-CI, deployment and package checks. They identify the exact commit, CI run, APK
-certificate/checksum, evidence files and physical-test boundary.
+The [Android APK](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/download/nesfic-i09-final-v1.4.2/Pharma_Path_Android_1.4.2.apk),
+`SHA256SUMS.txt` and `connection-release-verification.json` are published with
+that tag after CI, deployment and package checks. They identify frozen source
+`32809d1a200e8a977e7c0db902b55c5dfcffe20b`, CI, APK certificate/checksum and the
+physical-test boundary. See [download and verification details](ANDROID_DOWNLOAD.md).
 
 ## Android connection patch
 
@@ -13,9 +15,11 @@ the direct API hostname first and can fall back to the branded HTTPS hostname.
 Both addresses use the same backend and stock ledger. Cache and outbox identities
 remain stable; custom organisation servers never fall back to public hosts.
 
-The 1.4.1 product evidence deck and supporting proposal remain an immutable
-evidence snapshot. No presentation, architecture, product workflow, dataset or
-forecasting method is changed by this connection patch. See
+The [1.4.1 product evidence deck and supporting proposal](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.1)
+remain an immutable evidence snapshot. Their original asset manifest and release
+verification JSON continue to describe that snapshot. No presentation,
+architecture, product workflow, dataset or forecasting method is changed by
+this connection patch. See
 [ANDROID_CONNECTION_FIX](ANDROID_CONNECTION_FIX.md) for scope and recovery.
 
 ## How to verify the same source
@@ -23,9 +27,15 @@ forecasting method is changed by this connection patch. See
 - Website: `/release.json`, and Help → release identity.
 - Backend: public `/health/release` returns the source commit, version and tag.
 - Android: More → Connected account shows its compiled version and source commit.
-- PDFs: opening and verification slides identify that same source and CI.
+- PDFs: the unchanged 1.4.1 snapshot identifies its original source
+  `ecb9897df2a61c8f7cfe24463685c05b5ba28af0` and CI; its captured Android QR/online
+  receipt is app 1.3.2. It is not physical acceptance evidence for APK 1.4.2.
 - Source: the immutable canonical tag. The existing deployment repository mirrors
   the same commit so the configured Free services can build it without migration.
+
+The website, API and APK remain frozen at `32809d1`; later documentation-only
+commits on `main` do not replace that release or deploy a new service build.
+The 1.4.2 checks do not claim a retest on the affected friend's phone or Wi-Fi.
 
 Never use a moving `main` link as the only release identifier. Earlier `review-2`
 assets, version 1.3.2 recordings and dated audit guides are historical evidence,
@@ -71,8 +81,9 @@ native iOS acceptance or production readiness.
 ## Free hosting and video
 
 The static site and API remain on Free Render plans with persistent Neon Free
-PostgreSQL. The static `/review/index.html` page provides the video, documents,
-release and data limits even if the API is cold. The scheduled readiness check
+PostgreSQL. The static `/review/index.html` page provides the release link and
+data limits even if the API is cold. Submission recordings are supplied
+separately. The scheduled readiness check
 is best-effort; it is not an availability guarantee. No paid service is required.
 
 Grant category remains unconfirmed. The ₹18 lakh development budget is an

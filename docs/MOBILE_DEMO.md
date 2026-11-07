@@ -1,8 +1,8 @@
 # Pharma Path Android
 
-The final release is **1.4.1 / version code 8**, Android ARM64, React Native / Expo SDK 58. Native iOS delivery remains excluded. Download the APK, checksum, certificate and device recording from the [immutable release](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.1).
+The current release is **1.4.2 / version code 9**, Android ARM64, React Native / Expo SDK 58. [Download the APK](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/download/nesfic-i09-final-v1.4.2/Pharma_Path_Android_1.4.2.apk); the [immutable release](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.2) supplies its checksum and connection verification record. See [download and verification details](ANDROID_DOWNLOAD.md). Native iOS delivery remains excluded.
 
-The app connects to **https://pharma-path.onrender.com**. Its More screen identifies the compiled source commit. Public synthetic credentials are intentionally pre-filled; they are not private company credentials. A default independent rehearsal lasts two hours. Use the website's generated rehearsal email and the public evaluation password to share the same inventory on both clients.
+For the public demonstration, the app contacts **https://grd-supply-demo.onrender.com** first and can use **https://pharma-path.onrender.com** after an eligible connection failure. Both reach the same API and stock ledger; saved account/cache/outbox identities are preserved. Custom organisation servers do not fall back to public hosts. Its More screen identifies the compiled source commit. Public synthetic credentials are intentionally pre-filled; they are not private company credentials. A default independent rehearsal lasts two hours. Use the website's generated rehearsal email and the public evaluation password to share the same inventory on both clients.
 
 Existing installations retain the selected server and pending commands. Resolve those commands before changing accounts or origins. The Free API can need about a minute to wake. The final native package disables cleartext traffic and retains the existing evaluation signing certificate for upgrades. This is evaluation signing, not managed production/store signing.
 
@@ -41,6 +41,8 @@ Authorised network/stock/worklist snapshots are encrypted in SecureStore chunks.
 
 ## Verification
 
-The final release verification JSON records CI and physical checks against the exact packaged build. It distinguishes camera/online receipt, denied permission and offline persistence if exercised. A passed logic test or emulator screenshot alone does not prove native offline operation. Push delivery, automatic background sync, GPS vehicle tracking, supplier/courier integrations and app-store publication remain outside the demonstrated scope.
+The 1.4.2 connection verification record identifies frozen source `32809d1a200e8a977e7c0db902b55c5dfcffe20b`, 22 mobile logic tests and the signed package. Live sign-in, stock reads and reconciliation passed against the direct API and the alternate host after an injected DNS failure. The affected friend's phone/Wi-Fi has not been retested; these checks do not establish native physical-device or offline acceptance.
+
+The [1.4.1 submission documents and recorded evidence](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.1) retain their original source, CI and captured build labels. The physical QR/online receipt capture is app 1.3.2. A passed logic test or emulator screenshot alone does not prove native offline operation. Push delivery, automatic background sync, GPS vehicle tracking, supplier/courier integrations and app-store publication remain outside the demonstrated scope.
 
 The Expo starter licence remains in `mobile/EXPO_TEMPLATE_LICENSE`. Public benchmark data carries CC BY-NC 4.0 restrictions; it is research evidence, not licensed commercial company training data.

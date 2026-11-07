@@ -1,5 +1,8 @@
 # Android connection patch - 1.4.2
 
+[Download Android 1.4.2 APK](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/download/nesfic-i09-final-v1.4.2/Pharma_Path_Android_1.4.2.apk)
+— version code 9. See [source, checksum and verification details](ANDROID_DOWNLOAD.md).
+
 ## Report and diagnosis
 
 An Android phone reported `java.net.UnknownHostException` while resolving

@@ -11,6 +11,7 @@
 <p align="center">
   <a href="https://github.com/Pulkit-10-0/pharma-path-nesfic/actions/workflows/backend.yml"><img src="https://github.com/Pulkit-10-0/pharma-path-nesfic/actions/workflows/backend.yml/badge.svg?branch=main" alt="Product checks" /></a>
   · <a href="https://pharma-path.onrender.com/">Live demonstration</a>
+  · <a href="https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/download/nesfic-i09-final-v1.4.2/Pharma_Path_Android_1.4.2.apk">Download Android 1.4.2</a>
   · <a href="https://startup.assam.gov.in/nesfic26/problem-statements/nesfic-i-09">Official challenge</a>
   · <a href="docs/WEBSITE_READ_ALONG.md">Website walkthrough</a>
   · <a href="docs/PRD_STATUS.md">Implementation status</a>
@@ -455,6 +456,8 @@ Metadata declares `name`, `source_url`, `licence`, `geography`, `evidence_type`,
 
 The mobile client uses **React Native with Expo SDK 58** and native components. It connects directly to the same API as the website.
 
+**Current installation package: [Android 1.4.2 APK](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/download/nesfic-i09-final-v1.4.2/Pharma_Path_Android_1.4.2.apk), version code 9.** See [checksums, source and installation guidance](docs/ANDROID_DOWNLOAD.md). This connection patch preserves the account/cache/outbox identities and evaluation signing certificate. The 1.4.1 PDFs and recorded evidence retain their original build labels.
+
 ### Field workflows
 
 - Today, Network, Actions, Stock and More tabs.
@@ -501,7 +504,7 @@ flowchart LR
     Models --> Runner
 ```
 
-For the hosted demonstration, the compiled website, API and one supervised calculation worker run together on **Render Free**. **Neon PostgreSQL** stores persistent operating records. The Android app uses the same HTTPS origin.
+For the hosted demonstration, the compiled website, API and one supervised calculation worker run together on **Render Free**. **Neon PostgreSQL** stores persistent operating records. Android 1.4.2 uses the direct API HTTPS hostname first, with the branded HTTPS hostname as an eligible fallback; both reach the same backend and ledger.
 
 Forecast/simulation/benchmark jobs are durable SQL records. Stock-changing actions run synchronously through protected transactions; they are not silently posted by the background worker.
 
@@ -701,7 +704,7 @@ npx expo run:android --variant release
 
 For a local Android emulator API, use `http://10.0.2.2:8011` and explicitly set `GRD_ALLOW_LOCAL_HTTP=1` before prebuild/build. A local HTTP-enabled binary is a different configuration; use HTTPS and disable cleartext traffic for hosted distribution.
 
-Generated native folders are not committed. Configure native behaviour through `app.config.js` and Expo config plugins. Final release metadata is **1.4.2 / version code 9**. Build and physical acceptance evidence accompanies the immutable release, rather than an earlier APK.
+Generated native folders are not committed. Configure native behaviour through `app.config.js` and Expo config plugins. Current release metadata is **1.4.2 / version code 9**. The [immutable release](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/tag/nesfic-i09-final-v1.4.2) records the signed build, checksum and physical-test boundary; the affected phone/Wi-Fi has not been retested.
 
 An APK can be built from source using the steps above. Locally produced demonstration APKs, signing keys and build caches are deliberately excluded from Git. The existing demonstrated build uses a debug/demo signing identity; production/store distribution needs its own signing and acceptance process.
 
@@ -732,7 +735,7 @@ The Free API can sleep. The calculation worker pauses with it, and local contain
 
 `render.yaml` and `Dockerfile` describe the deployment approach. Configure secrets in provider-private settings. Initial cloud seeding is deliberate and must be disabled afterward; never reseed or upload a local database over an existing operating environment.
 
-Both Render services use manual deploys from the existing deployment repository, which mirrors the exact final commit from this canonical repository. The API service uses the existing Neon database. The final Android build uses the branded HTTPS origin. Earlier packages still use the original API address.
+Both Render services use manual deploys from the existing deployment repository. The website, API and Android 1.4.2 package remain frozen at `32809d1a200e8a977e7c0db902b55c5dfcffe20b`; later repository documentation updates do not change that deployed/package identity. The API service uses the existing Neon database. Android 1.4.2 contacts `https://grd-supply-demo.onrender.com` first and can fall back to `https://pharma-path.onrender.com` for eligible connection failures. Custom organisation servers never fall back to public hosts.
 
 The [availability workflow](.github/workflows/demo-availability.yml) checks the public readiness route every ten minutes and can be run on demand. GitHub scheduling is best-effort, so idle starts are still possible on Render Free.
 
@@ -787,11 +790,15 @@ Replace placeholders locally and keep real credentials out of shell logs and com
 
 ### Final verification record
 
-Local checks during final-release preparation passed 93 PostgreSQL backend tests,
-30 website tests and 13 Android logic tests, plus lint, type checks and website
-build. The immutable release's verification JSON supplies the final CI run,
-compiled source identities, APK checksum/signing certificate and physical-device
-acceptance boundary. Do not treat a source test count as phone or pilot evidence.
+The 1.4.2 release CI passed 93 PostgreSQL backend tests, 30 website tests and
+22 Android logic tests, plus lint, type checks and export/build checks. The
+[connection verification record](https://github.com/Pulkit-10-0/pharma-path-nesfic/releases/download/nesfic-i09-final-v1.4.2/connection-release-verification.json)
+supplies the CI run, compiled source identities, APK checksum/signing certificate
+and physical-test boundary. Live API checks passed on the direct and alternate
+host, with an injected DNS failure for the fallback case. The affected friend's
+phone/Wi-Fi has not been retested. The 1.4.1 evidence snapshot retains its original
+13 Android logic tests and captured builds. Do not treat a source test count as
+phone or pilot evidence.
 
 Regression cases include duplicate receipts, stale counts, competing approvals,
 atomic split rollback, tenant/site isolation, lost-response replay, failed secure
