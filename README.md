@@ -897,7 +897,7 @@ Patient identifiers are unnecessary for the stated stock-planning workflows.
 ├── Dockerfile                  Combined web/API runtime image
 ├── compose.yaml                Local PostgreSQL/API/worker setup
 ├── render.yaml                 Reference free-demo deployment
-└── 02_...08_*.py               Attributed earlier experiment entry points
+└── 02_...08_*.py               Earlier team experiment entry points
 ```
 
 Local credentials, databases, exports, backups, build caches, generated native folders and APKs are excluded. The attributed public benchmark is an explicit dataset exception.
@@ -920,13 +920,13 @@ Local credentials, databases, exports, backups, build caches, generated native f
 | [Hosting](docs/FREE_DEPLOYMENT.md) | Reference deployment arrangement and configuration |
 | [Comparable-project research](docs/COMPARABLE_PROJECT_RESEARCH_2026-11-02.md) | Repository/video inspiration and recommended features |
 | [OpenAPI](docs/openapi.json) | Machine-readable API snapshot |
-| [Source origin](docs/SOURCE_ORIGIN.md) | Upstream credit, source commit and clean-publication notes |
+| [Team project](docs/SOURCE_ORIGIN.md) | Project components, evaluation scope and repository references |
 
 Older audit/handoff documents are dated milestones. Use this README, the current upgrade checklist and source code when their earlier status descriptions differ.
 
-### Original team and sources
+### Team project and third-party sources
 
-This repository is a clean publication snapshot derived from the team's original repository, [HarshadaNayyar/GRD-medicine-supply](https://github.com/HarshadaNayyar/GRD-medicine-supply), source commit [2d30f0f](https://github.com/HarshadaNayyar/GRD-medicine-supply/commit/2d30f0f0ad66785e6b36e9c4dec12379f6a79d1b). Original notebook/experiment work is credited to that team repository; the source history is linked rather than imported.
+Pharma Path is a team-developed medicine supply intelligence platform. This repository brings together the team's forecasting experiments, data tools, Power BI analysis, shared backend, website and Android app.
 
 Key references and retained notices:
 
