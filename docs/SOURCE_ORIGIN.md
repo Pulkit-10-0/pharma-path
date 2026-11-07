@@ -1,26 +1,32 @@
-# Source origin and publication
+# Team project and development
 
-This repository publishes a clean source snapshot of the team project, with a new
-project README and public demo screenshots. It does not import the prior Git
-history, local databases, environment files, build caches or provider credentials.
+Pharma Path is a team-developed medicine supply intelligence platform. The project
+includes forecasting experiments, data preparation, Power BI analysis, a shared
+stock ledger and API, a website, and an Android field app.
 
-- Original team repository: https://github.com/HarshadaNayyar/GRD-medicine-supply
-- Snapshot source branch: `codex/grd-backend`
-- Snapshot source commit: `2d30f0f0ad66785e6b36e9c4dec12379f6a79d1b`
-- Publication date: 2 November 2026
-- New repository: https://github.com/Pulkit-10-0/pharma-path
+## Project components and evidence
+
+The notebook, root-level experiments and Power BI dashboard document the team's
+earlier category-level analysis. Their results are historical and must remain
+separate from evaluation of the current operating data and public benchmark.
+
+The integrated application connects forecasts to stock planning, approvals,
+dispatch, receipt and exception handling. Shared backend rules, scoped access,
+audit records, automated checks and deployment tools support these workflows.
+
+## Repositories and deployment
+
+- Submission repository: https://github.com/Pulkit-10-0/pharma-path-nesfic
+- Application repository and hosting source: https://github.com/Pulkit-10-0/pharma-path
+- Live website: https://pharma-path.onrender.com/
 - Default branch: `main`
 
-The original team's notebook, root-level experiments and historical dashboard
-export are retained with attribution. Their results are historical and must not be
-presented as the current system's evaluation. The integrated application adds the
-shared stock ledger/API, website, Android field client, job runner, planning and
-operational workflows, tests and deployment tooling.
+The hosted website and shared API use the application repository and the existing
+Neon database. Documentation changes do not reset stock or change the deployment
+configuration. Commit history and review tags remain available for reproducibility.
 
-Source-specific dataset, map, font, template and dependency licence notices remain
-included. No new repository-wide licence is assigned by this publication.
+## Data and third-party notices
 
-On 7 November 2026, the existing Render service was relinked to
-`Pulkit-10-0/pharma-path` on `main`. Its tagged evaluator commit `b987037`
-passed readiness on the existing service and Neon database. The original team
-repository remains the credited source of the initial experiments.
+Published dataset manifests retain their generation sources and hashes. Dataset,
+map, font, template and dependency licence notices remain included. No new
+repository-wide licence is assigned here.
