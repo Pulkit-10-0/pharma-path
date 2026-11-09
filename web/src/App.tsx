@@ -1092,7 +1092,7 @@ function Login({
         sessionStorage.getItem("pharma.workspace.email") || publicDemo.email,
     ),
     [password, setPassword] = useState<string>(publicDemo.password),
-    [isolated, setIsolated] = useState(true),
+    [isolated, setIsolated] = useState(false),
     [error, setError] = useState(""),
     [busy, setBusy] = useState(false);
   async function signIn(demo = false) {
